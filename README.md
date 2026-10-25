@@ -30,9 +30,13 @@ The platform refreshes itself each morning, Sydney time:
 
 Each price starts from a researched level and moves with its live indicator relative to the day it was researched, so a noisy feed can shift the model but never replace it. The **Markets** tab shows every indicator, its trend and which assumptions it set today.
 
+![Markets tab](docs/screenshots/markets.jpg)
+
 ## Humanoid robots
 
 The **Robots** tab models general-purpose humanoids doing the site's work: cabin turnover, greenhouse harvesting, data-centre remote hands, solar checks, livestock and maintenance. Each task has a capability-readiness forecast (an S-curve revised by the daily research) and the robot price follows a forecast decline anchored to live list prices (Unitree H2 at US$29,900 today). Robots only count as savings where they replace labour the model already pays for; owner time freed is shown separately. The optimiser decides whether, when and how many to bring in.
+
+![Robots tab](docs/screenshots/robots.jpg)
 
 ![Generated layout on NSW aerial imagery](docs/screenshots/site-layout.jpg)
 
