@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-25",
-  "note": "Seeded 25 Oct 2026 from the sources listed. The daily research automation revises these values when new evidence appears; live feeds in market.json move them day to day.",
+  "updated": "2026-10-26",
+  "note": "The LGC fallback moves to Ecovantage's 19-23 Oct close (A$7.55, down from A$7.85), and the robot list now records Tesla's late-2027 target for outside Optimus deliveries and that Unitree takes H2 orders through its sales team. GPU, solar, battery, livestock, robot-price and readiness values are unchanged because today's trackers (Bargo, amcompute, GPU.ai, Gatewell, Unitree store) still sit within them.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -16,7 +16,7 @@
     "B200": {
       "anchorUsdPerHr": 5,
       "serverUsd": 450000,
-      "reference": "US$7.99 on-demand, US$6.71 reserved, US$4.26 spot (39 providers)",
+      "reference": "US$7.99 on-demand, US$5.62 reserved, US$4.26 spot (37 providers)",
       "source": {
         "title": "Bargo B200 tracker",
         "url": "https://www.bargo.ai/gpu/b200",
@@ -81,12 +81,12 @@
     }
   },
   "lgc": {
-    "price": 7.85,
-    "date": "2026-10-16",
+    "price": 7.55,
+    "date": "2026-10-23",
     "source": {
       "title": "Ecovantage weekly market update",
       "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-      "date": "16 Oct 2026"
+      "date": "23 Oct 2026"
     }
   },
   "livestock": {
@@ -152,10 +152,10 @@
         "name": "Unitree H2",
         "maker": "Unitree",
         "priceUsd": 29900,
-        "availability": "On sale",
+        "availability": "Listed; order through Unitree sales",
         "class": "Full-size humanoid (1.8 m)",
         "source": "https://shop.unitree.com/collections/humanoid-robot",
-        "date": "2026-10-25"
+        "date": "2026-10-26"
       },
       {
         "name": "Unitree H1",
@@ -170,19 +170,19 @@
         "name": "Unitree H2 Plus",
         "maker": "Unitree",
         "priceUsd": 100000,
-        "availability": "On sale",
+        "availability": "Listed; order through Unitree sales",
         "class": "Full-size, higher-spec",
         "source": "https://shop.unitree.com/collections/humanoid-robot",
-        "date": "2026-10-25"
+        "date": "2026-10-26"
       },
       {
         "name": "Tesla Optimus V3",
         "maker": "Tesla",
         "priceUsd": null,
-        "availability": "Not for sale (internal deployment)",
+        "availability": "Not for sale; early production at Fremont, outside deliveries targeted for late 2027",
         "class": "Full-size general purpose",
-        "source": "https://www.tesla.com/AI",
-        "date": "2026-10-25"
+        "source": "https://www.humanoidsdaily.com/news/tesla-q3-2026-optimus-production-fremont-2027-deliveries",
+        "date": "2026-10-22"
       },
       {
         "name": "Figure 03",
