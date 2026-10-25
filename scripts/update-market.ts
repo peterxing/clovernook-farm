@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { abaresRow, dayMonthToIso, parseFaoCsv, parseInfolinkModule, parseLgc, parseNeo, parseRbaF11, parseUnitree, plain, vastGpuPrices } from './parsers.ts';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'src', 'data');
@@ -11,7 +12,6 @@ const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKi
 const readJson = <T>(f: string, fallback: T): T => { try { return JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8')) as T; } catch { return fallback; } };
 const writeJson = (f: string, v: unknown, pretty = true) => fs.writeFileSync(path.join(DATA, f), JSON.stringify(v, null, pretty ? 2 : 0) + (pretty ? '\n' : ''));
 const round = (v: number, d = 3) => Math.round(v * 10 ** d) / 10 ** d;
-const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 /** Today's date in Sydney as YYYY-MM-DD. */
 function sydneyDate(d = new Date()): string {
@@ -23,7 +23,6 @@ async function getText(url: string, ms = 45000): Promise<string> {
   if (!r.ok) throw new Error(`${r.status} ${url}`);
   return r.text();
 }
-const plain = (html: string) => html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&#8211;|&ndash;/g, '-').replace(/&amp;/g, '&').replace(/\s+/g, ' ');
 
 type Feed = Record<string, unknown> & { ok: boolean; date?: string; source?: string; url?: string; error?: string };
 async function feed(name: string, prev: Feed | undefined, fn: () => Promise<Feed>): Promise<Feed> {
@@ -43,13 +42,8 @@ async function feed(name: string, prev: Feed | undefined, fn: () => Promise<Feed
 // ---------- Feeds ----------
 async function fx(): Promise<Feed> {
   try {
-    const csv = await getText('https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv');
-    const rows = csv.split(/\r?\n/).filter((l) => /^\d{2}-[A-Za-z]{3}-\d{4},\d/.test(l));
-    const last = rows[rows.length - 1].split(',');
-    const audUsd = parseFloat(last[1]);
-    if (!(audUsd > 0.3 && audUsd < 1.5)) throw new Error('bad RBA value');
-    const [dd, mon, yyyy] = last[0].split('-');
-    return { ok: true, usdAud: round(1 / audUsd, 4), audUsd, date: `${yyyy}-${String(MON.indexOf(mon) + 1).padStart(2, '0')}-${dd}`, source: 'RBA F11.1 (A$1 = US$)', url: 'https://www.rba.gov.au/statistics/tables/#exchange-rates' };
+    const { audUsd, date } = parseRbaF11(await getText('https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv'));
+    return { ok: true, usdAud: round(1 / audUsd, 4), audUsd, date, source: 'RBA F11.1 (A$1 = US$)', url: 'https://www.rba.gov.au/statistics/tables/#exchange-rates' };
   } catch {
     const j = JSON.parse(await getText('https://api.frankfurter.app/latest?from=USD&to=AUD')) as { date: string; rates: { AUD: number } };
     return { ok: true, usdAud: round(j.rates.AUD, 4), date: j.date, source: 'Frankfurter (ECB reference rates)', url: 'https://www.frankfurter.app/' };
@@ -57,12 +51,17 @@ async function fx(): Promise<Feed> {
 }
 
 const VAST_NAMES: Record<string, string[]> = { B300: ['B300'], B200: ['B200'], H200: ['H200', 'H200 NVL'], RTXPRO6000: ['RTX PRO 6000 S', 'RTX PRO 6000 WS'], L40S: ['L40S'] };
-type GpuStat = { p25: number; median: number; n: number; p25s?: number; hist?: { date: string; p25: number }[] };
+type GpuStat = { p25: number; median: number; n: number; p25s?: number; ratio?: number; anchorKey?: string; hist?: { date: string; p25: number }[] };
+const MIN_OFFERS = 8; // thinner order books are too noisy to count as a day's reading
+const MIN_DAYS = 3; // days of readings before the index starts to move prices
+const RATIO_CAP: [number, number] = [0.75, 1.33];
+const MAX_DAILY_MOVE = 0.05;
 /**
  * Marketplace asks move with whichever offers happen to be unrented, so each model keeps two weeks of daily
- * lower-quartile readings and the model uses the median of the last seven (p25s).
+ * lower-quartile readings (p25s = median of the last seven). The index (ratio) compares p25s with its level when the
+ * researched price was set, is capped, and moves at most 5% a day.
  */
-async function gpu(prev?: Feed): Promise<Feed> {
+async function gpu(prev?: Feed, anchors?: Record<string, { usd?: number; p25?: number | null }>): Promise<Feed> {
   const today = sydneyDate();
   const prevModels = (prev?.models ?? {}) as Record<string, GpuStat>;
   const models: Record<string, GpuStat> = {};
@@ -70,53 +69,39 @@ async function gpu(prev?: Feed): Promise<Feed> {
     const prices: number[] = [];
     for (const name of names) {
       const q = encodeURIComponent(JSON.stringify({ gpu_name: { eq: name }, rentable: { eq: true }, type: 'on-demand', limit: 300 }));
-      const j = JSON.parse(await getText(`https://console.vast.ai/api/v0/bundles/?q=${q}`)) as { offers?: { dph_total: number; num_gpus: number }[] };
-      for (const o of j.offers ?? []) if (o.dph_total > 0 && o.num_gpus > 0) prices.push(o.dph_total / o.num_gpus);
+      prices.push(...vastGpuPrices(JSON.parse(await getText(`https://console.vast.ai/api/v0/bundles/?q=${q}`))));
     }
     prices.sort((a, b) => a - b);
     const hist = [...(prevModels[model]?.hist ?? [])].filter((h) => h.date !== today);
     let stat: GpuStat | undefined = prevModels[model] ? { ...prevModels[model] } : undefined;
-    if (prices.length >= 5) {
+    if (prices.length >= MIN_OFFERS) {
       stat = { p25: round(prices[Math.floor(prices.length * 0.25)], 3), median: round(prices[Math.floor(prices.length / 2)], 3), n: prices.length };
       hist.push({ date: today, p25: stat.p25 });
+    } else if (stat) {
+      stat.n = prices.length;
     }
     if (!stat) continue;
     const recent = hist.slice(-7).map((h) => h.p25).sort((a, b) => a - b);
     stat.hist = hist.slice(-14);
     stat.p25s = recent.length ? round(recent[Math.floor(recent.length / 2)], 3) : stat.p25;
+    const anchor = anchors?.[model]?.p25;
+    // A re-researched level (new anchor) restarts the index at 1 instead of carrying the old multiplier.
+    const anchorKey = `${anchors?.[model]?.usd ?? ''}|${anchor ?? ''}`;
+    const prevRatio = prevModels[model]?.anchorKey === anchorKey ? (prevModels[model]?.ratio ?? 1) : 1;
+    const target = anchor && hist.length >= MIN_DAYS ? Math.min(RATIO_CAP[1], Math.max(RATIO_CAP[0], stat.p25s / anchor)) : 1;
+    stat.ratio = round(Math.min(prevRatio * (1 + MAX_DAILY_MOVE), Math.max(prevRatio * (1 - MAX_DAILY_MOVE), target)), 4);
+    stat.anchorKey = anchorKey;
     models[model] = stat;
   }
   if (!Object.keys(models).length) throw new Error('no GPU offers');
-  return { ok: true, models, date: today, source: 'Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile)', url: 'https://vast.ai/pricing' };
+  return { ok: true, models, date: today, source: `Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥${MIN_OFFERS} offers)`, url: 'https://vast.ai/pricing' };
 }
 
 async function solarModule(): Promise<Feed> {
-  const html = await getText('https://www.infolink-group.com/spot-price/en/');
-  const m = html.match(/Mono TOPCon Module \(USD\)\s*<\/td>\s*<td[^>]*>\s*([\d.]+)\s*<\/td>\s*<td[^>]*>\s*([\d.]+)\s*<\/td>\s*<td[^>]*>\s*([\d.]+)/);
-  if (!m) throw new Error('TOPCon module row not found');
-  const avg = parseFloat(m[3]);
-  if (!(avg > 0.03 && avg < 0.6)) throw new Error('module price out of range');
+  const avg = parseInfolinkModule(await getText('https://www.infolink-group.com/spot-price/en/'));
   return { ok: true, usdPerW: avg, date: sydneyDate(), source: 'InfoLink spot price, TOPCon module (USD/W, average)', url: 'https://www.infolink-group.com/spot-price/en/' };
 }
 
-function abaresRow(html: string, label: RegExp) {
-  for (const tr of html.match(/<tr>[\s\S]*?<\/tr>/g) ?? []) {
-    const cells = [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((c) => c[1].replace(/<[^>]+>/g, '').trim());
-    if (cells.length >= 7 && label.test(cells[0])) {
-      const n = (s: string) => parseFloat(s.replace(/,/g, ''));
-      return { label: cells[0], date: cells[1], unit: cells[2], value: n(cells[3]), prev: n(cells[4]), yearAgo: n(cells[6]) };
-    }
-  }
-  return null;
-}
-function dayMonthToIso(dm: string): string {
-  const [d, mon] = dm.split('-');
-  const now = new Date();
-  const m = MON.indexOf(mon);
-  let y = now.getUTCFullYear();
-  if (m > now.getUTCMonth() + 1) y -= 1; // e.g. "28-Dec" read in January
-  return `${y}-${String(m + 1).padStart(2, '0')}-${d.padStart(2, '0')}`;
-}
 async function livestock(): Promise<Feed> {
   const html = await getText('https://www.agriculture.gov.au/abares/data/weekly-commodity-price-update');
   const eyci = abaresRow(html, /Eastern Young Cattle Indicator/i);
@@ -134,38 +119,21 @@ async function fpi(): Promise<Feed> {
   const link = page.match(/href="([^"]*food_price_indices_data\.csv[^"]*)"/i)?.[1]?.replace(/&amp;/g, '&')
     ?? 'https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv';
   const csv = await getText(link.startsWith('http') ? link : `https://www.fao.org${link}`);
-  const rows = csv.split(/\r?\n/).map((l) => l.split(',')).filter((c) => /^\d{4}-\d{2}$/.test(c[0]?.trim() ?? '') && parseFloat(c[1]) > 0);
-  if (!rows.length) throw new Error('no FPI rows');
-  const last = rows[rows.length - 1];
-  return { ok: true, value: parseFloat(last[1]), meat: parseFloat(last[2]), month: last[0].trim(), date: last[0].trim(), source: 'FAO Food Price Index (2014-2016 = 100)', url: 'https://www.fao.org/worldfoodsituation/foodpricesindex/en/' };
+  const { value, meat, month } = parseFaoCsv(csv);
+  return { ok: true, value, meat, month, date: month, source: 'FAO Food Price Index (2014-2016 = 100)', url: 'https://www.fao.org/worldfoodsituation/foodpricesindex/en/' };
 }
 
 async function humanoids(): Promise<Feed> {
-  const j = JSON.parse(await getText('https://shop.unitree.com/collections/humanoid-robot/products.json?limit=50')) as { products: { title: string; variants: { price: string }[] }[] };
-  const unitree = j.products
-    .filter((p) => /^Unitree (R1|G1|H1|H2)/i.test(p.title) && !/hand|arm/i.test(p.title))
-    .map((p) => ({ name: p.title.replace(/（.*）|\(.*\)/g, '').trim(), fromUsd: Math.min(...p.variants.map((v) => parseFloat(v.price)).filter((v) => v > 0)) }));
+  const unitree = parseUnitree(JSON.parse(await getText('https://shop.unitree.com/collections/humanoid-robot/products.json?limit=50')));
   if (!unitree.length) throw new Error('no Unitree humanoids');
   let neo: { priceUsd?: number; monthlyUsd?: number } | undefined;
-  try {
-    const t = plain(await getText('https://www.1x.tech/order'));
-    const own = t.match(/\$\s?([\d,]{5,})\s*Ownership/i), mo = t.match(/\$\s?([\d,]+)\s*\/\s*mo/i);
-    neo = { priceUsd: own ? parseFloat(own[1].replace(/,/g, '')) : undefined, monthlyUsd: mo ? parseFloat(mo[1].replace(/,/g, '')) : undefined };
-  } catch { /* optional */ }
+  try { neo = parseNeo(plain(await getText('https://www.1x.tech/order'))); } catch { /* optional */ }
   return { ok: true, unitree, neo, date: sydneyDate(), source: 'Unitree store and 1X order page (list prices, US$)', url: 'https://shop.unitree.com/collections/humanoid-robot' };
 }
 
 async function lgc(): Promise<Feed> {
-  const t = plain(await getText('https://www.ecovantage.com.au/energy-certificate-market-update/'));
-  const i = t.search(/The LGC spot market/i);
-  if (i < 0) throw new Error('LGC section not found');
-  const section = t.slice(i, i + 700);
-  const sentence = section.split(/(?<=\.)\s+(?=[A-Z])/).find((s) => /clos/i.test(s) && /\$\d/.test(s)) ?? section;
-  const prices = [...sentence.matchAll(/\$\s?(\d{1,3}\.\d{2})/g)].map((m) => parseFloat(m[1]));
-  const price = prices[prices.length - 1];
-  if (!(price > 0.5 && price < 100)) throw new Error('LGC price not parsed');
-  const wk = t.match(/Weekly Market Update \|\s*([^|]{6,40}?20\d\d)/);
-  return { ok: true, price, week: wk?.[1]?.trim(), date: sydneyDate(), source: 'Ecovantage weekly certificate market update (LGC spot)', url: 'https://www.ecovantage.com.au/energy-certificate-market-update/' };
+  const { price, week } = parseLgc(plain(await getText('https://www.ecovantage.com.au/energy-certificate-market-update/')));
+  return { ok: true, price, week, date: sydneyDate(), source: 'Ecovantage weekly certificate market update (LGC spot)', url: 'https://www.ecovantage.com.au/energy-certificate-market-update/' };
 }
 
 /** Rolls the hourly NSW1 price year forward to the last 365 complete days and returns summary statistics. */
@@ -236,7 +204,9 @@ async function main() {
   const prev = readJson<Record<string, Feed>>('market.json', {});
   const live: Record<string, unknown> = { updated: OFFLINE ? (prev.updated ?? null) : new Date().toISOString() };
   live.fx = await feed('FX', prev.fx, fx);
-  live.gpu = await feed('GPU marketplace', prev.gpu, () => gpu(prev.gpu));
+  const curatedAtStart = readJson<Record<string, any>>('market-curated.json', {});
+  const gpuAnchors = Object.fromEntries(Object.entries(curatedAtStart.gpu ?? {}).map(([k, v]: [string, any]) => [k, { usd: v.anchorUsdPerHr, p25: v.vastAnchorP25 }]));
+  live.gpu = await feed('GPU marketplace', prev.gpu, () => gpu(prev.gpu, gpuAnchors));
   live.solarModule = await feed('Solar modules', prev.solarModule, solarModule);
   live.livestock = await feed('Livestock (ABARES)', prev.livestock, livestock);
   live.fpi = await feed('FAO food prices', prev.fpi, fpi);
@@ -244,12 +214,13 @@ async function main() {
   live.lgc = await feed('LGCs', prev.lgc, lgc);
   live.nem = await feed('NEM prices', prev.nem, nem);
 
-  // First-time anchors: tie researched levels to today's indicator readings.
+  // Anchors: once a model has MIN_DAYS of readings, tie its researched level to the smoothed ask from then on.
   const curated = readJson<Record<string, any>>('market-curated.json', {});
   let curatedChanged = false;
-  const g = live.gpu as Feed & { models?: Record<string, { p25: number; p25s?: number }> };
+  const g = live.gpu as Feed & { models?: Record<string, GpuStat> };
   for (const [model, c] of Object.entries(curated.gpu ?? {}) as [string, any][]) {
-    if (!c.vastAnchorP25 && g?.ok && g.models?.[model]) { c.vastAnchorP25 = g.models[model].p25s ?? g.models[model].p25; curatedChanged = true; }
+    const m = g?.models?.[model];
+    if (!c.vastAnchorP25 && g?.ok && m && (m.hist?.length ?? 0) >= MIN_DAYS) { c.vastAnchorP25 = m.p25s ?? m.p25; curatedChanged = true; }
   }
   const f = live.fpi as Feed & { value?: number };
   if (curated.ag && !curated.ag.fpiAnchor && f?.ok && f.value) { curated.ag.fpiAnchor = f.value; curatedChanged = true; }

@@ -23,7 +23,7 @@ describe('market data', () => {
     const live: LiveMarket = {
       updated: '2026-10-26T00:00:00Z',
       fx: { ok: true, usdAud: 1.5, date: '2026-10-24' },
-      gpu: { ok: true, models: { B200: { p25: 40, median: 40, n: 20, p25s: 40 } } },
+      gpu: { ok: true, models: { B200: { p25: 40, median: 40, n: 20, p25s: 40, ratio: 2 } } },
       solarModule: { ok: true, usdPerW: cur.solar.moduleAnchorUsdPerW + 0.02 },
       livestock: { ok: true, eyci: { value: cur.livestock.eyciAnchor * 1.1 }, ntli: { value: cur.livestock.ntliAnchor * 0.9 } },
       fpi: { ok: true, value: 110, month: '2026-09' },
@@ -31,7 +31,7 @@ describe('market data', () => {
     };
     const { scenario: s } = applyMarket(baseScenario(), live, cur);
     expect(s.finance.usdAud).toBe(1.5);
-    expect(s.compute.catalog.B200.priceUsdPerGpuHr).toBeCloseTo(cur.gpu.B200.anchorUsdPerHr * 1.6, 2); // capped at ×1.6
+    expect(s.compute.catalog.B200.priceUsdPerGpuHr).toBeCloseTo(cur.gpu.B200.anchorUsdPerHr * 1.33, 2); // capped at ×1.33
     expect(s.pv.capexPerWdc.fixed).toBeCloseTo(cur.solar.capexPerWdc.fixed + 0.02 * 1.5, 3);
     expect(s.ag.cattleGmPerDse).toBeCloseTo(cur.livestock.cattleGmPerDse * 1.15, 1);
     expect(s.ag.sheepGmPerDse).toBeCloseTo(cur.livestock.sheepGmPerDse * 0.85, 1);
@@ -43,6 +43,15 @@ describe('market data', () => {
     const { scenario: s } = applyMarket(baseScenario(), { updated: null, gpu: { ok: false, models: {} } }, curated);
     expect(s.compute.catalog.H200.priceUsdPerGpuHr).toBe(curated.gpu.H200.anchorUsdPerHr);
     expect(s.pv.lgcPrice).toBe(curated.lgc.price);
+  });
+
+  it('ignores a GPU index computed against an older researched level', () => {
+    const cur: CuratedMarket = structuredClone(curated);
+    cur.gpu.H200.vastAnchorP25 = 4;
+    const stale: LiveMarket = { updated: null, gpu: { ok: true, models: { H200: { p25: 5, median: 5, n: 30, p25s: 5, ratio: 1.2, anchorKey: `3.1|4` } } } };
+    expect(applyMarket(baseScenario(), stale, cur).scenario.compute.catalog.H200.priceUsdPerGpuHr).toBe(cur.gpu.H200.anchorUsdPerHr);
+    const fresh: LiveMarket = { updated: null, gpu: { ok: true, models: { H200: { p25: 5, median: 5, n: 30, p25s: 5, ratio: 1.2, anchorKey: `${cur.gpu.H200.anchorUsdPerHr}|4` } } } };
+    expect(applyMarket(baseScenario(), fresh, cur).scenario.compute.catalog.H200.priceUsdPerGpuHr).toBeCloseTo(cur.gpu.H200.anchorUsdPerHr * 1.2, 2);
   });
 
   it('the daily recommended plan is a valid, feasible design', () => {

@@ -32,7 +32,7 @@ interface Feed { ok: boolean; date?: string; source?: string; url?: string; erro
 export interface LiveMarket {
   updated: string | null;
   fx?: Feed & { usdAud: number };
-  gpu?: Feed & { models: Partial<Record<GpuModel, { p25: number; median: number; n: number; p25s?: number }>> };
+  gpu?: Feed & { models: Partial<Record<GpuModel, { p25: number; median: number; n: number; p25s?: number; ratio?: number; anchorKey?: string }>> };
   nem?: Feed & { mean30: number; mean365: number; negShare365: number; through: string };
   lgc?: Feed & { price: number; week?: string };
   solarModule?: Feed & { usdPerW: number };
@@ -52,13 +52,17 @@ export interface Applied {
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 const ok = <T extends { ok: boolean }>(f: T | undefined): f is T => !!f && f.ok;
 
-/** Ratio of the marketplace's smoothed lower-quartile ask to its level when the anchor was researched. */
+/**
+ * Daily index of marketplace asks against their level when the researched price was set. The update script computes
+ * it (≥3 days of readings, capped, at most 5% a day); this just guards the range.
+ */
 export function gpuRatio(live: LiveMarket, cur: CuratedMarket, g: GpuModel): number {
   const m = live.gpu?.models?.[g];
-  const now = m?.p25s ?? m?.p25;
-  const anchor = cur.gpu[g]?.vastAnchorP25;
-  if (!ok(live.gpu) || !now || !anchor) return 1;
-  return clamp(now / anchor, 0.6, 1.6);
+  const c = cur.gpu[g];
+  if (!ok(live.gpu) || !m?.ratio || !c?.vastAnchorP25) return 1;
+  // The index only applies to the researched level it was computed against.
+  if (m.anchorKey !== undefined && m.anchorKey !== `${c.anchorUsdPerHr}|${c.vastAnchorP25}`) return 1;
+  return clamp(m.ratio, 0.75, 1.33);
 }
 
 /**

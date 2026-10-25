@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T22:14:16.987Z",
+  "updated": "2026-10-25T22:42:53.332Z",
   "fx": {
     "ok": true,
     "usdAud": 1.4273,
@@ -11,69 +11,65 @@
   "gpu": {
     "ok": true,
     "models": {
-      "B300": {
-        "p25": 8.5,
-        "median": 8.501,
-        "n": 7,
-        "hist": [
-          {
-            "date": "2026-10-26",
-            "p25": 8.5
-          }
-        ],
-        "p25s": 8.5
-      },
       "B200": {
-        "p25": 7.501,
+        "p25": 7.502,
         "median": 9.376,
-        "n": 14,
+        "n": 17,
         "hist": [
           {
             "date": "2026-10-26",
-            "p25": 7.501
+            "p25": 7.502
           }
         ],
-        "p25s": 7.501
+        "p25s": 7.502,
+        "ratio": 1,
+        "anchorKey": "5|"
       },
       "H200": {
-        "p25": 3.707,
-        "median": 4.002,
-        "n": 40,
+        "p25": 3.702,
+        "median": 4.001,
+        "n": 42,
         "hist": [
           {
             "date": "2026-10-26",
-            "p25": 3.707
+            "p25": 3.702
           }
         ],
-        "p25s": 3.707
+        "p25s": 3.702,
+        "ratio": 1,
+        "anchorKey": "3.8|"
       },
       "RTXPRO6000": {
-        "p25": 1.335,
+        "p25": 1.334,
         "median": 1.469,
-        "n": 97,
+        "n": 90,
         "hist": [
           {
             "date": "2026-10-26",
-            "p25": 1.335
+            "p25": 1.334
           }
         ],
-        "p25s": 1.335
+        "p25s": 1.334,
+        "ratio": 1,
+        "anchorKey": "1.9|"
       },
       "L40S": {
-        "p25": 0.535,
-        "median": 0.669,
-        "n": 23,
+        "p25": 0.601,
+        "median": 0.8,
+        "n": 26,
         "hist": [
           {
             "date": "2026-10-26",
-            "p25": 0.535
+            "p25": 0.601
           }
         ],
-        "p25s": 0.535
+        "p25s": 0.601,
+        "ratio": 1,
+        "anchorKey": "0.95|"
       }
     },
     "date": "2026-10-26",
-    "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile)",
+    "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
@@ -164,8 +160,8 @@
   },
   "lgc": {
     "ok": true,
-    "price": 7.85,
-    "week": "12 - 16 October 2026",
+    "price": 7.55,
+    "week": "19 - 23 October 2026",
     "date": "2026-10-26",
     "source": "Ecovantage weekly certificate market update (LGC spot)",
     "url": "https://www.ecovantage.com.au/energy-certificate-market-update/"

@@ -79,6 +79,23 @@ export function MarketsTab() {
   const gm = L.gpu?.models ?? {};
   const h2 = L.humanoids?.unitree?.find((u: { name: string }) => /^Unitree H2$/i.test(u.name))?.fromUsd;
   const cheapest = (L.humanoids?.unitree ?? []).reduce((m: number, u: { fromUsd: number }) => Math.min(m, u.fromUsd), Infinity);
+  const today = H[H.length - 1], before = H.length > 1 ? H[H.length - 2] : undefined;
+  const moves: string[] = [];
+  if (today && before) {
+    const pctMove = (a: number | null | undefined, b: number | null | undefined) => (a && b && Math.abs(a / b - 1) >= 0.005 ? `${a > b ? 'up' : 'down'} ${(Math.abs(a / b - 1) * 100).toFixed(1)}%` : null);
+    const add = (label: string, a: number | null | undefined, b: number | null | undefined) => { const m = pctMove(a, b); if (m) moves.push(`${label} ${m}`); };
+    if (today.recNpv !== null && before.recNpv !== null && today.recNpv !== before.recNpv) moves.push(`Recommended NPV ${aud(today.recNpv)} (${today.recNpv >= before.recNpv ? '+' : '−'}${aud(Math.abs(today.recNpv - before.recNpv))})`);
+    for (const g of Object.keys(today.gpuPrice ?? {}) as GpuModel[]) add(`${g} rent`, today.gpuPrice[g], before.gpuPrice?.[g]);
+    add('NSW 30-day power price', today.nem30, before.nem30);
+    add('LGC', today.lgc, before.lgc);
+    add('Module price', today.moduleUsdPerW, before.moduleUsdPerW);
+    add('Young cattle', today.eyci, before.eyci);
+    add('Trade lambs', today.ntli, before.ntli);
+    add('Food price index', today.fpi, before.fpi);
+    add('Humanoid price', today.robotUsd, before.robotUsd);
+    add('AUD/USD', today.usdAud ? 1 / today.usdAud : null, before.usdAud ? 1 / before.usdAud : null);
+    if ((today.recRobots ?? 0) !== (before.recRobots ?? 0)) moves.push(`Robots in the plan: ${before.recRobots ?? 0} → ${today.recRobots ?? 0}`);
+  }
   return (
     <div className="stack">
       <Card title="Market watch" subtitle={<>Live feeds refresh every morning (about 3 am Sydney time) and the recommended plan is re-optimised on the new numbers. Research on robots, build costs and server prices is refreshed daily as well. Last data update: <b>{updated}</b>.</>}
@@ -86,13 +103,23 @@ export function MarketsTab() {
         <div className="chips">{feeds.map(([name, f]) => <span key={name} className={`chip ${f?.ok && !f.stale ? 'on' : ''}`} title={f?.error ?? f?.source ?? ''}>{name}{f?.date ? ` · ${f.date}` : ''}</span>)}</div>
       </Card>
 
+      <Grid cols={2}>
+        <Card title={before ? `What changed since ${before.date}` : 'What changed'}>
+          {moves.length ? <ul className="facts">{moves.map((m) => <li key={m}>{m}</li>)}</ul> : <p className="muted">{before ? 'Nothing moved by more than half a percent.' : `History starts on ${today?.date ?? 'the first update'}; day-on-day changes appear from tomorrow.`}</p>}
+        </Card>
+        <Card title={`Today's research (${CURATED_MARKET.updated})`}>
+          <p>{CURATED_MARKET.note}</p>
+          {CURATED_MARKET.humanoids.outlook && <p className="small muted"><b>Robots:</b> {CURATED_MARKET.humanoids.outlook}</p>}
+        </Card>
+      </Grid>
+
       <Grid cols={4}>
         <Indicator label="AUD/USD" value={L.fx ? `US$${(1 / L.fx.usdAud).toFixed(4)}` : 'n/a'} sub={L.fx ? `A$${L.fx.usdAud.toFixed(4)} per US$ · ${L.fx.date}` : ''} series={col('usdAud').map((v) => (v ? +(1 / v).toFixed(4) : null))} color="#0f766e" status={L.fx} />
         <Indicator label="NSW wholesale power" value={L.nem ? `${aud(L.nem.mean30)}/MWh` : 'n/a'} sub={L.nem ? `30-day mean; 12-month ${aud(L.nem.mean365)}, ${pct(L.nem.negShare365, 1)} negative` : ''} series={col('nem30')} color={PALETTE.export} status={L.nem} />
         <Indicator label="LGC spot" value={L.lgc ? `A$${L.lgc.price.toFixed(2)}` : `A$${CURATED_MARKET.lgc.price}`} sub={L.lgc?.week ? `week of ${L.lgc.week}` : 'Ecovantage weekly update'} series={col('lgc')} color="#ca8a04" status={L.lgc} />
         <Indicator label="Solar modules (TOPCon)" value={L.solarModule ? `US$${L.solarModule.usdPerW.toFixed(3)}/W` : 'n/a'} sub="InfoLink spot average; moves PV build cost" series={col('moduleUsdPerW')} color={PALETTE.solar} status={L.solarModule} />
         {(['B300', 'B200', 'H200', 'RTXPRO6000'] as GpuModel[]).map((g) => (
-          <Indicator key={g} label={`${g} rental`} value={gm[g] ? `US$${(gm[g].p25s ?? gm[g].p25).toFixed(2)}/hr ask` : 'n/a'} sub={gm[g] ? `${gm[g].n} offers on Vast.ai; model uses US$${CURATED_MARKET.gpu[g].anchorUsdPerHr} × index` : ''} series={gpuCol(g, 'gpuAsk')} color={PALETTE.gpu} status={L.gpu} />
+          <Indicator key={g} label={`${g} rental`} value={gm[g] ? `US$${(gm[g].p25s ?? gm[g].p25).toFixed(2)}/hr ask` : 'n/a'} sub={gm[g] ? `${gm[g].n} offers on Vast.ai; model uses US$${CURATED_MARKET.gpu[g].anchorUsdPerHr} × index ${(gm[g].ratio ?? 1).toFixed(2)}` : ''} series={gpuCol(g, 'gpuAsk')} color={PALETTE.gpu} status={L.gpu} />
         ))}
         <Indicator label="Young cattle (EYCI)" value={L.livestock?.eyci ? `${num(L.livestock.eyci.value)}¢/kg` : 'n/a'} sub={L.livestock?.eyci ? `${chg(L.livestock.eyci.value, L.livestock.eyci.prev)} week · ${chg(L.livestock.eyci.value, L.livestock.eyci.yearAgo)} year · ${L.livestock.eyci.date}` : ''} series={col('eyci')} color={PALETTE.land} status={L.livestock} />
         <Indicator label="Trade lambs (NTLI)" value={L.livestock?.ntli ? `${num(L.livestock.ntli.value)}¢/kg` : 'n/a'} sub={L.livestock?.ntli ? `${chg(L.livestock.ntli.value, L.livestock.ntli.prev)} week · ${chg(L.livestock.ntli.value, L.livestock.ntli.yearAgo)} year` : ''} series={col('ntli')} color={PALETTE.farm} status={L.livestock} />
@@ -121,7 +148,7 @@ export function MarketsTab() {
       <Card title="Sources and method">
         <ul className="facts">
           <li><b>Researched levels, live direction.</b> Each price starts from a researched level (cited on the Assumptions tab) and moves with its live indicator relative to the day it was researched. Noisy feeds can shift the model but can't replace it.</li>
-          <li><b>GPUs.</b> Vast.ai's rentable on-demand offers; the lower quartile of the ask, smoothed as a 7-day median, indexes the researched rental price for each GPU (capped at ×0.6 to ×1.6).</li>
+          <li><b>GPUs.</b> Vast.ai's rentable on-demand offers. A day counts only with at least 8 offers; the lower quartile of the ask, smoothed as a 7-day median, indexes the researched rental price once there are 3 days of readings. The index is capped at ×0.75 to ×1.33 and moves at most 5% a day, so thin order books can't swing the plan.</li>
           <li><b>Farm.</b> ABARES weekly indicators (Eastern Young Cattle, National Trade Lamb) scale NSW DPI gross margins with an elasticity of {CURATED_MARKET.livestock.elasticity}; the FAO Food Price Index scales greenhouse and hay margins.</li>
           <li><b>Energy.</b> AEMO's NSW1 prices roll forward to the latest 365 days; InfoLink TOPCon module prices adjust solar build cost; Ecovantage's weekly LGC close sets certificate income to 2030; the RBA's daily rate converts US$ prices.</li>
           <li><b>Robots.</b> Unitree's store and 1X's order page give live list prices; capability readiness curves and the work-capable price are revised by the daily research update.</li>

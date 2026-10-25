@@ -11,7 +11,7 @@
         "url": "https://gpu.ai/gpu-price-index",
         "date": "Oct 2026"
       },
-      "vastAnchorP25": 8.5
+      "vastAnchorP25": null
     },
     "B200": {
       "anchorUsdPerHr": 5,
@@ -22,7 +22,7 @@
         "url": "https://www.bargo.ai/gpu/b200",
         "date": "25 Oct 2026"
       },
-      "vastAnchorP25": 7.501
+      "vastAnchorP25": null
     },
     "H200": {
       "anchorUsdPerHr": 3.8,
@@ -33,7 +33,7 @@
         "url": "https://www.mercatus-ai.com/blog/b200-server-price",
         "date": "2026"
       },
-      "vastAnchorP25": 3.697
+      "vastAnchorP25": null
     },
     "RTXPRO6000": {
       "anchorUsdPerHr": 1.9,
@@ -44,7 +44,7 @@
         "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
         "date": "Oct 2026"
       },
-      "vastAnchorP25": 1.334
+      "vastAnchorP25": null
     },
     "L40S": {
       "anchorUsdPerHr": 0.95,
@@ -55,7 +55,7 @@
         "url": "https://vast.ai/pricing",
         "date": "Oct 2026"
       },
-      "vastAnchorP25": 0.535
+      "vastAnchorP25": null
     }
   },
   "solar": {
