@@ -10,7 +10,7 @@ import { fpl } from '../../engine/model';
 
 const STREAM_COLORS: Record<string, string> = {
   'GPU compute': PALETTE.gpu, 'Interruptible compute': PALETTE.flex, 'Energy exports': PALETTE.export, 'Battery services': PALETTE.battery,
-  LGCs: '#facc15', 'Tenant energy': '#06b6d4', 'Rent & stays': PALETTE.homes, Agriculture: PALETTE.farm,
+  LGCs: '#facc15', 'Tenant energy': '#06b6d4', 'Rent & stays': PALETTE.homes, Agriculture: PALETTE.farm, 'Robot labour savings': '#7c3aed', 'Robot task data': '#c4b5fd',
 };
 
 export function Overview() {
@@ -74,6 +74,7 @@ export function Overview() {
             <li><span className="dot" style={{ background: PALETTE.gpu }} /><b>{gpus} GPUs</b> ({s.compute.servers} × {s.compute.model}), {num(r.energy.gpuHoursSold + r.energy.flexGpuHours)} GPU-hours/yr</li>
             <li><span className="dot" style={{ background: PALETTE.farm }} /><b>{num(r.ag.dse)} DSE</b> of livestock{s.ag.greenhouseM2 > 0 ? ` + ${num(s.ag.greenhouseM2)} m² greenhouse` : ''}{s.ag.hives ? ` + ${s.ag.hives} hives` : ''}</li>
             <li><span className="dot" style={{ background: PALETTE.homes }} /><b>{r.homes.dwellings} homes</b>: the homestead{s.homes.grannyFlat ? ', a granny flat' : ''}{s.homes.cabins ? ` and ${s.homes.cabins} farm-stay cabins` : ''}</li>
+            {s.robots.fleet > 0 && <li><span className="dot" style={{ background: '#7c3aed' }} /><b>{s.robots.fleet} humanoid robot{s.robots.fleet === 1 ? '' : 's'}</b> from {s.robots.deployYear} ({s.robots.acquisition === 'buy' ? 'bought' : 'leased'}) for cabin turnover, greenhouse work and data-centre hands</li>}
           </ul>
           <div className="hero-actions">
             <button type="button" className="btn primary" onClick={() => go('optimise')}>Optimise for maximum yield</button>

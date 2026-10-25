@@ -37,6 +37,7 @@ function relevant(p: ParamMeta, s: Scenario): boolean {
   if (p.path.startsWith('homes.granny') && !s.homes.grannyFlat) return false;
   if (p.path === 'ag.greenhouseGmPerM2' && s.ag.greenhouseM2 === 0) return false;
   if (p.path.startsWith('pv.capexPerWdc.')) return p.path.endsWith(s.pv.type) && s.pv.fillPct > 0;
+  if (p.path.startsWith('robots.') && s.robots.fleet === 0) return false;
   return true;
 }
 
@@ -64,6 +65,7 @@ export function contributions(s: Scenario, ctx: Context): { total: number; items
   if (s.ag.greenhouseM2 > 0) items.push(without('Heat-recovery greenhouse', 'greenhouse', (x) => { x.ag.greenhouseM2 = 0; }));
   if (s.ag.underArray !== 'none' || s.ag.openLand !== 'none') items.push(without('Grazing', 'grazing', (x) => { x.ag.underArray = 'none'; x.ag.openLand = 'none'; }));
   if (s.ag.hives > 0) items.push(without('Beehives', 'hives', (x) => { x.ag.hives = 0; }));
+  if (s.robots.fleet > 0) items.push(without('Humanoid robots', 'robots', (x) => { x.robots.fleet = 0; }));
   if (s.finance.includeLand) items.push(without('Land purchase & resale value', 'land', (x) => { x.finance.includeLand = false; }));
   return { total, items };
 }

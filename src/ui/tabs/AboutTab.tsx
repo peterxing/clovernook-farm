@@ -19,7 +19,9 @@ export function AboutTab() {
             <li><b>Dispatch.</b> Each hour, solar serves load, then storage, export (never at negative prices) or curtailment. The battery uses daily price thresholds with day-ahead foresight and keeps a reserve whenever the GPUs would otherwise exceed the import limit.</li>
             <li><b>Farm & homes.</b> Grazing scales with pasture under panels (falling with ground cover), stocking rates and NSW DPI gross margins; rentals use local rents and short-stay rates.</li>
             <li><b>Money.</b> Capex by component, escalating revenue and cost lines, GPU price decline and hardware refreshes, inverter and battery replacements, expected flood losses, and NPV/IRR/payback on pre-tax, unlevered cash flows (with optional debt).</li>
-            <li><b>Optimiser & risk.</b> Multi-start coordinate descent over 17 decisions; tornado sensitivity and Monte Carlo over every ranged assumption.</li>
+            <li><b>Optimiser & risk.</b> Multi-start coordinate descent over 20 decisions; tornado sensitivity and Monte Carlo over every ranged assumption.</li>
+            <li><b>Robots.</b> Each site task has a humanoid capability-readiness curve; the fleet's hours go first to labour the model already pays for. Robot prices follow a forecast decline anchored to live list prices.</li>
+            <li><b>Daily refresh.</b> Live feeds move researched price levels each morning and the recommended plan is re-optimised (see the Markets tab).</li>
           </ol>
         </Card>
       </Grid>

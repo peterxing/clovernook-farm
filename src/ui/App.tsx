@@ -17,6 +17,8 @@ import { RiskTab } from './tabs/RiskTab';
 import { ApprovalsTab } from './tabs/ApprovalsTab';
 import { AssumptionsTab } from './tabs/AssumptionsTab';
 import { AboutTab } from './tabs/AboutTab';
+import { RoboticsTab } from './tabs/RoboticsTab';
+import { MarketsTab } from './tabs/MarketsTab';
 
 const TABS = [
   { id: 'overview', label: 'Overview', C: Overview },
@@ -25,9 +27,11 @@ const TABS = [
   { id: 'compute', label: 'GPU compute', C: ComputeTab },
   { id: 'farm', label: 'Farm', C: FarmTab },
   { id: 'homes', label: 'Homes', C: HomesTab },
+  { id: 'robots', label: 'Robots', C: RoboticsTab },
   { id: 'finance', label: 'Finance', C: FinanceTab },
   { id: 'optimise', label: 'Optimise', C: OptimiseTab },
   { id: 'risk', label: 'Risk', C: RiskTab },
+  { id: 'markets', label: 'Markets', C: MarketsTab },
   { id: 'approvals', label: 'Approvals', C: ApprovalsTab },
   { id: 'assumptions', label: 'Assumptions', C: AssumptionsTab },
   { id: 'about', label: 'About', C: AboutTab },
@@ -124,6 +128,7 @@ export function App() {
         <span>{scenario.compute.servers > 0 ? <><b>{scenario.compute.servers * scenario.compute.catalog[scenario.compute.model].gpusPerServer}</b> {scenario.compute.model} GPUs</> : <b>No GPUs</b>}</span>
         <span><b>{Math.round(r.ag.dse)}</b> DSE stock</span>
         <span><b>{r.homes.dwellings}</b> homes</span>
+        {scenario.robots.fleet > 0 && <span><b>{scenario.robots.fleet}</b> humanoid{scenario.robots.fleet === 1 ? '' : 's'} from {scenario.robots.deployYear}</span>}
       </div>
       <nav className="tabs" aria-label="Sections">
         {TABS.map((t) => (

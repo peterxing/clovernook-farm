@@ -19,7 +19,20 @@ The site is Lot 43 DP825601: 13.2 ha (32.7 acres) of flat paddock on the Manning
 | **Homes** | Lease the homestead, add a granny flat and farm-stay cabins on flood-raised floors. |
 | **Money** | Capex by item, opex, escalation, debt, NPV/IRR/payback, LCOE, land purchase and resale. |
 
-Then it **optimises**: a multi-start coordinate-descent search over 17 decisions (array type, size, ground cover, tilt, DC/AC ratio, import/export limits, battery power and duration, GPU model and count, cabins, granny flat, farm enterprises, greenhouse, hives), testing several hundred full-year designs a second in a Web Worker, under a budget, grid limits, a minimum farmed share and flood-safety rules.
+Then it **optimises**: a multi-start coordinate-descent search over 20 decisions (array type, size, ground cover, tilt, DC/AC ratio, import/export limits, battery power and duration, GPU model and count, cabins, granny flat, farm enterprises, greenhouse, hives, and the humanoid robot fleet, its arrival year and buy-or-lease), testing several hundred full-year designs a second in a Web Worker, under a budget, grid limits, a minimum farmed share and flood-safety rules.
+
+## Updated every day
+
+The platform refreshes itself each morning, Sydney time:
+
+1. **Live feeds (GitHub Actions, ~3 am):** AEMO NSW1 prices roll forward to the latest 365 days; RBA exchange rate; Vast.ai GPU marketplace asks (B300, B200, H200, RTX PRO 6000, L40S); InfoLink TOPCon module prices; ABARES weekly cattle and lamb indicators; the FAO Food Price Index; Ecovantage's LGC close; Unitree and 1X humanoid list prices. `scripts/update-market.ts` writes `src/data/market.json`, adds a day to `market-history.json`, **re-runs the optimiser** and saves the new recommended plan to `recommended.json`, then the site redeploys.
+2. **Research (Scout automation, ~7:30 am):** reviews news and price trackers for what has no API (humanoid capability milestones and prices, solar and battery build costs, GPU server prices and reserved rates, livestock and farm margins) and updates `src/data/market-curated.json` with sources, then re-optimises and pushes.
+
+Each price starts from a researched level and moves with its live indicator relative to the day it was researched, so a noisy feed can shift the model but never replace it. The **Markets** tab shows every indicator, its trend and which assumptions it set today.
+
+## Humanoid robots
+
+The **Robots** tab models general-purpose humanoids doing the site's work: cabin turnover, greenhouse harvesting, data-centre remote hands, solar checks, livestock and maintenance. Each task has a capability-readiness forecast (an S-curve revised by the daily research) and the robot price follows a forecast decline anchored to live list prices (Unitree H2 at US$29,900 today). Robots only count as savings where they replace labour the model already pays for; owner time freed is shown separately. The optimiser decides whether, when and how many to bring in.
 
 ![Generated layout on NSW aerial imagery](docs/screenshots/site-layout.jpg)
 
@@ -31,15 +44,15 @@ Pulled from NSW government services when the data is built (`npm run data`):
 - **Zoning.** 91.8% RU1 Primary Production (40 ha minimum lot size), 8.2% R5 Large Lot Residential (the house block), Greater Taree LEP 2010.
 - **Overlays.** Acid sulfate soils class 2a/2b over ~95% of the lot, bush fire prone grassland (category 3), Koala Management Area, Coastal Environment Area, and Taree Airport 2.3 km south (glint and glare).
 
-## Headline result (default assumptions, October 2026)
+## Headline result
 
-The recommended plan comes straight from the optimiser with every element of the brief required: a 1.08 MWp high-clearance tracker array with cattle grazing underneath, a 1.5 MW / 1.5 MWh battery, 16 × B300 servers (128 GPUs) on a flood-raised platform, a 2,000 m² greenhouse heated by their waste heat, 40 hives, the leased homestead and six farm-stay cabins.
+The recommended plan is re-optimised every day with every element of the brief required. On 26 October 2026 it was a 1.54 MWp high-clearance tracker array with free-range hens underneath and cattle on the open paddock, a 2 MW / 2 MWh battery, 16 × B300 servers (128 GPUs) on a flood-raised platform, a 2,000 m² greenhouse heated by their waste heat, 40 hives, the leased homestead, six farm-stay cabins and one leased humanoid robot from 2028.
 
-- Capex about **A$22.7M** including the land; year-1 EBITDA about **A$6.5M**; NPV about break-even at 8% (IRR ~8.1%).
-- GPU compute carries most of the value and most of the risk: the Monte Carlo puts the chance of a positive NPV at about one in three, because GPU rental prices and their rate of decline dominate.
-- Exporting solar into the NSW midday market doesn't pay at elevated-structure costs, so the array is sized to feed the site. The no-GPU "Agrivoltaic farm & homes" plan comes out at roughly −A$3.4M NPV once the land purchase is included.
+- Capex about **A$24.4M** including the land; year-1 EBITDA about **A$6.7M**; NPV about **A$2.3M** at 8% (IRR ~9.3%).
+- GPU compute carries most of the value and most of the risk: rental prices and their rate of decline dominate the Monte Carlo.
+- Exporting solar into the NSW midday market doesn't pay at elevated-structure costs, so the array is sized to feed the site.
 
-Change any assumption and these numbers update instantly.
+Today's numbers are on the live site; change any assumption and they update instantly.
 
 ![Energy flows](docs/screenshots/energy.jpg)
 
@@ -51,16 +64,18 @@ npm run dev        # http://localhost:5173
 npm test           # engine, optimiser, risk and share-link tests
 npm run build      # static site in dist/
 npm run data       # rebuild src/data from the public sources (cached in scripts/.cache)
+npm run market     # refresh live market feeds and re-optimise the recommended plan (add -- --offline to skip fetching)
 ```
 
 Everything runs client-side; there is no server. Plans are shareable: the link encodes every change you make.
 
 ## How it's built
 
-- `src/engine/` – pure TypeScript model: `solar.ts` (sun position, transposition, bifacial, shading, flood curve), `layout.ts` (row layout in the real lot), `dispatch.ts` (hourly energy balance and battery), `landuse.ts` (farm and homes), `model.ts` (capex, cash flow, metrics), `optimize.ts`, `risk.ts` (tornado, Monte Carlo, NPV contributions), `params.ts` (every assumption with its source and range).
+- `src/engine/` – pure TypeScript model: `solar.ts` (sun position, transposition, bifacial, shading, flood curve), `layout.ts` (row layout in the real lot), `dispatch.ts` (hourly energy balance and battery), `landuse.ts` (farm and homes), `robots.ts` (humanoid readiness, prices and labour substitution), `market.ts` (applies live and researched market data), `model.ts` (capex, cash flow, metrics), `optimize.ts`, `risk.ts` (tornado, Monte Carlo, NPV contributions), `params.ts` (every assumption with its source and range).
 - `src/ui/` – React + ECharts + Leaflet front end, heavy jobs in a Web Worker.
-- `scripts/build-data.mjs` – fetches the cadastre, zoning, overlays, LiDAR, PVGIS weather and AEMO prices and writes compact JSON.
-- GitHub Actions runs the tests and deploys to GitHub Pages on every push to `main`.
+- `scripts/build-data.mjs` – fetches the cadastre, zoning, overlays, LiDAR and PVGIS weather and writes compact JSON.
+- `scripts/update-market.ts` – the daily market refresh and re-optimisation.
+- GitHub Actions runs the tests and deploys to GitHub Pages on every push to `main`, and refreshes the market data every day.
 
 ![Optimiser](docs/screenshots/optimiser.jpg)
 
@@ -70,8 +85,9 @@ Everything runs client-side; there is no server. Plans are shareable: the link e
 - Zoning, lot size, height, acid sulfate soils, bush fire prone land: NSW Department of Planning Planning Portal spatial data (CC BY 4.0).
 - Design flood levels: Manning River Floodplain Risk Management Study and Plan, BMT for MidCoast Council, 2020 (CC BY 4.0).
 - Weather: PVGIS 5.3 TMY (PVGIS-ERA5), © European Commission JRC; beam/diffuse split calibrated to NASA POWER climatology.
-- Electricity prices: AEMO aggregated price and demand data, NSW1, October 2025 to September 2026 (used with acknowledgement under AEMO's copyright permissions).
-- Costs and market prices: cited per assumption in the app (GPU rental indices, server quotes, battery and solar build costs, Essential Energy tariffs, LGC prices, NSW DPI gross margins, local rental data, RBA exchange rate).
+- Electricity prices: AEMO aggregated price and demand data, NSW1, rolling 365 days (used with acknowledgement under AEMO's copyright permissions).
+- Daily market feeds: Reserve Bank of Australia exchange rates; Vast.ai marketplace offers; InfoLink spot prices; ABARES weekly commodity price update; FAO Food Price Index; Ecovantage certificate market update; Unitree and 1X list prices.
+- Costs and market prices: cited per assumption in the app (GPU rental indices, server quotes, battery and solar build costs, Essential Energy tariffs, LGC prices, NSW DPI gross margins, local rental data, humanoid robot prices).
 
 ## Disclaimer
 

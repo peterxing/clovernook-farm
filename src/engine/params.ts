@@ -1,6 +1,6 @@
 import type { Scenario } from './types';
 
-export type ParamGroup = 'Solar' | 'Battery' | 'Grid & market' | 'Compute' | 'Agriculture' | 'Homes' | 'Site & flood' | 'Finance';
+export type ParamGroup = 'Solar' | 'Battery' | 'Grid & market' | 'Compute' | 'Agriculture' | 'Homes' | 'Robots' | 'Site & flood' | 'Finance';
 
 export interface Source {
   title: string;
@@ -18,6 +18,7 @@ export interface ParamMeta {
   step: number;
   low?: number; // plausible range used by the tornado and Monte Carlo
   high?: number;
+  relative?: boolean; // low/high are multipliers of the current value
   source?: Source;
   note?: string;
 }
@@ -105,6 +106,18 @@ export const PARAMS: ParamMeta[] = [
   { path: 'homes.raisedFloorPremium', label: 'Raising a new dwelling to the flood planning level', unit: 'A$/dwelling', group: 'Homes', min: 0, max: 200000, step: 1000 },
   { path: 'homes.cabinOpexPctRevenue', label: 'Cabin operating costs (cleaning, linen, management)', unit: '% of revenue', group: 'Homes', min: 0, max: 80, step: 1 },
   { path: 'homes.rentGrowthPctYr', label: 'Rent growth', unit: '%/yr', group: 'Homes', min: -2, max: 10, step: 0.1 },
+  // Robots
+  { path: 'robots.priceUsd', label: 'Work-capable humanoid price (reference year)', unit: 'US$/robot', group: 'Robots', min: 2000, max: 300000, step: 500, low: 0.75, high: 1.4, relative: true, note: 'Full-size humanoid with dexterous hands; tracks the Unitree H2 list price daily. Risk range is -25%/+40% of the base.' },
+  { path: 'robots.priceDeclinePctYr', label: 'Humanoid price decline', unit: '%/yr', group: 'Robots', min: 0, max: 50, step: 1, low: 8, high: 28 },
+  { path: 'robots.leaseUsdPerMonth', label: 'Robot-as-a-service fee (reference year)', unit: 'US$/month', group: 'Robots', min: 0, max: 10000, step: 50, note: '1X NEO is US$499/month for homes; work robots cost more.' },
+  { path: 'robots.readinessShiftYears', label: 'Robot capability timing vs forecast', unit: 'years', group: 'Robots', min: -5, max: 8, step: 0.5, low: -2, high: 3, note: 'Positive means slower progress than the readiness forecast.' },
+  { path: 'robots.productivity', label: 'Robot output vs a person (mature task)', unit: '×', group: 'Robots', min: 0.1, max: 2, step: 0.05, low: 0.5, high: 1 },
+  { path: 'robots.hoursPerDay', label: 'Working hours per robot per day', unit: 'h', group: 'Robots', min: 1, max: 24, step: 0.5 },
+  { path: 'robots.uptimePct', label: 'Robot uptime', unit: '%', group: 'Robots', min: 10, max: 100, step: 1 },
+  { path: 'robots.lifeYears', label: 'Robot service life', unit: 'years', group: 'Robots', min: 1, max: 15, step: 1 },
+  { path: 'robots.maintenancePctYr', label: 'Robot maintenance', unit: '% of price/yr', group: 'Robots', min: 0, max: 30, step: 0.5 },
+  { path: 'robots.softwarePerYr', label: 'Robot software & autonomy subscription', unit: 'A$/robot/yr', group: 'Robots', min: 0, max: 30000, step: 100 },
+  { path: 'robots.dataRevenuePerHour', label: 'Sale of task-demonstration data', unit: 'A$/robot-hour', group: 'Robots', min: 0, max: 100, step: 0.5, note: 'Optional: robot labs buy real-world farm and hospitality task data. Off by default.' },
   // Site & flood
   { path: 'site.dfeM', label: 'Defined flood event (2100 1% AEP)', unit: 'm AHD', group: 'Site & flood', min: 2, max: 8, step: 0.1, source: S.frms, note: 'Present-day 1% AEP 4.1 m; +10% flow with 2100 sea level rise 4.6 m (Dumaresq Island/Cundletown reporting point).' },
   { path: 'site.floodOffsetM', label: 'Site flood levels vs Cundletown reporting point', unit: 'm', group: 'Site & flood', min: -2, max: 2, step: 0.05, low: -0.3, high: 0.4, note: 'Confirm with MidCoast Council flood mapping for Lot 43 DP825601.' },
@@ -149,6 +162,6 @@ export function setParam(s: Scenario, path: string, value: number): void {
 export function rangeFor(p: ParamMeta, s: Scenario): [number, number] | null {
   if (p.low === undefined || p.high === undefined) return null;
   const base = getParam(s, p.path);
-  if (p.path.includes('$model')) return [base * p.low, base * p.high];
+  if (p.relative || p.path.includes('$model')) return [base * p.low, base * p.high];
   return [p.low, p.high];
 }

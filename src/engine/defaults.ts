@@ -1,4 +1,10 @@
 import type { GpuModel, GpuSpec, Scenario } from './types';
+import { applyMarket, type Applied, type CuratedMarket, type LiveMarket } from './market';
+import liveJson from '../data/market.json';
+import curatedJson from '../data/market-curated.json';
+
+export const LIVE_MARKET = liveJson as unknown as LiveMarket;
+export const CURATED_MARKET = curatedJson as unknown as CuratedMarket;
 
 /** Achievable rental prices sit between Oct-2026 spot and reserved market rates; capex is for complete 8-GPU servers. */
 export const GPU_CATALOG: Record<GpuModel, GpuSpec> = {
@@ -9,7 +15,8 @@ export const GPU_CATALOG: Record<GpuModel, GpuSpec> = {
   L40S: { label: 'NVIDIA L40S (8-GPU server)', gpusPerServer: 8, serverKw: 4.2, serverCapexUsd: 110000, priceUsdPerGpuHr: 0.95, memoryGb: 48 },
 };
 
-export function defaultScenario(): Scenario {
+/** Starting assumptions before market data is applied (also the fallback when feeds are missing). */
+export function baseScenario(): Scenario {
   return {
     name: 'Base case',
     pv: {
@@ -145,6 +152,32 @@ export function defaultScenario(): Scenario {
       landTaxPerYr: 0,
       farmBaseKw: 2,
     },
+    robots: {
+      fleet: 0,
+      deployYear: 2029,
+      acquisition: 'buy',
+      priceUsd: 42000,
+      priceRefYear: 2026,
+      priceDeclinePctYr: 18,
+      leaseUsdPerMonth: 1500,
+      lifeYears: 5,
+      maintenancePctYr: 6,
+      softwarePerYr: 2000,
+      hoursPerDay: 16,
+      uptimePct: 85,
+      productivity: 0.8,
+      kwhPerHour: 1,
+      readinessShiftYears: 0,
+      dataRevenuePerHour: 0,
+      tasks: {
+        cabinTurnover: { label: 'Cabin turnover (cleaning, linen, restocking)', midYear: 2029, steepness: 0.9, wage: 42, costed: true },
+        greenhouse: { label: 'Greenhouse harvesting, de-leafing & packing', midYear: 2029.5, steepness: 0.85, wage: 35, costed: true },
+        dcHands: { label: 'Data-centre remote hands (server swaps, cabling, checks)', midYear: 2030, steepness: 0.8, wage: 85, costed: true },
+        solarOps: { label: 'Solar inspection, cleaning & vegetation checks', midYear: 2028.5, steepness: 1, wage: 60, costed: true },
+        livestock: { label: 'Livestock checks, feeding & moving stock', midYear: 2032, steepness: 0.6, wage: 38, costed: false },
+        maintenance: { label: 'Fencing, repairs & grounds', midYear: 2031, steepness: 0.7, wage: 45, costed: false },
+      },
+    },
     finance: {
       years: 25,
       startYear: 2027,
@@ -162,4 +195,14 @@ export function defaultScenario(): Scenario {
       usdAud: 1.42,
     },
   };
+}
+
+/** Starting assumptions with the latest market data applied (feeds updated daily, research curated daily). */
+export function defaultScenario(): Scenario {
+  return applyMarket(baseScenario(), LIVE_MARKET, CURATED_MARKET).scenario;
+}
+
+/** Which assumptions the market data set, and why (for the Assumptions and Markets tabs). */
+export function marketApplied(): Applied[] {
+  return applyMarket(baseScenario(), LIVE_MARKET, CURATED_MARKET).applied;
 }

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-26",
+  "generatedAt": "2026-10-25T22:05:02.084Z",
+  "evaluations": 841,
+  "ms": 7934,
+  "options": {
+    "objective": "npv",
+    "capexBudget": 25000000,
+    "maxImportKw": 1500,
+    "maxExportKw": 5000,
+    "minAgSharePct": 70,
+    "maxCabins": 6,
+    "allowedPv": [
+      "fixed",
+      "tracker",
+      "vertical"
+    ],
+    "allowedGpu": [
+      "B300",
+      "B200",
+      "H200",
+      "RTXPRO6000",
+      "L40S"
+    ],
+    "maxServers": 64,
+    "floodSafe": true,
+    "minPvKwdc": 1000,
+    "minBessKwh": 1000,
+    "minServers": 2,
+    "minNewDwellings": 2,
+    "maxRobots": 6
+  },
+  "decisions": {
+    "pv.type": "tracker",
+    "pv.fillPct": 40,
+    "pv.gcr": 0.25,
+    "pv.tiltDeg": 20,
+    "pv.dcAcRatio": 1.1,
+    "pv.clearanceM": 3.7,
+    "grid.importLimitKw": 750,
+    "grid.exportLimitKw": 3000,
+    "bess.powerKw": 2000,
+    "bess.hours": 1,
+    "compute.model": "B300",
+    "compute.servers": 16,
+    "compute.padRaiseM": 3.2,
+    "homes.cabins": 6,
+    "homes.grannyFlat": false,
+    "ag.underArray": "poultry",
+    "ag.openLand": "cattle",
+    "ag.greenhouseM2": 2000,
+    "ag.hives": 40,
+    "robots.fleet": 1,
+    "robots.deployYear": 2028,
+    "robots.acquisition": "lease"
+  },
+  "metrics": {
+    "npv": 2338056,
+    "irr": 0.0933,
+    "capex": 24390545,
+    "ebitda1": 6689862,
+    "kwdc": 1538,
+    "bessKwh": 2000,
+    "gpus": 128,
+    "gpuModel": "B300",
+    "robots": 1,
+    "robotYear": 2028
+  }
+}

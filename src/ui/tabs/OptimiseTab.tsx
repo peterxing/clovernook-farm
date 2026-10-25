@@ -22,6 +22,7 @@ function describe(s: Scenario) {
     ['Compute', s.compute.servers > 0 ? `${s.compute.servers} × ${s.compute.model} (${g} GPUs)` : 'none'],
     ['Homes', `${s.homes.cabins} cabins${s.homes.grannyFlat ? ' + granny flat' : ''}`],
     ['Farm', `${USE_LABEL[s.ag.underArray]} under panels, ${USE_LABEL[s.ag.openLand].toLowerCase()} on open paddocks, ${num(s.ag.greenhouseM2)} m² greenhouse, ${s.ag.hives} hives`],
+    ['Robots', s.robots.fleet > 0 ? `${s.robots.fleet} humanoid${s.robots.fleet === 1 ? '' : 's'} from ${s.robots.deployYear} (${s.robots.acquisition === 'buy' ? 'bought' : 'leased'})` : 'none'],
   ];
 }
 
@@ -78,6 +79,7 @@ export function OptimiseTab() {
             <Field label="Largest export connection" value={o.maxExportKw} min={100} max={5000} step={100} unit="kW" onChange={(v) => setO({ ...o, maxExportKw: v })} />
             <Field label="Most farm-stay cabins" value={o.maxCabins} min={0} max={12} step={1} onChange={(v) => setO({ ...o, maxCabins: v })} />
             <Field label="Most GPU servers" value={o.maxServers} min={0} max={96} step={1} onChange={(v) => setO({ ...o, maxServers: v })} />
+            <Field label="Most humanoid robots" value={o.maxRobots} min={0} max={6} step={1} onChange={(v) => setO({ ...o, maxRobots: v })} hint="The optimiser also picks the year they arrive and whether to buy or lease." />
           </div>
           <div>
             <Toggle label="Keep every element of the brief" checked={keepAll} onChange={setKeepAll} hint="At least 1 MWp solar, 1 MWh battery, 2 GPU servers and 2 new homes." />
@@ -121,7 +123,7 @@ export function OptimiseTab() {
           </Grid>
           <Card title="Runner-up plans">
             <table className="table compact">
-              <thead><tr><th>#</th><th>Solar</th><th>Battery</th><th>Compute</th><th>Cabins</th><th className="num">Capex</th><th className="num">NPV</th><th className="num">IRR</th><th /></tr></thead>
+              <thead><tr><th>#</th><th>Solar</th><th>Battery</th><th>Compute</th><th>Cabins</th><th>Robots</th><th className="num">Capex</th><th className="num">NPV</th><th className="num">IRR</th><th /></tr></thead>
               <tbody>
                 {out.top.map((t, i) => (
                   <tr key={t.summary.key}>
@@ -130,6 +132,7 @@ export function OptimiseTab() {
                     <td>{(t.summary.bessKwh / 1000).toFixed(1)} MWh</td>
                     <td>{t.summary.servers} × {t.summary.gpu}</td>
                     <td>{t.summary.cabins}</td>
+                    <td>{t.summary.robots ? `${t.summary.robots} from ${t.summary.robotYear}` : 'none'}</td>
                     <td className="num">{aud(t.summary.capex)}</td>
                     <td className="num">{aud(t.summary.npv)}</td>
                     <td className="num">{pct(t.summary.irr)}</td>
@@ -141,7 +144,7 @@ export function OptimiseTab() {
           </Card>
         </>
       )}
-      {!out && <Note tone="info">The current plan was produced by this optimiser with the default settings (NPV objective, A$25M budget, 1.5 MW import cap, every element kept). Change the settings and run it to see how the best design shifts.</Note>}
+      {!out && <Note tone="info">The recommended plan is produced by this optimiser every morning on the latest market data (NPV objective, A$25M budget, 1.5 MW import cap, every element kept, up to 6 robots). Change the settings and run it to see how the best design shifts.</Note>}
     </div>
   );
 }

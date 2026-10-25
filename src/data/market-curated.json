@@ -1,0 +1,252 @@
+{
+  "updated": "2026-10-25",
+  "note": "Seeded 25 Oct 2026 from the sources listed. The daily research automation revises these values when new evidence appears; live feeds in market.json move them day to day.",
+  "gpu": {
+    "B300": {
+      "anchorUsdPerHr": 6.5,
+      "serverUsd": 600000,
+      "reference": "~US$9/GPU-hr on-demand at neoclouds; limited availability",
+      "source": {
+        "title": "GPU.ai price index",
+        "url": "https://gpu.ai/gpu-price-index",
+        "date": "Oct 2026"
+      },
+      "vastAnchorP25": 8.5
+    },
+    "B200": {
+      "anchorUsdPerHr": 5,
+      "serverUsd": 450000,
+      "reference": "US$7.99 on-demand, US$6.71 reserved, US$4.26 spot (39 providers)",
+      "source": {
+        "title": "Bargo B200 tracker",
+        "url": "https://www.bargo.ai/gpu/b200",
+        "date": "25 Oct 2026"
+      },
+      "vastAnchorP25": 7.501
+    },
+    "H200": {
+      "anchorUsdPerHr": 3.8,
+      "serverUsd": 370000,
+      "reference": "US$5.08-6.31 on-demand at independent clouds",
+      "source": {
+        "title": "Mercatus: 8x H200 server ~US$370k",
+        "url": "https://www.mercatus-ai.com/blog/b200-server-price",
+        "date": "2026"
+      },
+      "vastAnchorP25": 3.697
+    },
+    "RTXPRO6000": {
+      "anchorUsdPerHr": 1.9,
+      "serverUsd": 225000,
+      "reference": "US$1.60-2.19 mainstream, median ~US$2.19",
+      "source": {
+        "title": "GPU.ai price index; Gatewell card pricing ~US$20k",
+        "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
+        "date": "Oct 2026"
+      },
+      "vastAnchorP25": 1.334
+    },
+    "L40S": {
+      "anchorUsdPerHr": 0.95,
+      "serverUsd": 110000,
+      "reference": "Older Ada-generation card; prices drifting down",
+      "source": {
+        "title": "Vast.ai marketplace",
+        "url": "https://vast.ai/pricing",
+        "date": "Oct 2026"
+      },
+      "vastAnchorP25": 0.535
+    }
+  },
+  "solar": {
+    "capexPerWdc": {
+      "fixed": 1.3,
+      "tracker": 1.4,
+      "vertical": 1.5
+    },
+    "moduleAnchorUsdPerW": 0.114,
+    "source": {
+      "title": "Small (1-5 MW) Australian solar farms A$1.3-2.0/W; InfoLink TOPCon module spot US$0.114/W",
+      "url": "https://www.infolink-group.com/spot-price/en/",
+      "date": "25 Oct 2026"
+    }
+  },
+  "battery": {
+    "capexPerKwh": 340,
+    "capexPerKw": 220,
+    "source": {
+      "title": "Modo Energy: Australian battery build cost ~A$480/kWh for 1-hour systems in 2026",
+      "url": "https://modoenergy.com/research/en/australia-nem-capex-historical-and-forecast-build-cost-battery-energy-storage-2026",
+      "date": "2026"
+    }
+  },
+  "lgc": {
+    "price": 7.85,
+    "date": "2026-10-16",
+    "source": {
+      "title": "Ecovantage weekly market update",
+      "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
+      "date": "16 Oct 2026"
+    }
+  },
+  "livestock": {
+    "sheepGmPerDse": 53.7,
+    "cattleGmPerDse": 60,
+    "eyciAnchor": 939,
+    "ntliAnchor": 1150,
+    "elasticity": 1.5,
+    "source": {
+      "title": "NSW DPIRD 2025 gross margins; ABARES weekly indicators (14 Oct 2026: EYCI 939c, trade lamb 1,150c/kg cwt)",
+      "url": "https://www.agriculture.gov.au/abares/data/weekly-commodity-price-update",
+      "date": "14 Oct 2026"
+    }
+  },
+  "ag": {
+    "greenhouseGmPerM2": 50,
+    "hayGmPerHa": 500,
+    "fpiAnchor": 136,
+    "elasticity": 1.5,
+    "source": {
+      "title": "FAO Food Price Index (monthly)",
+      "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
+      "date": "Oct 2026"
+    }
+  },
+  "humanoids": {
+    "workCapablePriceUsd": 42000,
+    "priceRefYear": 2026,
+    "priceDeclinePctYr": 18,
+    "leaseUsdPerMonth": 1500,
+    "unitreeH2Anchor": 29900,
+    "basis": "A full-size Unitree H2 (US$29,900) with two Dex5-S dexterous hands (~US$6,350 each) is the cheapest work-capable configuration on open sale. 1X NEO sells at US$20,000 or US$499/month for homes but is teleoperation-assisted.",
+    "outlook": "Unitree's full-size humanoid price has fallen from about US$90,000 (H1) to US$29,900 (H2) as Chinese makers scaled; dexterous, reliable autonomy for unstructured outdoor work is still the bottleneck. Expect indoor, repetitive tasks (cleaning, harvesting in rows) first and livestock work last.",
+    "models": [
+      {
+        "name": "Unitree R1",
+        "maker": "Unitree",
+        "priceUsd": 4900,
+        "availability": "On sale",
+        "class": "Compact entry humanoid (1.2 m)",
+        "source": "https://shop.unitree.com/collections/humanoid-robot",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Unitree G1",
+        "maker": "Unitree",
+        "priceUsd": 13500,
+        "availability": "On sale",
+        "class": "Research humanoid (1.3 m); EDU versions to ~US$21.5k+",
+        "source": "https://shop.unitree.com/collections/humanoid-robot",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "1X NEO",
+        "maker": "1X",
+        "priceUsd": 20000,
+        "availability": "US deliveries from 2026; US$499/month subscription",
+        "class": "Home robot, teleoperation-assisted",
+        "source": "https://www.1x.tech/order",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Unitree H2",
+        "maker": "Unitree",
+        "priceUsd": 29900,
+        "availability": "On sale",
+        "class": "Full-size humanoid (1.8 m)",
+        "source": "https://shop.unitree.com/collections/humanoid-robot",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Unitree H1",
+        "maker": "Unitree",
+        "priceUsd": 90000,
+        "availability": "Quote",
+        "class": "Full-size research humanoid",
+        "source": "https://shop.unitree.com/collections/humanoid-robot",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Unitree H2 Plus",
+        "maker": "Unitree",
+        "priceUsd": 100000,
+        "availability": "On sale",
+        "class": "Full-size, higher-spec",
+        "source": "https://shop.unitree.com/collections/humanoid-robot",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Tesla Optimus V3",
+        "maker": "Tesla",
+        "priceUsd": null,
+        "availability": "Not for sale (internal deployment)",
+        "class": "Full-size general purpose",
+        "source": "https://www.tesla.com/AI",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Figure 03",
+        "maker": "Figure AI",
+        "priceUsd": null,
+        "availability": "Enterprise pilots only",
+        "class": "Full-size general purpose",
+        "source": "https://www.figure.ai/",
+        "date": "2026-10-25"
+      }
+    ],
+    "tasks": {
+      "cabinTurnover": {
+        "label": "Cabin turnover (cleaning, linen, restocking)",
+        "midYear": 2029,
+        "steepness": 0.9,
+        "wage": 42,
+        "costed": true
+      },
+      "greenhouse": {
+        "label": "Greenhouse harvesting, de-leafing & packing",
+        "midYear": 2029.5,
+        "steepness": 0.85,
+        "wage": 35,
+        "costed": true
+      },
+      "dcHands": {
+        "label": "Data-centre remote hands (server swaps, cabling, checks)",
+        "midYear": 2030,
+        "steepness": 0.8,
+        "wage": 85,
+        "costed": true
+      },
+      "solarOps": {
+        "label": "Solar inspection, cleaning & vegetation checks",
+        "midYear": 2028.5,
+        "steepness": 1,
+        "wage": 60,
+        "costed": true
+      },
+      "livestock": {
+        "label": "Livestock checks, feeding & moving stock",
+        "midYear": 2032,
+        "steepness": 0.6,
+        "wage": 38,
+        "costed": false
+      },
+      "maintenance": {
+        "label": "Fencing, repairs & grounds",
+        "midYear": 2031,
+        "steepness": 0.7,
+        "wage": 45,
+        "costed": false
+      }
+    },
+    "sources": [
+      {
+        "title": "Unitree humanoid store (live prices)",
+        "url": "https://shop.unitree.com/collections/humanoid-robot"
+      },
+      {
+        "title": "1X NEO order page",
+        "url": "https://www.1x.tech/order"
+      }
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "updated": "2026-10-25T22:04:37.428Z",
+  "fx": {
+    "ok": true,
+    "usdAud": 1.4273,
+    "audUsd": 0.7006,
+    "date": "2026-10-23",
+    "source": "RBA F11.1 (A$1 = US$)",
+    "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates"
+  },
+  "gpu": {
+    "ok": true,
+    "models": {
+      "B300": {
+        "p25": 8.5,
+        "median": 8.501,
+        "n": 7,
+        "hist": [
+          {
+            "date": "2026-10-26",
+            "p25": 8.5
+          }
+        ],
+        "p25s": 8.5
+      },
+      "B200": {
+        "p25": 7.501,
+        "median": 9.376,
+        "n": 15,
+        "hist": [
+          {
+            "date": "2026-10-26",
+            "p25": 7.501
+          }
+        ],
+        "p25s": 7.501
+      },
+      "H200": {
+        "p25": 3.697,
+        "median": 4.001,
+        "n": 36,
+        "hist": [
+          {
+            "date": "2026-10-26",
+            "p25": 3.697
+          }
+        ],
+        "p25s": 3.697
+      },
+      "RTXPRO6000": {
+        "p25": 1.334,
+        "median": 1.468,
+        "n": 91,
+        "hist": [
+          {
+            "date": "2026-10-26",
+            "p25": 1.334
+          }
+        ],
+        "p25s": 1.334
+      },
+      "L40S": {
+        "p25": 0.535,
+        "median": 0.669,
+        "n": 25,
+        "hist": [
+          {
+            "date": "2026-10-26",
+            "p25": 0.535
+          }
+        ],
+        "p25s": 0.535
+      }
+    },
+    "date": "2026-10-26",
+    "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile)",
+    "url": "https://vast.ai/pricing"
+  },
+  "solarModule": {
+    "ok": true,
+    "usdPerW": 0.114,
+    "date": "2026-10-26",
+    "source": "InfoLink spot price, TOPCon module (USD/W, average)",
+    "url": "https://www.infolink-group.com/spot-price/en/"
+  },
+  "livestock": {
+    "ok": true,
+    "eyci": {
+      "value": 939,
+      "prev": 918,
+      "yearAgo": 846,
+      "date": "2026-10-14",
+      "unit": "Ac/kg cwt"
+    },
+    "ntli": {
+      "value": 1150,
+      "prev": 1127,
+      "yearAgo": 1108,
+      "date": "2026-10-14",
+      "unit": "Ac/kg cwt"
+    },
+    "mutton": {
+      "value": 832,
+      "prev": 823,
+      "yearAgo": 739,
+      "date": "2026-10-14",
+      "unit": "Ac/kg cwt"
+    },
+    "wheat": {
+      "value": 321,
+      "prev": 332,
+      "yearAgo": 231,
+      "date": "2026-10-14",
+      "unit": "US$/t"
+    },
+    "date": "2026-10-14",
+    "source": "ABARES weekly commodity price update",
+    "url": "https://www.agriculture.gov.au/abares/data/weekly-commodity-price-update"
+  },
+  "fpi": {
+    "ok": true,
+    "value": 136,
+    "meat": 127.9,
+    "month": "2026-09",
+    "date": "2026-09",
+    "source": "FAO Food Price Index (2014-2016 = 100)",
+    "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/"
+  },
+  "humanoids": {
+    "ok": true,
+    "unitree": [
+      {
+        "name": "Unitree R1",
+        "fromUsd": 4900
+      },
+      {
+        "name": "Unitree G1",
+        "fromUsd": 13500
+      },
+      {
+        "name": "Unitree H2 Plus",
+        "fromUsd": 100000
+      },
+      {
+        "name": "Unitree R1-D",
+        "fromUsd": 4290
+      },
+      {
+        "name": "Unitree H2",
+        "fromUsd": 29900
+      },
+      {
+        "name": "Unitree H1",
+        "fromUsd": 90000
+      }
+    ],
+    "neo": {
+      "priceUsd": 20000,
+      "monthlyUsd": 499
+    },
+    "date": "2026-10-26",
+    "source": "Unitree store and 1X order page (list prices, US$)",
+    "url": "https://shop.unitree.com/collections/humanoid-robot"
+  },
+  "lgc": {
+    "ok": true,
+    "price": 7.85,
+    "week": "12 - 16 October 2026",
+    "date": "2026-10-26",
+    "source": "Ecovantage weekly certificate market update (LGC spot)",
+    "url": "https://www.ecovantage.com.au/energy-certificate-market-update/"
+  },
+  "nem": {
+    "ok": true,
+    "mean30": 124.49,
+    "mean365": 79.03,
+    "negShare365": 0.0762,
+    "through": "2026-10-25",
+    "date": "2026-10-25",
+    "source": "AEMO NSW1 5-minute prices",
+    "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
+  }
+}

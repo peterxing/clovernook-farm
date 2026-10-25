@@ -4,8 +4,8 @@ import { Card, Field, Grid, Kpi, Toggle } from '../components';
 import { EChart, PALETTE } from '../EChart';
 import { aud, audFull, pct, years } from '../format';
 
-const GROUP_COLORS: Record<string, string> = { Solar: PALETTE.solar, Battery: PALETTE.battery, Grid: PALETTE.grid, Compute: PALETTE.gpu, Agriculture: PALETTE.farm, Homes: PALETTE.homes, Site: PALETTE.site, Land: PALETTE.land };
-const REV_COLORS: Record<string, string> = { 'GPU compute': PALETTE.gpu, 'Interruptible compute': PALETTE.flex, 'Energy exports': PALETTE.export, 'Battery services': PALETTE.battery, LGCs: '#facc15', 'Tenant energy': '#06b6d4', 'Rent & stays': PALETTE.homes, Agriculture: PALETTE.farm };
+const GROUP_COLORS: Record<string, string> = { Solar: PALETTE.solar, Battery: PALETTE.battery, Grid: PALETTE.grid, Compute: PALETTE.gpu, Agriculture: PALETTE.farm, Homes: PALETTE.homes, Robots: '#7c3aed', Site: PALETTE.site, Land: PALETTE.land };
+const REV_COLORS: Record<string, string> = { 'GPU compute': PALETTE.gpu, 'Interruptible compute': PALETTE.flex, 'Energy exports': PALETTE.export, 'Battery services': PALETTE.battery, LGCs: '#facc15', 'Tenant energy': '#06b6d4', 'Rent & stays': PALETTE.homes, Agriculture: PALETTE.farm, 'Robot labour savings': '#7c3aed', 'Robot task data': '#c4b5fd' };
 
 export function FinanceTab() {
   const { scenario: s, result: r, update } = useApp();

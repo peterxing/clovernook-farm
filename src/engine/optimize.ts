@@ -16,6 +16,7 @@ export interface OptimizeOptions {
   minBessKwh: number;
   minServers: number;
   minNewDwellings: number;
+  maxRobots: number;
 }
 
 export const defaultOptimizeOptions = (): OptimizeOptions => ({
@@ -33,6 +34,7 @@ export const defaultOptimizeOptions = (): OptimizeOptions => ({
   minBessKwh: 1000,
   minServers: 2,
   minNewDwellings: 2,
+  maxRobots: 6,
 });
 
 export interface Evaluated {
@@ -49,6 +51,8 @@ export interface Evaluated {
   gpu: GpuModel;
   pvType: PvType;
   cabins: number;
+  robots: number;
+  robotYear: number;
 }
 
 export interface OptimizeProgress {
@@ -98,6 +102,9 @@ function variables(o: OptimizeOptions): Variable[] {
     { name: 'ag.openLand', values: () => ['sheep', 'cattle', 'hay'], get: (s) => s.ag.openLand, set: (s, v) => { s.ag.openLand = v as OpenLandUse; } },
     { name: 'ag.greenhouseM2', values: () => [0, 250, 500, 1000, 2000], get: (s) => s.ag.greenhouseM2, set: (s, v) => { s.ag.greenhouseM2 = v as number; } },
     { name: 'ag.hives', values: () => [0, 10, 20, 40], get: (s) => s.ag.hives, set: (s, v) => { s.ag.hives = v as number; } },
+    { name: 'robots.fleet', values: () => [0, 1, 2, 3, 4, 6].filter((v) => v <= o.maxRobots), get: (s) => s.robots.fleet, set: (s, v) => { s.robots.fleet = v as number; } },
+    { name: 'robots.deployYear', values: (s) => (s.robots.fleet > 0 ? [2027, 2028, 2029, 2030, 2031, 2033] : [s.robots.deployYear]), get: (s) => s.robots.deployYear, set: (s, v) => { s.robots.deployYear = v as number; } },
+    { name: 'robots.acquisition', values: (s) => (s.robots.fleet > 0 ? ['buy', 'lease'] : [s.robots.acquisition]), get: (s) => s.robots.acquisition, set: (s, v) => { s.robots.acquisition = v as 'buy' | 'lease'; } },
   ];
 }
 
@@ -164,7 +171,7 @@ export function optimize(base: Scenario, ctx: Context, o: OptimizeOptions, onPro
     const feasible = violation <= 1e-9;
     const e: Evaluated = {
       key, score: scoreOf(r, o.objective), feasible, violation, npv: r.npv, irr: r.irr, capex: r.capexTotal, kwdc: r.layout.kwdc,
-      bessKwh: r.bessKwh, servers: s.compute.servers, gpu: s.compute.model, pvType: s.pv.type, cabins: s.homes.cabins,
+      bessKwh: r.bessKwh, servers: s.compute.servers, gpu: s.compute.model, pvType: s.pv.type, cabins: s.homes.cabins, robots: s.robots.fleet, robotYear: s.robots.deployYear,
     };
     cache.set(key, e);
     if (feasible && (!bestGlobal || e.score > bestGlobal.e.score)) bestGlobal = { s: structuredClone(s), e };

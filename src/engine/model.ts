@@ -5,6 +5,7 @@ import { layoutArray, toLocal, type LocalFrame, type Ring } from './layout';
 import { dispatch, monthOfHour } from './dispatch';
 import { agriculture, homes, homesKwhPerYear, otherLoad } from './landuse';
 import { annuity, irr, npv, payback } from './finance';
+import { robotLeaseUsdPerMonth, robotPriceUsd, robotYears, taskHours } from './robots';
 
 export interface Context {
   site: SiteData;
@@ -145,6 +146,17 @@ export function evaluate(s: Scenario, ctx: Context, opts: { series?: boolean } =
   const hm = homes(s);
   const tenantKwh = homesKwhPerYear(s) - (s.homes.houseMode === 'owner' ? s.homes.dwellingKwhPerDay * 365 : 0);
 
+  // ---- Humanoid robots ----
+  const N = Math.max(1, Math.round(fin.years));
+  const rb = s.robots;
+  const fleet = Math.max(0, Math.round(rb.fleet));
+  const hoursByTask = taskHours(s, { guestNights: hm.guestNights, greenhouseM2: s.ag.greenhouseM2, kwdc, dse: ag.dse, dwellings: hm.dwellings });
+  const robo = robotYears({ ...s, robots: { ...rb, fleet } }, hoursByTask, fin.startYear, N, fin.inflationPct);
+  const robotBuyAud = (year: number) => fleet * robotPriceUsd(s, year) * usd * 1.1; // incl. freight and import costs
+  const dY = Math.max(rb.deployYear, fin.startYear); // robots arriving in the first year are bought up front
+  const deployIdx = dY - fin.startYear + 1; // project year the robots arrive (1-based)
+  robo.capexFirst = fleet > 0 && rb.acquisition === 'buy' ? robotBuyAud(dY) : 0;
+
   // ---- Capex ----
   const capex: CapexLine[] = [];
   const add = (key: string, label: string, group: CapexLine['group'], amount: number) => { if (amount > 0.5) capex.push({ key, label, group, amount }); };
@@ -170,9 +182,10 @@ export function evaluate(s: Scenario, ctx: Context, opts: { series?: boolean } =
   add('hives', `Beehives (${s.ag.hives})`, 'Agriculture', s.ag.hives * 600);
   add('poultry', 'Mobile hen houses', 'Agriculture', ag.hens * 45);
   add('homes', `New dwellings (${(s.homes.grannyFlat ? 1 : 0) + s.homes.cabins}) incl. raised floors & services`, 'Homes', hm.capex);
+  if (deployIdx === 1 && rb.acquisition === 'buy') add('robots', `${fleet} humanoid robot${fleet === 1 ? '' : 's'} (bought at the start)`, 'Robots', robo.capexFirst);
   const devCost = fin.developmentFixed + (servers > 0 ? 50000 : 0) + (bessKwh > 0 ? 30000 : 0);
   add('dev', 'Approvals & studies (DA, flood, ASS, glare, bushfire, ecology, acoustic)', 'Site', devCost);
-  const subtotal = capex.filter((l) => l.key !== 'servers').reduce((a, l) => a + l.amount, 0);
+  const subtotal = capex.filter((l) => l.key !== 'servers' && l.key !== 'robots').reduce((a, l) => a + l.amount, 0);
   add('contingency', `Contingency (${fin.contingencyPct}% of construction; excludes servers)`, 'Site', (subtotal * fin.contingencyPct) / 100);
   if (fin.includeLand) add('land', 'Land purchase (incl. ~4.5% stamp duty & costs)', 'Land', fin.landPrice * 1.045);
   const capexTotal = capex.reduce((a, l) => a + l.amount, 0);
@@ -199,7 +212,6 @@ export function evaluate(s: Scenario, ctx: Context, opts: { series?: boolean } =
 
   // ---- Annual cash flows ----
   const years: YearRow[] = [];
-  const N = Math.max(1, Math.round(fin.years));
   const infl = fin.inflationPct / 100, esc = s.grid.priceEscalationPctYr / 100, rentG = s.homes.rentGrowthPctYr / 100;
   const fee = c.marketplaceFeePct / 100;
   const avgImport = E.importMwh > 0 ? (E.importCost / E.importMwh) : (ctx.prices.reduce((a, b) => a + b, 0) / HOURS) * s.grid.priceScale + s.grid.networkAdderPerMwh;
@@ -226,6 +238,8 @@ export function evaluate(s: Scenario, ctx: Context, opts: { series?: boolean } =
       'Tenant energy': (tenantKwh * s.homes.tenantEnergyPricePerKwh) * fi,
       'Rent & stays': hm.revenue * fr,
       Agriculture: ag.grossMargin * fi,
+      'Robot labour savings': robo.years[y - 1]?.cashSavings ?? 0,
+      'Robot task data': (robo.years[y - 1]?.robotHoursWorked ?? 0) * rb.dataRevenuePerHour * fi,
     };
     const lostSelf = selfUsedMwh * (1 - degr);
     const opex: Record<string, number> = {
@@ -238,11 +252,27 @@ export function evaluate(s: Scenario, ctx: Context, opts: { series?: boolean } =
       'Homes operating costs': hm.opex * fr,
       'Rates & land tax': (s.site.councilRatesPerYr + s.site.landTaxPerYr) * fi,
       'Flood risk provision': floodProvision * fi,
+      'Robot fleet': 0,
     };
+    if (fleet > 0 && calYear >= dY) {
+      const ry = robo.years[y - 1];
+      const energy = (ry?.robotHoursWorked ?? 0) * rb.kwhPerHour * 0.12;
+      const life = Math.max(1, Math.round(rb.lifeYears));
+      const lastBuyYear = dY + Math.floor((calYear - dY) / life) * life;
+      const ownership = rb.acquisition === 'buy'
+        ? robotBuyAud(lastBuyYear) * ((rb.maintenancePctYr + 1) / 100) // maintenance + insurance
+        : fleet * robotLeaseUsdPerMonth(s, calYear) * 12 * usd;
+      opex['Robot fleet'] = ownership + (fleet * rb.softwarePerYr + energy) * fi;
+    }
     let capexY = 0;
     if (y === Math.round(s.pv.inverterReplaceYear) && kwac > 0) capexY += kwac * 1000 * s.pv.inverterReplacePerWac * fi;
     if (y === Math.round(s.bess.augmentYear) && bessKwh > 0) capexY += bessCapex * (s.bess.augmentPctOfCapex / 100);
     if (servers > 0 && y % Math.max(1, Math.round(c.refreshYears)) === 0 && y < N) capexY += serverCapex;
+    if (fleet > 0 && rb.acquisition === 'buy' && calYear >= dY) {
+      const since = calYear - dY;
+      const boughtUpFront = deployIdx === 1 && since === 0;
+      if (since % Math.max(1, Math.round(rb.lifeYears)) === 0 && !boughtUpFront && y < N) capexY += robotBuyAud(calYear);
+    }
     const rev = Object.values(revenue).reduce((a, b) => a + b, 0);
     const ox = Object.values(opex).reduce((a, b) => a + b, 0);
     const ebitda = rev - ox;
@@ -279,7 +309,7 @@ export function evaluate(s: Scenario, ctx: Context, opts: { series?: boolean } =
   if (E.pvAcMwh > 0 && E.curtailedMwh / E.pvAcMwh > 0.1) warnings.push(`${Math.round((100 * E.curtailedMwh) / E.pvAcMwh)}% of solar is curtailed: add battery, flexible compute or export capacity.`);
 
   return {
-    scenario: s, layout, pvKwac: kwac, bessKwh, itKw, energy: E, series: disp.series, ag, homes: hm, capex, capexTotal, years,
+    scenario: s, layout, pvKwac: kwac, bessKwh, itKw, energy: E, series: disp.series, ag, homes: hm, robots: robo, capex, capexTotal, years,
     npv: npvV, irr: irrV, equityIrr: eqIrr, paybackYears: pb, lcoe: lcoeDen > 0 ? lcoeNum / lcoeDen : 0,
     year1: { revenue: y1Rev, opex: y1Opex, ebitda: y1Rev - y1Opex, revenueByStream: y1.revenue },
     ebitdaPerHa: (y1Rev - y1Opex) / site.areaHa,

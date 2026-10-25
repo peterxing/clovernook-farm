@@ -79,6 +79,8 @@ button { font: inherit; }
 .kpi-homes { border-left-color: var(--homes); }
 .kpi-battery { border-left-color: var(--battery); }
 .card .grid .kpi { box-shadow: none; background: #f8faf6; }
+.kpi.indicator { padding-bottom: 6px; }
+.kpi.indicator .kpi-value { font-size: 21px; }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 18px; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.8px; font-size: 12px; color: var(--brand-2); font-weight: 700; margin: 0 0 6px; }

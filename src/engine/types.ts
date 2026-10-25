@@ -4,6 +4,15 @@ export type UnderArrayUse = 'sheep' | 'cattle' | 'poultry' | 'none';
 export type OpenLandUse = 'sheep' | 'cattle' | 'hay' | 'none';
 export type HouseMode = 'owner' | 'rent';
 export type Objective = 'npv' | 'irr' | 'ebitdaPerHa' | 'profitIndex';
+export type RobotTask = 'cabinTurnover' | 'greenhouse' | 'dcHands' | 'solarOps' | 'livestock' | 'maintenance';
+
+export interface RobotTaskDef {
+  label: string;
+  midYear: number; // year a humanoid can do half of this task's human hours
+  steepness: number; // logistic slope per year
+  wage: number; // A$/h for the human labour it replaces
+  costed: boolean; // true when that labour is already a cash cost in the model (otherwise it frees owner time)
+}
 
 export interface Scenario {
   name: string;
@@ -140,6 +149,25 @@ export interface Scenario {
     landTaxPerYr: number;
     farmBaseKw: number;
   };
+  robots: {
+    fleet: number; // general-purpose humanoid robots
+    deployYear: number; // first calendar year they work on site
+    acquisition: 'buy' | 'lease';
+    priceUsd: number; // work-capable humanoid (with hands and on-board compute) at priceRefYear
+    priceRefYear: number;
+    priceDeclinePctYr: number;
+    leaseUsdPerMonth: number; // robot-as-a-service alternative at priceRefYear
+    lifeYears: number;
+    maintenancePctYr: number;
+    softwarePerYr: number; // A$ per robot
+    hoursPerDay: number;
+    uptimePct: number;
+    productivity: number; // human-equivalent output per robot hour once a task is fully ready
+    kwhPerHour: number;
+    readinessShiftYears: number; // + = slower progress than the forecast
+    dataRevenuePerHour: number; // optional: A$ per robot-hour for selling task demonstration data
+    tasks: Record<RobotTask, RobotTaskDef>;
+  };
   finance: {
     years: number;
     startYear: number;
@@ -251,7 +279,7 @@ export interface EnergyTotals {
 export interface CapexLine {
   key: string;
   label: string;
-  group: 'Solar' | 'Battery' | 'Grid' | 'Compute' | 'Agriculture' | 'Homes' | 'Site' | 'Land';
+  group: 'Solar' | 'Battery' | 'Grid' | 'Compute' | 'Agriculture' | 'Homes' | 'Robots' | 'Site' | 'Land';
   amount: number;
 }
 
@@ -300,6 +328,24 @@ export interface HomesResult {
   guestNights: number;
 }
 
+export interface RobotYear {
+  calYear: number;
+  readiness: Record<RobotTask, number>;
+  automatedHours: Record<RobotTask, number>; // human-equivalent hours done by robots
+  humanHours: Record<RobotTask, number>; // baseline human hours for the task
+  cashSavings: number; // A$ (nominal)
+  ownerHoursFreed: number;
+  robotHoursWorked: number;
+  priceUsd: number; // price per robot that year
+}
+
+export interface RobotResult {
+  taskHours: Record<RobotTask, number>;
+  years: RobotYear[];
+  capexFirst: number;
+  steadySavings: number; // savings in the first year all tasks are near maturity (or the last year)
+}
+
 export interface Result {
   scenario: Scenario;
   layout: Layout;
@@ -310,6 +356,7 @@ export interface Result {
   series: HourlySeries | null;
   ag: AgResult;
   homes: HomesResult;
+  robots: RobotResult;
   capex: CapexLine[];
   capexTotal: number;
   years: YearRow[];

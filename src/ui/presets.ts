@@ -1,5 +1,6 @@
 import type { Scenario } from '../engine/types';
 import { defaultScenario } from '../engine/defaults';
+import recommendedJson from '../data/recommended.json';
 
 export interface Preset {
   id: string;
@@ -8,10 +9,29 @@ export interface Preset {
   build: () => Scenario;
 }
 
-/** Output of the optimiser with every element of the brief required (see Optimise tab), rounded for robustness. */
+interface RecommendedFile {
+  date: string | null;
+  decisions?: Record<string, number | string | boolean>;
+  metrics?: { npv: number; irr: number | null; capex: number };
+}
+export const RECOMMENDED = recommendedJson as unknown as RecommendedFile;
+
+function setPath(s: Scenario, path: string, v: unknown) {
+  const keys = path.split('.');
+  let o = s as unknown as Record<string, unknown>;
+  for (let i = 0; i < keys.length - 1; i++) o = o[keys[i]] as Record<string, unknown>;
+  if (keys[keys.length - 1] in o) o[keys[keys.length - 1]] = v;
+}
+
+/** Re-optimised every day from the latest market data (src/data/recommended.json), with every element of the brief. */
 function recommended(): Scenario {
   const s = defaultScenario();
   s.name = 'Recommended: full brief, optimised';
+  if (RECOMMENDED.decisions) {
+    for (const [k, v] of Object.entries(RECOMMENDED.decisions)) setPath(s, k, v);
+    if (RECOMMENDED.date) s.name = `Recommended (optimised ${RECOMMENDED.date})`;
+    return s;
+  }
   s.pv.type = 'tracker'; s.pv.fillPct = 20; s.pv.gcr = 0.35; s.pv.dcAcRatio = 1.1;
   s.grid.importLimitKw = 1000; s.grid.exportLimitKw = 1000;
   s.bess.powerKw = 1500; s.bess.hours = 1;
@@ -59,7 +79,7 @@ function baseCase(): Scenario {
 }
 
 export const PRESETS: Preset[] = [
-  { id: 'recommended', name: 'Recommended plan', blurb: 'Optimised for NPV with every element of the brief: solar, battery, GPUs, grazing and homes.', build: recommended },
+  { id: 'recommended', name: 'Recommended plan', blurb: 'Re-optimised daily for NPV with every element of the brief: solar, battery, GPUs, grazing, homes and, when they pay, humanoid robots.', build: recommended },
   { id: 'agrivoltaic', name: 'Agrivoltaic farm & homes', blurb: 'No compute: solar over grazing, a battery, a greenhouse and rentals.', build: agrivoltaic },
   { id: 'solar', name: 'Maximum solar', blurb: 'Fills the paddock with panels and exports to the grid.', build: solarExport },
   { id: 'compute', name: 'Compute campus', blurb: '40 B200 servers on a 1 MVA connection, with the farm around it.', build: computeHeavy },

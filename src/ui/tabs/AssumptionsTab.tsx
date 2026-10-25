@@ -1,12 +1,12 @@
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { useApp } from '../state';
-import { Card, Note, Ext } from '../components';
+import { Card, Note, Pill, Ext } from '../components';
 import { PARAMS, getParam, setParam, type ParamGroup } from '../../engine/params';
-import { defaultScenario } from '../../engine/defaults';
+import { defaultScenario, marketApplied } from '../../engine/defaults';
 import type { GpuModel, Scenario } from '../../engine/types';
 import { num } from '../format';
 
-const GROUPS: ParamGroup[] = ['Solar', 'Battery', 'Grid & market', 'Compute', 'Agriculture', 'Homes', 'Site & flood', 'Finance'];
+const GROUPS: ParamGroup[] = ['Solar', 'Battery', 'Grid & market', 'Compute', 'Agriculture', 'Homes', 'Robots', 'Site & flood', 'Finance'];
 
 function ParamInput({ value, min, max, step, onChange }: { value: number; min: number; max: number; step: number; onChange: (v: number) => void }) {
   const [text, setText] = useState<string | null>(null);
@@ -22,6 +22,7 @@ export function AssumptionsTab() {
   const [filter, setFilter] = useState('');
   const fileRef = useRef<HTMLInputElement>(null);
   const defaults = defaultScenario();
+  const live = useMemo(() => new Map(marketApplied().map((a) => [a.path, a])), []);
 
   const exportJson = () => {
     const blob = new Blob([JSON.stringify(scenario, null, 2)], { type: 'application/json' });
@@ -62,14 +63,15 @@ export function AssumptionsTab() {
                 {items.map((p) => {
                   const v = getParam(scenario, p.path);
                   const d = getParam(defaults, p.path.replace('$model', scenario.compute.model));
-                  const rel = p.path.includes('$model');
+                  const rel = p.relative || p.path.includes('$model');
+                  const m = live.get(p.path.replace('$model', scenario.compute.model));
                   return (
                     <tr key={p.path} className={Math.abs(v - d) > 1e-9 ? 'changed' : ''}>
-                      <td>{p.label}{rel ? ` (${scenario.compute.model})` : ''}</td>
+                      <td>{p.label}{p.path.includes('$model') ? ` (${scenario.compute.model})` : ''}{m && <> <Pill tone="info">market</Pill></>}</td>
                       <td><ParamInput value={v} min={p.min} max={p.max} step={p.step} onChange={(x) => update((s) => setParam(s, p.path, x))} /></td>
                       <td className="muted small">{p.unit}</td>
                       <td className="muted small">{p.low !== undefined ? (rel ? `${Math.round(p.low * 100)}%-${Math.round((p.high ?? 1) * 100)}% of base` : `${num(p.low, p.step < 1 ? 2 : 0)}-${num(p.high ?? 0, p.step < 1 ? 2 : 0)}`) : ''}</td>
-                      <td className="small">{p.source && <Ext href={p.source.url}>{p.source.title}</Ext>}{p.source?.date ? ` (${p.source.date})` : ''}{p.note && <div className="muted">{p.note}</div>}</td>
+                      <td className="small">{m ? <div>{m.url ? <Ext href={m.url}>{m.basis}</Ext> : m.basis}{m.date ? ` (${m.date})` : ''}</div> : <>{p.source && <Ext href={p.source.url}>{p.source.title}</Ext>}{p.source?.date ? ` (${p.source.date})` : ''}</>}{p.note && <div className="muted">{p.note}</div>}</td>
                     </tr>
                   );
                 })}

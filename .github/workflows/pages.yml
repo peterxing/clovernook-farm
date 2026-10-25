@@ -1,21 +1,26 @@
-name: Test and deploy to GitHub Pages
+name: Update market data, test and deploy
 
 on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    # 16:00 UTC = 3 am in Sydney during daylight saving (2 am otherwise).
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -23,32 +28,39 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Refresh market data and re-optimise the plan
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: npx tsx scripts/update-market.ts
       - run: npm test
       - run: npm run build
+      - name: Commit refreshed data
+        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Daily market update $(TZ=Australia/Sydney date +%F)"
+            git pull --rebase --autostash
+            git push
+          fi
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - id: pages
-        uses: actions/configure-pages@v6
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: dist
       - id: deployment
         uses: actions/deploy-pages@v5
