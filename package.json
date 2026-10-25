@@ -1,0 +1,32 @@
+{
+  "name": "clovernook-farm",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Open planning platform for 18 Clovernook Drive, Cundletown NSW: agrivoltaic solar, battery, GPU compute, grazing, crops and rental homes on one 13.2 ha floodplain lot.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "data": "node scripts/build-data.mjs"
+  },
+  "dependencies": {
+    "echarts": "^6.1.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@turf/turf": "^7.4.0",
+    "@types/leaflet": "^1.9.22",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
+  }
+}
