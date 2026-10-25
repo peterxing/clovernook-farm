@@ -85,7 +85,8 @@ button { font: inherit; }
 .hero h2 { font-size: 27px; color: var(--brand); }
 .lead { font-size: 15px; color: #374151; }
 .layers { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 7px; font-size: 14px; }
-.layers li { display: flex; align-items: center; gap: 9px; }
+.layers li { display: block; padding-left: 18px; text-indent: -18px; }
+.layers li .dot { vertical-align: 0; }
 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; flex: none; }
 .hero-actions { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
 .hero-map { border-radius: 12px; overflow: hidden; min-height: 430px; }

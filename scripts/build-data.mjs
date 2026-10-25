@@ -139,7 +139,7 @@ const lineAngle = (Math.atan2(100 - 171, 259 - 82) * 180) / Math.PI; // R5/RU1 b
 const site = {
   generated: new Date().toISOString().slice(0, 10),
   address: '18 Clovernook Drive, Cundletown NSW 2430',
-  lotPlan: lot.properties.lotidstring.replace('//', ' '),
+  lotPlan: `Lot ${lot.properties.lotnumber} ${lot.properties.planlabel}`,
   addressPoint: ADDRESS_POINT.map((v) => round(v, 7)),
   centroid: turf.centroid(lot).geometry.coordinates.map((v) => round(v, 7)),
   areaHa: round(lotArea / 1e4, 3),
