@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-26",
-  "note": "The LGC fallback moves to Ecovantage's 19-23 Oct close (A$7.55, down from A$7.85), and the robot list now records Tesla's late-2027 target for outside Optimus deliveries and that Unitree takes H2 orders through its sales team. GPU, solar, battery, livestock, robot-price and readiness values are unchanged because today's trackers (Bargo, amcompute, GPU.ai, Gatewell, Unitree store) still sit within them.",
+  "updated": "2026-10-27",
+  "note": "No material changes today. GPU trackers (Bargo, amcompute, llmhosting, Gatewell), robot list prices, LGCs and livestock indicators all sit within the existing values, and no new farm-relevant robot milestone appeared.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
