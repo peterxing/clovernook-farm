@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-27",
-  "note": "No material changes today. GPU trackers (Bargo, amcompute, llmhosting, Gatewell), robot list prices, LGCs and livestock indicators all sit within the existing values, and no new farm-relevant robot milestone appeared.",
+  "updated": "2026-10-28",
+  "note": "No material changes today. GPU trackers (Bargo, GPU.ai, llmhosting, Gatewell), robot list prices, LGCs and livestock indicators still sit within the existing values, and no farm-relevant robot milestone or site planning change appeared.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
