@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-28",
-  "note": "No material changes today. GPU trackers (Bargo, GPU.ai, llmhosting, Gatewell), robot list prices, LGCs and livestock indicators still sit within the existing values, and no farm-relevant robot milestone or site planning change appeared.",
+  "updated": "2026-10-29",
+  "note": "No material changes today. GPU trackers (Bargo, GPU.ai, llmhosting, Gatewell), robot list prices, LGCs and NSW margins still sit within the existing values; the ABARES feed timed out overnight, but ABARES still shows the 14 Oct indicators the model uses.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
