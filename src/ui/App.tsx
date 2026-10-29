@@ -19,6 +19,7 @@ import { AssumptionsTab } from './tabs/AssumptionsTab';
 import { AboutTab } from './tabs/AboutTab';
 import { RoboticsTab } from './tabs/RoboticsTab';
 import { MarketsTab } from './tabs/MarketsTab';
+import { DeliveryTab } from './tabs/DeliveryTab';
 
 const TABS = [
   { id: 'overview', label: 'Overview', C: Overview },
@@ -33,6 +34,7 @@ const TABS = [
   { id: 'risk', label: 'Risk', C: RiskTab },
   { id: 'markets', label: 'Markets', C: MarketsTab },
   { id: 'approvals', label: 'Approvals', C: ApprovalsTab },
+  { id: 'delivery', label: 'Delivery plan', C: DeliveryTab },
   { id: 'assumptions', label: 'Assumptions', C: AssumptionsTab },
   { id: 'about', label: 'About', C: AboutTab },
 ] as const;

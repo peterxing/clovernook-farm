@@ -26,7 +26,7 @@ Then it **optimises**: a multi-start coordinate-descent search over 20 decisions
 The platform refreshes itself each morning, Sydney time:
 
 1. **Live feeds (GitHub Actions, ~3 am):** AEMO NSW1 prices roll forward to the latest 365 days; RBA exchange rate; Vast.ai GPU marketplace asks (B300, B200, H200, RTX PRO 6000, L40S); InfoLink TOPCon module prices; ABARES weekly cattle and lamb indicators; the FAO Food Price Index; Ecovantage's LGC close; Unitree and 1X humanoid list prices. `scripts/update-market.ts` writes `src/data/market.json`, adds a day to `market-history.json`, **re-runs the optimiser** and saves the new recommended plan to `recommended.json`, then the site redeploys.
-2. **Research (Scout automation, ~7:30 am):** reviews news and price trackers for what has no API (humanoid capability milestones and prices, solar and battery build costs, GPU server prices and reserved rates, livestock and farm margins) and updates `src/data/market-curated.json` with sources, then re-optimises and pushes.
+2. **Research (Scout automation, ~7:30 am):** reviews news and price trackers for what has no API (humanoid capability milestones and prices, solar and battery build costs, GPU server prices and reserved rates, livestock and farm margins) and updates `src/data/market-curated.json` with sources, then re-optimises and pushes. The same run re-checks the delivery plan (`src/data/delivery-plan.json`): fees, lead times, rules, buyer requirements and any public sign of progress.
 
 Each price starts from a researched level and moves with its live indicator relative to the day it was researched, so a noisy feed can shift the model but never replace it. The **Markets** tab shows every indicator, its trend and which assumptions it set today.
 
@@ -37,6 +37,12 @@ Each price starts from a researched level and moves with its live indicator rela
 The **Robots** tab models general-purpose humanoids doing the site's work: cabin turnover, greenhouse harvesting, data-centre remote hands, solar checks, livestock and maintenance. Each task has a capability-readiness forecast (an S-curve revised by the daily research) and the robot price follows a forecast decline anchored to live list prices (Unitree H2 at US$29,900 today). Robots only count as savings where they replace labour the model already pays for; owner time freed is shown separately. The optimiser decides whether, when and how many to bring in.
 
 ![Robots tab](docs/screenshots/robots.jpg)
+
+## Delivery plan
+
+The **Delivery plan** tab lists the steps that take the selected plan from paper to income, in six workstreams: **commitments** (securing the site, the development budget, finance, the investment decision and each contract), **approvals** (pre-lodgement, studies, the DA, construction certificates, farm licences and LGC accreditation), the **grid connection** (Essential Energy's Chapter 5A process under 5 MW, Chapter 5 above), **procurement** (the HV transformer, battery, modules, data hall and servers, ordered to their lead times), **customer sign-ups** (GPU offtake, the homestead lease, cabin bookings, an energy offtake, egg and produce buyers) and **build & open**. Each step has a duration, its predecessors, who it depends on and a dated source; steps appear only when the plan needs them and take their quantities from it.
+
+The tab schedules the steps with a critical-path calculation and shows the programme, the next actions, sign-up targets against what's signed, and money committed over time. At today's lead times the grid connection and the HV transformer set the pace: the recommended plan is energised about 2.8 years after work starts, later than the cash-flow model's 2027 start, and the tab says so. The daily research keeps the steps current; until work starts, dates roll forward from each day's update.
 
 ![Generated layout on NSW aerial imagery](docs/screenshots/site-layout.jpg)
 
@@ -75,7 +81,7 @@ Everything runs client-side; there is no server. Plans are shareable: the link e
 
 ## How it's built
 
-- `src/engine/` – pure TypeScript model: `solar.ts` (sun position, transposition, bifacial, shading, flood curve), `layout.ts` (row layout in the real lot), `dispatch.ts` (hourly energy balance and battery), `landuse.ts` (farm and homes), `robots.ts` (humanoid readiness, prices and labour substitution), `market.ts` (applies live and researched market data), `model.ts` (capex, cash flow, metrics), `optimize.ts`, `risk.ts` (tornado, Monte Carlo, NPV contributions), `params.ts` (every assumption with its source and range).
+- `src/engine/` – pure TypeScript model: `solar.ts` (sun position, transposition, bifacial, shading, flood curve), `layout.ts` (row layout in the real lot), `dispatch.ts` (hourly energy balance and battery), `landuse.ts` (farm and homes), `robots.ts` (humanoid readiness, prices and labour substitution), `market.ts` (applies live and researched market data), `model.ts` (capex, cash flow, metrics), `optimize.ts`, `risk.ts` (tornado, Monte Carlo, NPV contributions), `delivery.ts` (delivery plan: plan-fitted steps, critical path, commitments and sign-ups), `params.ts` (every assumption with its source and range).
 - `src/ui/` – React + ECharts + Leaflet front end, heavy jobs in a Web Worker.
 - `scripts/build-data.mjs` – fetches the cadastre, zoning, overlays, LiDAR and PVGIS weather and writes compact JSON.
 - `scripts/update-market.ts` – the daily market refresh and re-optimisation.

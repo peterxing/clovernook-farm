@@ -1,0 +1,1448 @@
+{
+  "updated": "2026-10-30",
+  "note": "First edition of the delivery plan. The grid connection (Essential Energy's Chapter 5A process, 2-3 years end to end) and an 8-14 month transformer lead time set the pace, so the site can't be energised before about August 2029, later than the 2027 start the cash-flow model assumes. The property sold on 7 April 2026 for A$1.15M and isn't listed, so the first step is an option with the new owner.",
+  "startDate": null,
+  "steps": [
+    {
+      "id": "site-option",
+      "stream": "commitments",
+      "title": "Secure the site with a conditional option to buy",
+      "detail": "The property changed hands on 7 April 2026 and isn't listed. Offer the owner an option to buy at about {landPrice}, conditional on development consent and a grid connection offer, with access for surveys in the meantime; a long lease with an option to buy is the fallback.",
+      "who": "Owner of 18 Clovernook Drive, with a conveyancer",
+      "weeks": 12,
+      "after": [],
+      "needs": [
+        "land"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "OnTheHouse: 18 Clovernook Drive sold on 7 Apr 2026 for A$1,150,000 (listed Jan 2025 at A$1,250,000)",
+          "url": "https://www.onthehouse.com.au/property/nsw/cundletown-2430/18-clovernook-dr-cundletown-nsw-2430-14330178",
+          "date": "Apr 2026"
+        },
+        {
+          "title": "Homely: 'Clover Downs' sale listing, 32 acres",
+          "url": "https://www.homely.com.au/homes/18-clovernook-drive-cundletown-nsw-2430/11759719",
+          "date": "2025"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "dev-budget",
+      "stream": "commitments",
+      "title": "Approve the development budget ({capex.dev})",
+      "detail": "Studies, design and Council and Essential Energy fees are spent before the investment decision and are lost if the project stops, so approve {capex.dev} for this stage.",
+      "who": "Owner and investors",
+      "weeks": 2,
+      "after": [],
+      "status": "todo",
+      "capex": [
+        "dev"
+      ],
+      "sources": [
+        {
+          "title": "Clovernook Farm: capital cost by item (Finance tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
+        },
+        {
+          "title": "Essential Energy: connection application costs in CEOP8079 Annexure A",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "survey",
+      "stream": "approvals",
+      "title": "Survey, flood levels and soil tests",
+      "detail": "Detail and level survey; ask Council for the design flood levels (the plan builds to a {fpl} m AHD flood planning level); test the soils for piles and acid sulfate soils.",
+      "who": "Registered surveyor, geotechnical engineer and MidCoast Council",
+      "weeks": 8,
+      "after": [
+        "site-option"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Manning River Floodplain Risk Management Study and Plan (MidCoast Council)",
+          "url": "https://data.nsw.gov.au/data/dataset/fdp-reports-manning-river-frms-p",
+          "date": "2020"
+        },
+        {
+          "title": "MidCoast Council: flood risk management plans to be updated",
+          "url": "https://www.midcoast.nsw.gov.au/Your-Council/Our-news/News-releases/Flood-risk-management-plans-to-be-updated",
+          "date": "19 Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "concept",
+      "stream": "approvals",
+      "title": "Concept design and capital investment value",
+      "detail": "Turn the plan into concept drawings: {summary}. The capital investment value decides who determines the DA.",
+      "who": "Owner's engineer and town planner",
+      "weeks": 6,
+      "after": [
+        "survey"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: layout on the real lot (Site & layout tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "pre-da",
+      "stream": "approvals",
+      "title": "Pre-lodgement meeting with MidCoast Council",
+      "detail": "Request a pre-lodgement meeting (A$625 including GST). Meetings run on Tuesdays at 9, 10 or 11 am and formal minutes follow within 21 days. Bring a statement comparing the proposal with the LEP and DCP, a site plan, concept plans and the capital investment value.",
+      "who": "MidCoast Council Development Assessment Panel",
+      "weeks": 5,
+      "after": [
+        "concept"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "MidCoast Council: pre-lodgement meetings",
+          "url": "https://www.midcoast.nsw.gov.au/Development/Industry/Pre-lodgement-meetings",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "studies",
+      "stream": "approvals",
+      "title": "Specialist studies",
+      "detail": "Flood impact and risk, acid sulfate soils management, bush fire assessment to Planning for Bush Fire Protection 2019, glint and glare for Taree Airport, biodiversity and koalas, noise from cooling and inverters, traffic and visual impact.",
+      "who": "Flood, soils, bush fire, glare, ecology, acoustic, traffic and visual consultants",
+      "weeks": 16,
+      "after": [
+        "pre-da"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: studies the DA will need (Approvals tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
+        },
+        {
+          "title": "NSW RFS: Planning for Bush Fire Protection",
+          "url": "https://www.rfs.nsw.gov.au/plan-and-prepare/building-in-a-bush-fire-area/planning-for-bush-fire-protection",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "da-lodge",
+      "stream": "approvals",
+      "title": "Lodge the development application",
+      "detail": "Lodge one DA for the whole site. Electricity generating works worth more than A$5M are regionally significant development, decided by the Hunter and Central Coast Regional Planning Panel rather than Council.",
+      "who": "NSW Planning Portal and MidCoast Council",
+      "weeks": 2,
+      "after": [
+        "studies"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "cabins"
+          ],
+          "detail": "Lodge one DA for the whole site. Electricity generating works worth more than A$5M are regionally significant development, decided by the Hunter and Central Coast Regional Planning Panel rather than Council. The cabins are tourist accommodation on bush fire prone land, so the DA is integrated development and needs a bush fire safety authority (a new RFS process applies from 1 July 2026)."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "NSW Planning Portal: regionally significant development (private infrastructure over A$5M)",
+          "url": "https://www.planningportal.nsw.gov.au/development-and-assessment/planning-approval-pathways/regionally-significant-development",
+          "date": "Oct 2026"
+        },
+        {
+          "title": "NSW RFS: issuing a bush fire safety authority for integrated development from 1 July 2026",
+          "url": "https://www.rfs.nsw.gov.au/resources/publications/building-in-a-bush-fire-area/general/guidance-document-issuing-a-bush-fire-safety-authority-for-integrated-development-from-1-july-2026/Guidance-Document-Issuing-a-Bush-Fire-Safety-Authority-for-Integrated-Development.pdf",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "da-determined",
+      "stream": "approvals",
+      "title": "Assessment and development consent",
+      "detail": "Public exhibition, referrals, assessment and a public panel meeting. Allow six to nine months (planning estimate); the consent conditions set the flood, bush fire, glare and noise requirements.",
+      "who": "Regional planning panel or MidCoast Council",
+      "weeks": 30,
+      "after": [
+        "da-lodge"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "NSW Planning Portal: regionally significant development and planning panels",
+          "url": "https://www.planningportal.nsw.gov.au/development-and-assessment/planning-approval-pathways/regionally-significant-development",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "ee-register",
+      "stream": "grid",
+      "title": "Register on the Essential Connections Portal",
+      "detail": "Register as a High Voltage customer for major connections; registrations are processed within five business days.",
+      "who": "Essential Energy",
+      "weeks": 1,
+      "after": [],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections and large embedded generators",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "ee-prelim",
+      "stream": "grid",
+      "title": "Preliminary enquiry",
+      "detail": "Ask for {kwac} of solar inverters plus a {bessKw} battery, {importKw} of import and {exportKw} of export. Under 5 MW this is a Chapter 5A connection, exempt from AEMO registration; the response takes about a month.",
+      "who": "Essential Energy",
+      "weeks": 5,
+      "after": [
+        "ee-register"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "gridLarge"
+          ],
+          "detail": "Ask for {kwac} of solar inverters plus a {bessKw} battery, {importKw} of import and {exportKw} of export. At 5 MW or more this is a Chapter 5 connection that needs AEMO registration and takes 3-5 years end to end."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connection types and timeline (Chapter 5A under 5 MW, Chapter 5 above)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "ee-investigation",
+      "stream": "grid",
+      "title": "Connection investigation response",
+      "detail": "Choose the preferred connection option; Essential Energy sets out the network augmentation and requirements (about 2 months).",
+      "who": "Essential Energy",
+      "weeks": 9,
+      "after": [
+        "ee-prelim"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections timeline (stage 2, 2 months)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "ee-studies",
+      "stream": "grid",
+      "title": "Connection application and network studies",
+      "detail": "Apply with the inverter, battery and protection details, including the emergency backstop and SCADA requirements for HV embedded generation. Studies take 6-9 months under Chapter 5A.",
+      "who": "Essential Energy and the owner's power systems consultant",
+      "weeks": 33,
+      "after": [
+        "ee-investigation",
+        "concept"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "gridLarge"
+          ],
+          "weeks": 54,
+          "detail": "Apply with the inverter, battery and protection details, including the emergency backstop and SCADA requirements. Studies take 10-15 months under Chapter 5."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections timeline (stage 3, 6-9 months for Chapter 5A)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "connection-offer",
+      "stream": "grid",
+      "title": "Connection offer and contract terms",
+      "detail": "Negotiate the offer: the technical schedule, the connection charge ({capex.grid} in this plan) and whether Essential Energy or an Accredited Service Provider builds the works (4-6 months).",
+      "who": "Essential Energy",
+      "weeks": 22,
+      "after": [
+        "ee-studies"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "gridLarge"
+          ],
+          "weeks": 54,
+          "detail": "Negotiate the offer: the technical schedule, the connection charge ({capex.grid} in this plan) and who builds the works (10-15 months under Chapter 5)."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections timeline (stage 4, contract development)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "gpu-loi",
+      "stream": "customers",
+      "title": "GPU customers: letters of intent",
+      "detail": "Approach three to five buyers for 12-36 month reserved contracts covering at least {gpusHalf} of the {gpus} {gpuModel} GPUs at or above the plan's US${gpuPrice} per GPU-hour, starting at energisation.",
+      "who": "AI companies, neoclouds and GPU marketplaces",
+      "weeks": 12,
+      "after": [
+        "concept"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Bargo: B200 on-demand, reserved and spot rents",
+          "url": "https://www.bargo.ai/gpu/b200",
+          "date": "29 Oct 2026"
+        },
+        {
+          "title": "Clovernook Farm: GPU rents used by the model (Markets tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "servers-quote",
+      "stream": "procurement",
+      "title": "Firm server quotes",
+      "detail": "Quotes for {servers} × {gpuLabel} servers ({capex.servers} in this plan). Resellers quote HGX boards at 3-8 weeks' shipping, but complete servers take longer and Blackwell supply is allocated.",
+      "who": "Server makers and resellers",
+      "weeks": 6,
+      "after": [
+        "gpu-loi"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Gatewell: HGX B300, B200 and H200 board prices and shipping times",
+          "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
+          "date": "25 Oct 2026"
+        },
+        {
+          "title": "Mercatus: 8-GPU server prices and allocation",
+          "url": "https://www.mercatus-ai.com/blog/b200-server-price",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "gpu-contract",
+      "stream": "customers",
+      "title": "Sign the GPU offtake",
+      "detail": "Sign take-or-pay contracts for at least {gpusHalf} GPUs (about {gpuHoursHalf} GPU-hours a year) with a deposit, start dates tied to energisation and service levels the site can meet.",
+      "who": "GPU customers",
+      "weeks": 8,
+      "after": [
+        "gpu-loi",
+        "servers-quote"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: GPU utilisation and revenue (GPU compute tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "finance",
+      "stream": "commitments",
+      "title": "Arrange finance for {capexTotal}",
+      "detail": "Lenders want contracted income: the homestead lease, cabin bookings and an energy offtake; the land and farm assets secure the rest.",
+      "who": "Banks and private credit",
+      "weeks": 20,
+      "after": [
+        "da-lodge",
+        "gpu-loi"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "compute"
+          ],
+          "who": "Banks, private credit and GPU financiers",
+          "detail": "Lenders want contracted income: the GPU offtake first, then the homestead lease and an energy offtake. Specialist lenders finance GPU servers against signed offtake; the land and farm assets secure the rest."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "American Compute: GPU financing and residual values",
+          "url": "https://www.amcompute.com/",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "epc-tender",
+      "stream": "procurement",
+      "title": "Tender the construction works",
+      "detail": "Fixed-price tenders, valid until the investment decision, for the {kwdc} {pvType} array, the {bessKw} / {bessKwh} battery, the flood-raised platform and the HV works.",
+      "who": "Solar, battery and civil contractors",
+      "weeks": 12,
+      "after": [
+        "da-lodge"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Small (1-5 MW) Australian solar farm build costs",
+          "url": "https://www.greenlightsolar.com.au/solar-farms-in-australia-costs-pros-and-cons-explained/",
+          "date": "2026"
+        },
+        {
+          "title": "Modo Energy: battery build costs in Australia (2026)",
+          "url": "https://modoenergy.com/research/en/australia-nem-capex-historical-and-forecast-build-cost-battery-energy-storage-2026",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "fid",
+      "stream": "commitments",
+      "title": "Final investment decision",
+      "detail": "Go or no-go: consent granted, connection offer in hand, finance approved and fixed construction prices. Then commit the build budget.",
+      "who": "Owner and investors",
+      "weeks": 2,
+      "after": [
+        "site-option",
+        "da-determined",
+        "connection-offer",
+        "gpu-contract",
+        "finance",
+        "epc-tender"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "land",
+            "compute"
+          ],
+          "detail": "Go or no-go: consent granted, connection offer in hand, at least {gpusHalf} GPUs contracted, finance approved and fixed construction prices. Exercise the land option ({capex.land} with duty) and commit the build budget."
+        },
+        {
+          "needs": [
+            "land"
+          ],
+          "detail": "Go or no-go: consent granted, connection offer in hand, finance approved and fixed construction prices. Exercise the land option ({capex.land} with duty) and commit the build budget."
+        },
+        {
+          "needs": [
+            "compute"
+          ],
+          "detail": "Go or no-go: consent granted, connection offer in hand, at least {gpusHalf} GPUs contracted, finance approved and fixed construction prices. Then commit the build budget."
+        }
+      ],
+      "status": "todo",
+      "milestone": true,
+      "capex": [
+        "land"
+      ],
+      "sources": [
+        {
+          "title": "Clovernook Farm: cash flow and returns (Finance tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "connection-accept",
+      "stream": "commitments",
+      "title": "Accept the connection offer ({capex.grid})",
+      "detail": "Sign the connection contract and pay for the connection works. Accepting before the investment decision saves months but puts the money at risk.",
+      "who": "Essential Energy",
+      "weeks": 2,
+      "after": [
+        "fid"
+      ],
+      "status": "todo",
+      "capex": [
+        "grid"
+      ],
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections and large embedded generators",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "epc-contract",
+      "stream": "procurement",
+      "title": "Sign the construction contract",
+      "detail": "Commit the solar array, battery, raised platform and the contingency budget.",
+      "who": "EPC contractor",
+      "weeks": 4,
+      "after": [
+        "fid"
+      ],
+      "status": "todo",
+      "capex": [
+        "pv",
+        "pvRaise",
+        "bess",
+        "pad",
+        "contingency"
+      ],
+      "sources": [
+        {
+          "title": "Clovernook Farm: capital cost by item (Finance tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "long-lead",
+      "stream": "procurement",
+      "title": "Order the HV kiosk, transformer and switchgear",
+      "detail": "Distribution transformers up to 5 MVA are quoted at 8-14 months (US market, 2026), so reserve a manufacturing slot as soon as the connection offer fixes the specification; a cancellable deposit keeps energisation on time.",
+      "who": "Electrical equipment suppliers",
+      "weeks": 48,
+      "after": [
+        "connection-offer"
+      ],
+      "status": "todo",
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "Nexus Power: transformer lead times in 2026 (distribution class up to 5 MVA: 8-14 months)",
+          "url": "https://www.nexuspower.io/insights/transformer-lead-times-2026",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "battery-order",
+      "stream": "procurement",
+      "title": "Battery supply ({bessKw} / {bessKwh})",
+      "detail": "Containerised LFP: 12-26 weeks of factory build, 4-9 weeks of shipping and 4-6 weeks of heavy-haul permits, so 5-8 months from order to pad.",
+      "who": "Battery maker, through the EPC contractor",
+      "weeks": 30,
+      "after": [
+        "epc-contract"
+      ],
+      "status": "todo",
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "SourceBySpec: BESS container lead times in 2026",
+          "url": "https://www.sourcebyspec.com/news/bess-container-lead-times-in-2026-factory-ocean-and-last-mile-breakdown.html",
+          "date": "Sep 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "pv-order",
+      "stream": "procurement",
+      "title": "Modules and {pvType} structures",
+      "detail": "About {modules} bifacial TOPCon modules ({kwdc}) on structures with {clearance} m of clearance for grazing and floods; allow about four months (planning estimate).",
+      "who": "Module and structure suppliers, through the EPC contractor",
+      "weeks": 16,
+      "after": [
+        "epc-contract"
+      ],
+      "status": "todo",
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "InfoLink: TOPCon module spot prices",
+          "url": "https://www.infolink-group.com/spot-price/en/",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "dc-order",
+      "stream": "procurement",
+      "title": "Data hall, cooling and fibre",
+      "detail": "A {itKw} (IT) modular data hall with cooling and power distribution, and a fibre service. Order the fibre early: regional fibre builds take months.",
+      "who": "Modular data centre and telecommunications suppliers",
+      "weeks": 20,
+      "after": [
+        "epc-contract"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "capex": [
+        "dc",
+        "fibre"
+      ],
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "Clovernook Farm: data hall and network costs (GPU compute tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "servers-order",
+      "stream": "procurement",
+      "title": "Order the servers ({servers} × {gpuModel})",
+      "detail": "Order about 14 weeks before energisation so the servers arrive just in time: GPU prices fall every quarter and idle servers earn nothing.",
+      "who": "Server maker or reseller",
+      "weeks": 12,
+      "after": [
+        "fid",
+        {
+          "id": "energise",
+          "lagWeeks": -14
+        }
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "capex": [
+        "servers"
+      ],
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "Gatewell: HGX board prices and shipping times",
+          "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
+          "date": "25 Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "detail-design",
+      "stream": "build",
+      "title": "Detailed design",
+      "detail": "Piles and structures with {clearance} m of clearance, the {padRaise} m raised platform, electrical and protection design, and the flood and bush fire details the certifier needs.",
+      "who": "EPC contractor and engineers",
+      "weeks": 12,
+      "after": [
+        "epc-contract"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: flood planning level and raised platform (Risk tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=risk"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "cc",
+      "stream": "approvals",
+      "title": "Construction certificates",
+      "detail": "Certify the platform, array structures and electrical works against the consent before building.",
+      "who": "Registered certifier",
+      "weeks": 8,
+      "after": [
+        "da-determined",
+        "detail-design"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "newHomes"
+          ],
+          "detail": "Certify the platform, array structures, new dwellings and electrical works against the consent before building."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "NSW Planning Portal",
+          "url": "https://www.planningportal.nsw.gov.au/",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "pic",
+      "stream": "approvals",
+      "title": "Property identification code (PIC)",
+      "detail": "Needed for any cattle or sheep, and for 100 or more poultry, before stock arrives.",
+      "who": "Local Land Services",
+      "weeks": 2,
+      "after": [
+        "fid"
+      ],
+      "needs": [
+        "livestock"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "NSW DPIRD: property identification codes",
+          "url": "https://www.dpird.nsw.gov.au/dpi/biosecurity/your-role-in-biosecurity/primary-producers/nlis/property-identification-codes",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "bees",
+      "stream": "approvals",
+      "title": "Register as a beekeeper ({hives} hives)",
+      "detail": "Every beekeeper must register from the first hive; registration lasts two years.",
+      "who": "NSW DPIRD, through Service NSW",
+      "weeks": 2,
+      "after": [
+        "fid"
+      ],
+      "needs": [
+        "hives"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Service NSW: apply for a beekeeper registration",
+          "url": "https://www.service.nsw.gov.au/transaction/apply-for-a-beekeeper-registration",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "egg-licence",
+      "stream": "approvals",
+      "title": "Egg producer licence",
+      "detail": "About {eggsDozenWk} dozen eggs a week from {hens} hens is far above the 20-dozen threshold, so licence the farm and prepare for audits before selling.",
+      "who": "NSW Food Authority",
+      "weeks": 8,
+      "after": [
+        "fid"
+      ],
+      "needs": [
+        "poultry"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "NSW Food Authority: egg producers (licence above 20 dozen eggs a week)",
+          "url": "https://www.foodauthority.nsw.gov.au/industry/eggs/egg-producers",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "site-works",
+      "stream": "build",
+      "title": "Site works: piles, platform and trenching",
+      "detail": "Work in the drier months (late winter to spring), follow the acid sulfate soils plan and raise the platform and the livestock refuge mound above {fpl} m AHD.",
+      "who": "Civil contractor",
+      "weeks": 12,
+      "after": [
+        "cc"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: acid sulfate soils and flood design (Approvals tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "pv-install",
+      "stream": "build",
+      "title": "Install the solar array",
+      "detail": "About {modules} modules on {pvType} structures.",
+      "who": "EPC contractor",
+      "weeks": 12,
+      "after": [
+        "site-works",
+        "pv-order"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: array layout (Site & layout tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "bess-install",
+      "stream": "build",
+      "title": "Install the battery and inverters",
+      "detail": "Set the containers on the raised platform and connect the inverters.",
+      "who": "EPC contractor",
+      "weeks": 6,
+      "after": [
+        "site-works",
+        "battery-order"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: battery sizing and dispatch (Solar & battery tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=energy"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "install-electrical",
+      "stream": "build",
+      "title": "Install the HV kiosk and protection",
+      "detail": "HV switchgear, transformer, protection and metering on the platform, ready for Essential Energy's witness tests.",
+      "who": "Electrical contractor (Accredited Service Provider)",
+      "weeks": 6,
+      "after": [
+        "site-works",
+        "long-lead"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections and large embedded generators",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "connection-works",
+      "stream": "grid",
+      "title": "Connection works",
+      "detail": "Detailed design and construction of the connection assets (9-12 months).",
+      "who": "Essential Energy or an Accredited Service Provider",
+      "weeks": 46,
+      "after": [
+        "connection-accept"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "gridLarge"
+          ],
+          "weeks": 52,
+          "detail": "Detailed design and construction of the connection assets (9-15 months under Chapter 5)."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections timeline (stage 5, 9-12 months)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "energise",
+      "stream": "grid",
+      "title": "Commissioning and energisation",
+      "detail": "Test the protection and inverters, then energise the solar and battery (2-3 months).",
+      "who": "Essential Energy and the EPC contractor",
+      "weeks": 11,
+      "after": [
+        "connection-works",
+        "install-electrical",
+        "pv-install",
+        "bess-install"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "gridLarge"
+          ],
+          "weeks": 13,
+          "detail": "Test the protection and inverters, then energise the solar and battery (2-4 months under Chapter 5)."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: HV connections timeline (stage 6, 2-3 months)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-29"
+    },
+    {
+      "id": "lgc-accreditation",
+      "stream": "approvals",
+      "title": "Power station accreditation for LGCs",
+      "detail": "Prepare the application in the REC Registry ahead of first generation: LGCs can only be created from the accreditation date. The {kwdc} array is above the 1 MW limit that moved smaller new solar to small-scale certificates on 1 October 2026.",
+      "who": "Clean Energy Regulator",
+      "weeks": 12,
+      "after": [
+        {
+          "id": "energise",
+          "lagWeeks": -12
+        }
+      ],
+      "variants": [
+        {
+          "needs": [
+            "midScale"
+          ],
+          "title": "Claim small-scale certificates (mid-scale solar)",
+          "detail": "Since 1 October 2026 new solar systems of 100 kW to 1 MW earn small-scale technology certificates instead of LGCs, and the {kwdc} array falls in that band."
+        }
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clean Energy Regulator: apply for power station accreditation",
+          "url": "https://cer.gov.au/schemes/renewable-energy-target/renewable-energy-target-participants-and-industry/power-stations/apply-accreditation",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "energy-offtake",
+      "stream": "customers",
+      "title": "Energy offtake for exports and certificates",
+      "detail": "An exempt generator sells through a retailer: sign a PPA or aggregation deal for about {exportMwh} a year of exports and the battery's trading, and a broker for the certificates.",
+      "who": "Electricity retailers, aggregators and certificate brokers",
+      "weeks": 12,
+      "after": [
+        "connection-offer"
+      ],
+      "needs": [
+        "export"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Essential Energy: Chapter 5A generators under 5 MW are exempt from AEMO registration",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
+          "date": "Oct 2026"
+        },
+        {
+          "title": "Ecovantage: weekly certificate market update",
+          "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "dc-build",
+      "stream": "build",
+      "title": "Install the data hall",
+      "detail": "Set the modular hall on the platform, commission the cooling and fibre, and connect the heat recovery for the greenhouse.",
+      "who": "Data centre contractor",
+      "weeks": 8,
+      "after": [
+        "site-works",
+        "dc-order"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: data hall, PUE and heat recovery (GPU compute tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "servers-install",
+      "stream": "build",
+      "title": "Install and burn in the servers",
+      "detail": "Rack, burn in and benchmark the {gpus} GPUs before customers start.",
+      "who": "Owner's operations team",
+      "weeks": 3,
+      "after": [
+        "servers-order",
+        "dc-build",
+        "energise"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: GPU compute tab",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "gpus-live",
+      "stream": "build",
+      "title": "GPUs earning",
+      "detail": "Contracted customers start; spare capacity goes to the marketplaces.",
+      "who": "GPU customers",
+      "weeks": 1,
+      "after": [
+        "servers-install",
+        "gpu-contract"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "milestone": true,
+      "sources": [
+        {
+          "title": "Clovernook Farm: GPU compute tab",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "gpu-marketplace",
+      "stream": "customers",
+      "title": "List spare GPUs on marketplaces",
+      "detail": "Vast.ai's certified data centre tier needs 5 or more servers in a professionally managed facility with reliable power, cooling and network; ISO 27001 or SOC 2 helps but isn't required, and applications are reviewed within 2 business days. Otherwise list as a standard host.",
+      "who": "Vast.ai and other GPU marketplaces",
+      "weeks": 2,
+      "after": [
+        "servers-install"
+      ],
+      "needs": [
+        "compute"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Vast.ai: certified data center application",
+          "url": "https://vast.ai/data-center-application",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "homestead-lease",
+      "stream": "customers",
+      "title": "Lease the homestead",
+      "detail": "Lease the existing house at about {homesteadRent} once the land is bought, keeping access for the site works.",
+      "who": "Local property manager and tenant",
+      "weeks": 6,
+      "after": [
+        "fid"
+      ],
+      "needs": [
+        "homesteadLease"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "HtAG Analytics: Taree 2430 rents and vacancy",
+          "url": "https://www.htag.com.au/nsw/nsw328-mid-coast-council/taree-nsw-2430/",
+          "date": "Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "cabins-build",
+      "stream": "build",
+      "title": "Build the new dwellings",
+      "detail": "Floors at the flood planning level ({fpl} m AHD), with the bush fire construction standards and asset protection zones set by the consent.",
+      "who": "Builder",
+      "weeks": 26,
+      "after": [
+        "cc"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "cabins"
+          ],
+          "title": "Build {cabins} cabins on raised floors"
+        }
+      ],
+      "needs": [
+        "newHomes"
+      ],
+      "status": "todo",
+      "capex": [
+        "homes"
+      ],
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "Clovernook Farm: homes and cabins (Homes tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "cabin-bookings",
+      "stream": "customers",
+      "title": "Open cabin bookings",
+      "detail": "List the cabins and take bookings for the first season. The plan needs about {guestNights} guest nights a year ({cabins} cabins at {cabinOcc}% occupancy and {cabinAdr} a night).",
+      "who": "Guests, through a farm-stay website, Airbnb, Booking.com and Stayz",
+      "weeks": 12,
+      "after": [
+        {
+          "id": "cabins-build",
+          "lagWeeks": -12
+        }
+      ],
+      "needs": [
+        "cabins"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Airbnb: host your home",
+          "url": "https://www.airbnb.com.au/host/homes",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "cabins-open",
+      "stream": "build",
+      "title": "Cabins open",
+      "detail": "Occupation certificates, fire safety measures and the first guests.",
+      "who": "Owner and guests",
+      "weeks": 1,
+      "after": [
+        "cabins-build",
+        "cabin-bookings"
+      ],
+      "needs": [
+        "cabins"
+      ],
+      "status": "todo",
+      "milestone": true,
+      "sources": [
+        {
+          "title": "Clovernook Farm: homes and cabins (Homes tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "greenhouse-build",
+      "stream": "build",
+      "title": "Build the greenhouse ({greenhouseM2} m²)",
+      "detail": "Greenhouse with irrigation and a packing shed.",
+      "who": "Greenhouse supplier",
+      "weeks": 14,
+      "after": [
+        "cc"
+      ],
+      "variants": [
+        {
+          "needs": [
+            "compute"
+          ],
+          "detail": "Greenhouse with irrigation and a packing shed, heated by the data hall's waste heat."
+        }
+      ],
+      "needs": [
+        "greenhouse"
+      ],
+      "status": "todo",
+      "capex": [
+        "greenhouse"
+      ],
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "Clovernook Farm: greenhouse and heat recovery (Farm tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "produce-buyers",
+      "stream": "customers",
+      "title": "Sign greenhouse produce buyers",
+      "detail": "Supply agreements for the {greenhouseM2} m² greenhouse with a wholesaler, restaurants or farmers' markets.",
+      "who": "Wholesalers, restaurants and farmers' markets",
+      "weeks": 8,
+      "after": [
+        {
+          "id": "greenhouse-build",
+          "lagWeeks": -8
+        }
+      ],
+      "variants": [
+        {
+          "needs": [
+            "hives"
+          ],
+          "detail": "Supply agreements for the {greenhouseM2} m² greenhouse with a wholesaler, restaurants or farmers' markets, plus honey from {hives} hives."
+        }
+      ],
+      "needs": [
+        "greenhouse"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "Clovernook Farm: farm margins (Farm tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "restock",
+      "stream": "build",
+      "title": "Fencing, water and restocking",
+      "detail": "Fences, water and yards, the livestock refuge mound and the stock: {stock}.",
+      "who": "Fencing contractor and stock agent",
+      "weeks": 6,
+      "after": [
+        "pv-install",
+        "pic"
+      ],
+      "status": "todo",
+      "capex": [
+        "fence",
+        "mound",
+        "poultry",
+        "hives"
+      ],
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "Clovernook Farm: grazing under the array (Farm tab)",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "egg-buyers",
+      "stream": "customers",
+      "title": "Sign egg buyers",
+      "detail": "Contract about {eggsDozenWk} dozen eggs a week from {hens} hens: a free-range brand for most of it, plus farm-gate and local sales.",
+      "who": "Free-range egg brands, local grocers and cafés",
+      "weeks": 8,
+      "after": [
+        "egg-licence"
+      ],
+      "needs": [
+        "poultry"
+      ],
+      "status": "todo",
+      "sources": [
+        {
+          "title": "NSW Food Authority: egg producers",
+          "url": "https://www.foodauthority.nsw.gov.au/industry/eggs/egg-producers",
+          "date": "2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "robot-lease",
+      "stream": "procurement",
+      "title": "Humanoid robot {robotMode} ({robots} from {robotYear})",
+      "detail": "Robot-as-a-service fees run from US$499 a month for a teleoperated home robot (1X NEO) to about US$95k a year for an industrial Agility Digit; the plan assumes US${leaseUsd} a month. Start with cabin turnover and greenhouse work, the tasks expected to mature first, so the robot arrives as the cabins open.",
+      "who": "Humanoid makers and robot-as-a-service providers",
+      "weeks": 8,
+      "after": [
+        {
+          "id": "cabins-open",
+          "lagWeeks": -8
+        }
+      ],
+      "needs": [
+        "robots"
+      ],
+      "status": "todo",
+      "capex": [
+        "robots"
+      ],
+      "commitAt": "start",
+      "sources": [
+        {
+          "title": "1X: NEO order page (US$20,000 or US$499 a month)",
+          "url": "https://www.1x.tech/order",
+          "date": "Oct 2026"
+        },
+        {
+          "title": "Humanoids Daily: Agility's investor day (Digit earns about US$500k over five years under RaaS)",
+          "url": "https://www.humanoidsdaily.com/news/agility-investor-day-digit-5-launch-costs-and-a-300m-order-that-unlocks-skill-by-skill",
+          "date": "6 Oct 2026"
+        }
+      ],
+      "checked": "2026-10-30"
+    },
+    {
+      "id": "operating",
+      "stream": "build",
+      "title": "Fully operating",
+      "detail": "Every part of the plan is earning.",
+      "who": "Owner",
+      "weeks": 0,
+      "after": [
+        "energise",
+        "gpus-live",
+        "gpu-marketplace",
+        "cabins-open",
+        "homestead-lease",
+        "restock",
+        "greenhouse-build",
+        "produce-buyers",
+        "egg-buyers",
+        "energy-offtake",
+        "lgc-accreditation",
+        "robot-lease",
+        "bees"
+      ],
+      "status": "todo",
+      "milestone": true,
+      "sources": [
+        {
+          "title": "Clovernook Farm: Overview",
+          "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
+        }
+      ],
+      "checked": "2026-10-30"
+    }
+  ],
+  "signups": [
+    {
+      "id": "gpu",
+      "label": "GPUs under contract",
+      "unit": "GPUs",
+      "target": "gpusHalf",
+      "signed": 0,
+      "needs": [
+        "compute"
+      ],
+      "step": "gpu-contract",
+      "note": "At least half before the investment decision; the rest go to marketplaces."
+    },
+    {
+      "id": "homestead",
+      "label": "Homestead tenant",
+      "unit": "lease",
+      "target": "homestead",
+      "signed": 0,
+      "needs": [
+        "homesteadLease"
+      ],
+      "step": "homestead-lease"
+    },
+    {
+      "id": "cabins",
+      "label": "Cabin guest nights booked (first year)",
+      "unit": "nights",
+      "target": "guestNights",
+      "signed": 0,
+      "needs": [
+        "cabins"
+      ],
+      "step": "cabin-bookings"
+    },
+    {
+      "id": "energy",
+      "label": "Exports under an offtake agreement",
+      "unit": "MWh a year",
+      "target": "exportMwh",
+      "signed": 0,
+      "needs": [
+        "export"
+      ],
+      "step": "energy-offtake"
+    },
+    {
+      "id": "eggs",
+      "label": "Eggs under supply agreements",
+      "unit": "dozen a week",
+      "target": "eggsDozenWk",
+      "signed": 0,
+      "needs": [
+        "poultry"
+      ],
+      "step": "egg-buyers"
+    },
+    {
+      "id": "produce",
+      "label": "Greenhouse output under agreement",
+      "unit": "m²",
+      "target": "greenhouseM2",
+      "signed": 0,
+      "needs": [
+        "greenhouse"
+      ],
+      "step": "produce-buyers"
+    }
+  ]
+}

@@ -5,8 +5,9 @@ import { SiteMap } from '../SiteMap';
 import { EChart, PALETTE } from '../EChart';
 import { contributions } from '../../engine/risk';
 import { getContext, site } from '../data';
-import { aud, kwp, mwh, num, pct, PV_LABEL, USE_LABEL, years } from '../format';
+import { aud, kwp, monthYear, mwh, num, pct, PV_LABEL, USE_LABEL, years } from '../format';
 import { fpl } from '../../engine/model';
+import { DELIVERY_PLAN, schedulePlan } from '../../engine/delivery';
 
 const STREAM_COLORS: Record<string, string> = {
   'GPU compute': PALETTE.gpu, 'Interruptible compute': PALETTE.flex, 'Energy exports': PALETTE.export, 'Battery services': PALETTE.battery,
@@ -16,6 +17,7 @@ const STREAM_COLORS: Record<string, string> = {
 export function Overview() {
   const { scenario: s, result: r, go } = useApp();
   const contrib = useMemo(() => contributions(r.scenario, getContext()), [r.scenario]);
+  const delivery = useMemo(() => schedulePlan(DELIVERY_PLAN, s, r), [s, r]);
   const gpus = s.compute.servers * s.compute.catalog[s.compute.model].gpusPerServer;
 
   const waterfall = useMemo(() => {
@@ -118,6 +120,7 @@ export function Overview() {
             <li><b>Zoning.</b> {site.planning.zoning.RU1?.pct}% RU1 Primary Production, {site.planning.zoning.R5?.pct}% R5 Large Lot Residential (house block). <button type="button" className="link" onClick={() => go('approvals')}>Approvals pathway</button></li>
             <li><b>Acid sulfate soils</b> class 2a/2b over 95% of the lot: piles and trenches need an ASS management plan.</li>
             <li><b>Bush fire prone</b> grassland (category 3) and <b>2.3 km from Taree Airport</b>: needs asset protection zones and a glint and glare study.</li>
+            {delivery.byId.energise && <li><b>Delivery.</b> The grid connection sets the pace: at today's lead times the site is energised in {monthYear(delivery.byId.energise.endDate)} and fully operating by {monthYear(delivery.endDate)}. <button type="button" className="link" onClick={() => go('delivery')}>Delivery plan</button></li>}
           </ul>
         </Card>
         <Card title="Checks on this plan">

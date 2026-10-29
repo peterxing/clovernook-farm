@@ -1,7 +1,10 @@
+import { useMemo } from 'react';
 import { useApp } from '../state';
 import { Card, Grid, Note, Pill, Ext } from '../components';
 import { site } from '../data';
 import { fpl } from '../../engine/model';
+import { DELIVERY_PLAN, schedulePlan } from '../../engine/delivery';
+import { monthYear } from '../format';
 
 type Status = 'consent' | 'without' | 'confirm' | 'limited';
 const pill = (st: Status, text?: string) => {
@@ -10,8 +13,13 @@ const pill = (st: Status, text?: string) => {
 };
 
 export function ApprovalsTab() {
-  const { scenario: s } = useApp();
+  const { scenario: s, result: r, go } = useApp();
   const level = fpl(s);
+  const sched = useMemo(() => schedulePlan(DELIVERY_PLAN, s, r), [s, r]);
+  const milestones = ['pre-da', 'da-lodge', 'da-determined', 'connection-offer', 'fid', 'energise', 'gpus-live', 'cabins-open', 'operating']
+    .map((id) => sched.byId[id])
+    .filter((x) => x !== undefined)
+    .sort((a, b) => a.end - b.end);
   const rows: { use: string; ru1: Status; r5: Status; basis: string }[] = [
     { use: 'Solar array (electricity generating works)', ru1: 'consent', r5: 'confirm', basis: 'SEPP (Transport and Infrastructure) 2021 allows electricity generating works with consent in prescribed rural zones such as RU1. Keep the array on the RU1 land.' },
     { use: 'Battery storage', ru1: 'consent', r5: 'confirm', basis: 'Assessed with the solar works or as ancillary development; hazard screening under SEPP (Resilience and Hazards) 2021.' },
@@ -31,15 +39,9 @@ export function ApprovalsTab() {
     ['Glint & glare', `${site.airport.name} is about 2.3 km south; airport obstacle surface ${site.planning.obstacleLimitationSurfaceM} m.`],
     ['Biodiversity & koala', 'Koala Management Area: retain paddock trees, check clearing against the Biodiversity Offsets Scheme thresholds.'],
     ['Acoustic assessment', 'GPU cooling and inverter noise at the homestead, cabins and neighbours, day and night.'],
-    ['Grid connection', 'Essential Energy connection enquiry, then detailed studies for import and export capacity on the local 11 kV feeder.'],
+    ['Grid connection', 'Essential Energy preliminary enquiry, then the connection application and network studies for import and export on the local 11 kV feeder (Chapter 5A under 5 MW, 2-3 years end to end).'],
     ['Traffic & access', 'Construction traffic on Clovernook Drive; all-weather access to the platform; flood evacuation route.'],
     ['Visual & landscape', 'Screen planting along boundaries; the Coastal Environment Area applies to part of the land.'],
-  ];
-  const phases = [
-    ['Now - 3 months', 'Due diligence: flood certificate, survey, geotech/ASS sampling, Essential Energy enquiry, pre-DA meeting, GPU offtake conversations.'],
-    ['3 - 9 months', 'Specialist studies, concept design, DA lodgement (the regional planning panel may determine it, depending on capital investment value), connection studies.'],
-    ['9 - 15 months', 'Determination, connection offer, procurement of modules, battery, platform and servers; farm-stay complying development certificates.'],
-    ['15 - 24 months', 'Build the platform and array in dry seasons, energise, commission compute, open cabins, restock paddocks.'],
   ];
   return (
     <div className="stack">
@@ -55,9 +57,9 @@ export function ApprovalsTab() {
         <Card title="Studies the development application will need">
           <ul className="facts">{studies.map(([t, d]) => <li key={t}><b>{t}.</b> {d}</li>)}</ul>
         </Card>
-        <Card title="Indicative programme">
-          <ol className="timeline">{phases.map(([t, d]) => <li key={t}><span className="when">{t}</span><span>{d}</span></li>)}</ol>
-          <Note tone="info">Build on the floodplain in the drier months (late winter to spring) and order long-lead items early: HV switchgear, the battery and Blackwell servers.</Note>
+        <Card title="Programme" subtitle={`Key dates from the delivery plan, updated daily; work starting ${monthYear(sched.start)}.`} actions={<button type="button" className="btn small" onClick={() => go('delivery')}>Full delivery plan</button>}>
+          <ol className="timeline">{milestones.map((m) => <li key={m.id}><span className="when">{monthYear(m.endDate)}</span><span><b>{m.title}.</b> <span className="small muted">{m.who}</span></span></li>)}</ol>
+          <Note tone="info">The grid connection, not the DA, sets the pace. Build on the floodplain in the drier months (late winter to spring) and order long-lead items early: the HV transformer and switchgear, the battery and the Blackwell servers.</Note>
         </Card>
       </Grid>
       <Note tone="warn">The strongest planning story is a primary-production site that keeps grazing under elevated panels, keeps the paddock trees and floodplain storage, and adds homes only at a scale MidCoast Council and the SES can support.</Note>

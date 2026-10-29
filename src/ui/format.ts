@@ -16,6 +16,8 @@ export const kwp = (v: number) => (Math.abs(v) >= 1000 ? `${(v / 1000).toFixed(2
 export const kwh = (v: number) => (Math.abs(v) >= 1000 ? `${(v / 1000).toFixed(1)} MWh` : `${Math.round(v).toLocaleString()} kWh`);
 export const mwh = (v: number) => (Math.abs(v) >= 1000 ? `${(v / 1000).toFixed(2)} GWh` : `${Math.round(v).toLocaleString()} MWh`);
 export const years = (v: number | null) => (v === null || !Number.isFinite(v) ? 'never' : `${v.toFixed(1)} yrs`);
+/** "Aug 2029" from an ISO date. */
+export const monthYear = (iso: string) => new Date(Date.parse(`${iso}T00:00:00Z`)).toLocaleDateString('en-AU', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 export const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 export const PV_LABEL = { fixed: 'Elevated fixed tilt', tracker: 'High-clearance single-axis tracker', vertical: 'Vertical bifacial fences' } as const;
 export const USE_LABEL: Record<string, string> = { sheep: 'Sheep', cattle: 'Cattle', poultry: 'Free-range hens', hay: 'Hay / silage', none: 'Not farmed' };
