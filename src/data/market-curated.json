@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-30",
-  "note": "No values changed: Bargo's B200 reserved average jumped to US$7.79 while spot and on-demand held, so the B200 rent stays until the move lasts (reference updated). Since 1 Oct 2026 new solar of 100 kW-1 MW earns small-scale certificates instead of LGCs, which the plan's 1.54 MWp array clears; the ABARES feed timed out again, so cattle and lamb still use 14 Oct prices (ABARES now shows EYCI 1,016c for 28 Oct).",
+  "updated": "2026-10-31",
+  "note": "No material changes today: B200 rents still sit around the US$5.00 assumption (amcompute's median reserved rate is US$4.79 even though Bargo's average stays at US$7.79), and Tesla's reported Optimus reservations from early December are unconfirmed. The ABARES feed timed out for a third day, so cattle and lamb still use 14 Oct prices while ABARES shows EYCI 1,016c and trade lamb 1,163c for 28 Oct.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,

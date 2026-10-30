@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-30",
-  "note": "First edition of the delivery plan. The grid connection (Essential Energy's Chapter 5A process, 2-3 years end to end) and an 8-14 month transformer lead time set the pace, so the site can't be energised before about August 2029, later than the 2027 start the cash-flow model assumes. The property sold on 7 April 2026 for A$1.15M and isn't listed, so the first step is an option with the new owner.",
+  "updated": "2026-10-31",
+  "note": "No material changes today: Essential Energy's connection timeline, MidCoast's A$625 pre-lodgement meeting and the lot's status (sold 7 April 2026, not listed, no DA lodged) are unchanged, and the consent step now notes MidCoast's 56-day average determination time. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "dev-budget",
@@ -52,7 +52,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "survey",
@@ -116,7 +116,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "studies",
@@ -179,7 +179,7 @@
       "id": "da-determined",
       "stream": "approvals",
       "title": "Assessment and development consent",
-      "detail": "Public exhibition, referrals, assessment and a public panel meeting. Allow six to nine months (planning estimate); the consent conditions set the flood, bush fire, glare and noise requirements.",
+      "detail": "Public exhibition, referrals, assessment and a public panel meeting. MidCoast decides DAs faster than the NSW average (56 days against 76 in April-June 2026), but a panel-determined, integrated DA takes far longer, so allow six to nine months (planning estimate); the consent conditions set the flood, bush fire, glare and noise requirements.",
       "who": "Regional planning panel or MidCoast Council",
       "weeks": 30,
       "after": [
@@ -191,9 +191,14 @@
           "title": "NSW Planning Portal: regionally significant development and planning panels",
           "url": "https://www.planningportal.nsw.gov.au/development-and-assessment/planning-approval-pathways/regionally-significant-development",
           "date": "Oct 2026"
+        },
+        {
+          "title": "MidCoast Council: summary of the 28 October 2026 meeting (average DA determination time 56 days, NSW average 76)",
+          "url": "https://www.midcoast.nsw.gov.au/Your-Council/Council-meetings/Council-meeting-summary/Summary-Council-meeting-28-October-2026",
+          "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-10-31"
     },
     {
       "id": "ee-register",
@@ -211,7 +216,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "ee-prelim",
@@ -239,7 +244,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "ee-investigation",
@@ -259,7 +264,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "ee-studies",
@@ -289,7 +294,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "connection-offer",
@@ -318,7 +323,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "gpu-loi",
@@ -523,7 +528,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "epc-contract",
@@ -867,7 +872,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "connection-works",
@@ -896,7 +901,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "energise",
@@ -928,7 +933,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     {
       "id": "lgc-accreditation",
