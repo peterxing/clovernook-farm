@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T20:29:09.708Z",
+  "updated": "2026-10-31T19:45:33.296Z",
   "fx": {
     "ok": true,
     "usdAud": 1.4205,
@@ -14,7 +14,7 @@
       "B300": {
         "p25": 8.501,
         "median": 9.94,
-        "n": 5,
+        "n": 2,
         "hist": [
           {
             "date": "2026-10-27",
@@ -26,9 +26,9 @@
         "anchorKey": "6.5|"
       },
       "B200": {
-        "p25": 8.751,
-        "median": 9.378,
-        "n": 13,
+        "p25": 6.864,
+        "median": 8.501,
+        "n": 21,
         "hist": [
           {
             "date": "2026-10-26",
@@ -53,16 +53,20 @@
           {
             "date": "2026-10-31",
             "p25": 8.751
+          },
+          {
+            "date": "2026-11-01",
+            "p25": 6.864
           }
         ],
-        "p25s": 8.751,
-        "ratio": 1.0001,
+        "p25s": 8.75,
+        "ratio": 1,
         "anchorKey": "5|8.75"
       },
       "H200": {
-        "p25": 3.974,
-        "median": 4.136,
-        "n": 42,
+        "p25": 3.606,
+        "median": 4.003,
+        "n": 51,
         "hist": [
           {
             "date": "2026-10-26",
@@ -87,16 +91,20 @@
           {
             "date": "2026-10-31",
             "p25": 3.974
+          },
+          {
+            "date": "2026-11-01",
+            "p25": 3.606
           }
         ],
-        "p25s": 3.974,
-        "ratio": 1.05,
+        "p25s": 3.736,
+        "ratio": 1,
         "anchorKey": "3.8|3.736"
       },
       "RTXPRO6000": {
-        "p25": 1.434,
-        "median": 1.655,
-        "n": 106,
+        "p25": 1.334,
+        "median": 1.554,
+        "n": 101,
         "hist": [
           {
             "date": "2026-10-26",
@@ -121,6 +129,10 @@
           {
             "date": "2026-10-31",
             "p25": 1.434
+          },
+          {
+            "date": "2026-11-01",
+            "p25": 1.334
           }
         ],
         "p25s": 1.336,
@@ -128,9 +140,9 @@
         "anchorKey": "1.9|1.334"
       },
       "L40S": {
-        "p25": 0.64,
+        "p25": 0.601,
         "median": 0.8,
-        "n": 28,
+        "n": 36,
         "hist": [
           {
             "date": "2026-10-26",
@@ -155,6 +167,10 @@
           {
             "date": "2026-10-31",
             "p25": 0.64
+          },
+          {
+            "date": "2026-11-01",
+            "p25": 0.601
           }
         ],
         "p25s": 0.64,
@@ -162,14 +178,14 @@
         "anchorKey": "0.95|0.64"
       }
     },
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
     "ok": true,
     "usdPerW": 0.114,
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "source": "InfoLink spot price, TOPCon module (USD/W, average)",
     "url": "https://www.infolink-group.com/spot-price/en/"
   },
@@ -246,7 +262,7 @@
       "priceUsd": 20000,
       "monthlyUsd": 499
     },
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "source": "Unitree store and 1X order page (list prices, US$)",
     "url": "https://shop.unitree.com/collections/humanoid-robot"
   },
@@ -254,17 +270,17 @@
     "ok": true,
     "price": 7.55,
     "week": "19 - 23 October 2026",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "source": "Ecovantage weekly certificate market update (LGC spot)",
     "url": "https://www.ecovantage.com.au/energy-certificate-market-update/"
   },
   "nem": {
     "ok": true,
-    "mean30": 129.29,
-    "mean365": 78.89,
-    "negShare365": 0.0748,
-    "through": "2026-10-30",
-    "date": "2026-10-30",
+    "mean30": 129.03,
+    "mean365": 78.79,
+    "negShare365": 0.0747,
+    "through": "2026-10-31",
+    "date": "2026-10-31",
     "source": "AEMO NSW1 5-minute prices",
     "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
   }
