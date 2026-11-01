@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-31",
-  "note": "No material changes today: Essential Energy's connection timeline, MidCoast's A$625 pre-lodgement meeting and the lot's status (sold 7 April 2026, not listed, no DA lodged) are unchanged, and the consent step now notes MidCoast's 56-day average determination time. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-01",
+  "note": "Re-checked the other 40 steps against their sources and no fee, lead time or rule changed; the specialist studies step now notes that PBP 2019 still applies while a draft PBP 2026 (exhibited August-September 2026) awaits adoption. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -77,7 +77,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "concept",
@@ -96,7 +96,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "pre-da",
@@ -122,7 +122,7 @@
       "id": "studies",
       "stream": "approvals",
       "title": "Specialist studies",
-      "detail": "Flood impact and risk, acid sulfate soils management, bush fire assessment to Planning for Bush Fire Protection 2019, glint and glare for Taree Airport, biodiversity and koalas, noise from cooling and inverters, traffic and visual impact.",
+      "detail": "Flood impact and risk, acid sulfate soils management, bush fire assessment to Planning for Bush Fire Protection 2019 (still the legislated version; a draft PBP 2026 was exhibited in August-September 2026 and may apply by the time the DA is lodged), glint and glare for Taree Airport, biodiversity and koalas, noise from cooling and inverters, traffic and visual impact.",
       "who": "Flood, soils, bush fire, glare, ecology, acoustic, traffic and visual consultants",
       "weeks": 16,
       "after": [
@@ -135,12 +135,12 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
         },
         {
-          "title": "NSW RFS: Planning for Bush Fire Protection",
-          "url": "https://www.rfs.nsw.gov.au/plan-and-prepare/building-in-a-bush-fire-area/planning-for-bush-fire-protection",
-          "date": "2026"
+          "title": "NSW RFS: Planning for Bush Fire Protection (PBP 2019 in force; draft PBP 2026 exhibited 6 Aug-3 Sep 2026)",
+          "url": "https://www.rfs.nsw.gov.au/plan-and-prepare/building-on-bush-fire-prone-land/planning-for-bush-fire-protection",
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "da-lodge",
@@ -173,7 +173,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "da-determined",
@@ -350,7 +350,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "servers-quote",
@@ -378,7 +378,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "gpu-contract",
@@ -401,7 +401,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "finance",
@@ -431,7 +431,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "epc-tender",
@@ -456,7 +456,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "fid",
@@ -505,7 +505,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "connection-accept",
@@ -554,7 +554,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "long-lead",
@@ -575,7 +575,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "battery-order",
@@ -596,7 +596,7 @@
           "date": "Sep 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "pv-order",
@@ -617,7 +617,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "dc-order",
@@ -644,7 +644,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "servers-order",
@@ -675,7 +675,7 @@
           "date": "25 Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "detail-design",
@@ -694,7 +694,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=risk"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "cc",
@@ -723,7 +723,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "pic",
@@ -746,7 +746,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "bees",
@@ -769,7 +769,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "egg-licence",
@@ -792,7 +792,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "site-works",
@@ -811,7 +811,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "pv-install",
@@ -831,7 +831,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "bess-install",
@@ -851,7 +851,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=energy"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "install-electrical",
@@ -965,7 +965,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "energy-offtake",
@@ -993,7 +993,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "dc-build",
@@ -1016,7 +1016,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "servers-install",
@@ -1040,7 +1040,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "gpus-live",
@@ -1064,7 +1064,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "gpu-marketplace",
@@ -1087,7 +1087,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "homestead-lease",
@@ -1110,7 +1110,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "cabins-build",
@@ -1144,7 +1144,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "cabin-bookings",
@@ -1170,7 +1170,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "cabins-open",
@@ -1194,7 +1194,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "greenhouse-build",
@@ -1228,7 +1228,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "produce-buyers",
@@ -1261,7 +1261,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "restock",
@@ -1288,7 +1288,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "egg-buyers",
@@ -1311,7 +1311,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "robot-lease",
@@ -1346,7 +1346,7 @@
           "date": "6 Oct 2026"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     },
     {
       "id": "operating",
@@ -1378,7 +1378,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
         }
       ],
-      "checked": "2026-10-30"
+      "checked": "2026-11-01"
     }
   ],
   "signups": [
