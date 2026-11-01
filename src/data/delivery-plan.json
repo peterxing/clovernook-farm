@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-01",
-  "note": "Re-checked the other 40 steps against their sources and no fee, lead time or rule changed; the specialist studies step now notes that PBP 2019 still applies while a draft PBP 2026 (exhibited August-September 2026) awaits adoption. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-02",
+  "note": "No material changes today: Essential Energy's connection timeline, MidCoast's A$625 pre-lodgement meeting and the lot's status (sold 7 April 2026, not listed, no DA lodged) are unchanged. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "dev-budget",
@@ -52,7 +52,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "survey",
@@ -116,7 +116,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "studies",
@@ -198,7 +198,7 @@
           "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "ee-register",
@@ -216,7 +216,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "ee-prelim",
@@ -244,7 +244,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "ee-investigation",
@@ -264,7 +264,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "ee-studies",
@@ -294,7 +294,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "connection-offer",
@@ -323,7 +323,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "gpu-loi",
@@ -528,7 +528,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "epc-contract",
@@ -872,7 +872,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "connection-works",
@@ -901,7 +901,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "energise",
@@ -933,7 +933,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-10-31"
+      "checked": "2026-11-02"
     },
     {
       "id": "lgc-accreditation",
