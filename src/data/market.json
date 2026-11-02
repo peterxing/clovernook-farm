@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-01T20:17:49.490Z",
+  "updated": "2026-11-02T22:04:45.903Z",
   "fx": {
     "ok": true,
-    "usdAud": 1.4205,
-    "audUsd": 0.704,
-    "date": "2026-10-30",
+    "usdAud": 1.4239,
+    "audUsd": 0.7023,
+    "date": "2026-11-02",
     "source": "RBA F11.1 (A$1 = US$)",
     "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates"
   },
@@ -14,7 +14,7 @@
       "B300": {
         "p25": 8.501,
         "median": 9.94,
-        "n": 7,
+        "n": 6,
         "hist": [
           {
             "date": "2026-10-27",
@@ -28,7 +28,7 @@
       "B200": {
         "p25": 6.864,
         "median": 8.501,
-        "n": 5,
+        "n": 4,
         "hist": [
           {
             "date": "2026-10-26",
@@ -64,9 +64,9 @@
         "anchorKey": "5|8.75"
       },
       "H200": {
-        "p25": 3.601,
-        "median": 4.002,
-        "n": 53,
+        "p25": 3.721,
+        "median": 4.21,
+        "n": 35,
         "hist": [
           {
             "date": "2026-10-26",
@@ -99,16 +99,20 @@
           {
             "date": "2026-11-02",
             "p25": 3.601
+          },
+          {
+            "date": "2026-11-03",
+            "p25": 3.721
           }
         ],
-        "p25s": 3.736,
-        "ratio": 1,
+        "p25s": 3.721,
+        "ratio": 0.996,
         "anchorKey": "3.8|3.736"
       },
       "RTXPRO6000": {
-        "p25": 1.374,
-        "median": 1.602,
-        "n": 108,
+        "p25": 1.336,
+        "median": 1.58,
+        "n": 114,
         "hist": [
           {
             "date": "2026-10-26",
@@ -141,6 +145,10 @@
           {
             "date": "2026-11-02",
             "p25": 1.374
+          },
+          {
+            "date": "2026-11-03",
+            "p25": 1.336
           }
         ],
         "p25s": 1.336,
@@ -148,9 +156,9 @@
         "anchorKey": "1.9|1.334"
       },
       "L40S": {
-        "p25": 0.467,
-        "median": 0.641,
-        "n": 27,
+        "p25": 0.535,
+        "median": 0.735,
+        "n": 31,
         "hist": [
           {
             "date": "2026-10-26",
@@ -183,6 +191,10 @@
           {
             "date": "2026-11-02",
             "p25": 0.467
+          },
+          {
+            "date": "2026-11-03",
+            "p25": 0.535
           }
         ],
         "p25s": 0.64,
@@ -190,14 +202,14 @@
         "anchorKey": "0.95|0.64"
       }
     },
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
     "ok": true,
     "usdPerW": 0.114,
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "source": "InfoLink spot price, TOPCon module (USD/W, average)",
     "url": "https://www.infolink-group.com/spot-price/en/"
   },
@@ -274,7 +286,7 @@
       "priceUsd": 20000,
       "monthlyUsd": 499
     },
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "source": "Unitree store and 1X order page (list prices, US$)",
     "url": "https://shop.unitree.com/collections/humanoid-robot"
   },
@@ -284,15 +296,17 @@
     "week": "19 - 23 October 2026",
     "date": "2026-11-02",
     "source": "Ecovantage weekly certificate market update (LGC spot)",
-    "url": "https://www.ecovantage.com.au/energy-certificate-market-update/"
+    "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
+    "stale": true,
+    "error": "LGC section not found"
   },
   "nem": {
     "ok": true,
-    "mean30": 128.6,
-    "mean365": 78.84,
-    "negShare365": 0.0743,
-    "through": "2026-11-01",
-    "date": "2026-11-01",
+    "mean30": 129.71,
+    "mean365": 79.02,
+    "negShare365": 0.0736,
+    "through": "2026-11-02",
+    "date": "2026-11-02",
     "source": "AEMO NSW1 5-minute prices",
     "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
   }
