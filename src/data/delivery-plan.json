@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-02",
-  "note": "No material changes today: Essential Energy's connection timeline, MidCoast's A$625 pre-lodgement meeting and the lot's status (sold 7 April 2026, not listed, no DA lodged) are unchanged. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-03",
+  "note": "No material changes today: GPU rents, server board prices and module prices behind the procurement and offtake steps are unchanged, and the plan's battery is now 1 MW / 2 MWh, which doesn't change its lead time. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -343,14 +343,14 @@
         {
           "title": "Bargo: B200 on-demand, reserved and spot rents",
           "url": "https://www.bargo.ai/gpu/b200",
-          "date": "29 Oct 2026"
+          "date": "2 Nov 2026"
         },
         {
           "title": "Clovernook Farm: GPU rents used by the model (Markets tab)",
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-03"
     },
     {
       "id": "servers-quote",
@@ -617,7 +617,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-03"
     },
     {
       "id": "dc-order",
@@ -675,7 +675,7 @@
           "date": "25 Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-03"
     },
     {
       "id": "detail-design",
