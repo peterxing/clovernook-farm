@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-03",
-  "note": "The LGC fallback moves to A$7.45, Ecovantage's spot close for the week of 26-30 Oct (only Monday traded, during the All Energy expo); the live LGC feed failed because Ecovantage reworded its update, so the model still uses last week's A$7.55. ABARES timed out for a sixth day, so cattle and lamb still use 14 Oct prices; GPU trackers and robot list prices are unchanged.",
+  "updated": "2026-11-04",
+  "note": "No material changes today: GPU trackers (Bargo, GPU.ai, amcompute, llmhosting) and Gatewell's server board prices (reposted 3 Nov) are unchanged, as are robot list prices. The LGC feed failed again on Ecovantage's new wording, so the model keeps A$7.55 while the fallback holds the A$7.45 close for 26-30 Oct, and ABARES timed out for a seventh day.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,

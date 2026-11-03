@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-03",
-  "note": "No material changes today: GPU rents, server board prices and module prices behind the procurement and offtake steps are unchanged, and the plan's battery is now 1 MW / 2 MWh, which doesn't change its lead time. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-04",
+  "note": "No material changes today: Clean Energy Regulator accreditation, Vast.ai's data-centre rules, transformer and battery lead times and Gatewell's server board prices (reposted 3 November) are unchanged. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -370,7 +370,7 @@
         {
           "title": "Gatewell: HGX B300, B200 and H200 board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "25 Oct 2026"
+          "date": "3 Nov 2026"
         },
         {
           "title": "Mercatus: 8-GPU server prices and allocation",
@@ -378,7 +378,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-04"
     },
     {
       "id": "gpu-contract",
@@ -575,7 +575,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-04"
     },
     {
       "id": "battery-order",
@@ -596,7 +596,7 @@
           "date": "Sep 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-04"
     },
     {
       "id": "pv-order",
@@ -672,10 +672,10 @@
         {
           "title": "Gatewell: HGX board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "25 Oct 2026"
+          "date": "3 Nov 2026"
         }
       ],
-      "checked": "2026-11-03"
+      "checked": "2026-11-04"
     },
     {
       "id": "detail-design",
@@ -965,7 +965,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-04"
     },
     {
       "id": "energy-offtake",
@@ -1087,7 +1087,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-04"
     },
     {
       "id": "homestead-lease",
