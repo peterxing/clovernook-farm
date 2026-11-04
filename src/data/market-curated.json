@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-04",
-  "note": "No material changes today: GPU trackers (Bargo, GPU.ai, amcompute, llmhosting) and Gatewell's server board prices (reposted 3 Nov) are unchanged, as are robot list prices. The LGC feed failed again on Ecovantage's new wording, so the model keeps A$7.55 while the fallback holds the A$7.45 close for 26-30 Oct, and ABARES timed out for a seventh day.",
+  "updated": "2026-11-05",
+  "note": "Figure 03's entry now says it is sold only to business customers (BMW, Catalyst Brands), with BotQ's 1,000th robot built in July; GPU trackers, Gatewell's server prices (reposted 3 Nov) and robot list prices are otherwise unchanged. ABARES timed out for an eighth day and the LGC feed still fails on Ecovantage's new wording, so the model keeps A$7.55 while the fallback holds the A$7.45 close for 26-30 Oct.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -188,10 +188,10 @@
         "name": "Figure 03",
         "maker": "Figure AI",
         "priceUsd": null,
-        "availability": "Enterprise pilots only",
+        "availability": "Not for sale; business customers only (BMW, Catalyst Brands); 1,000th unit built July 2026",
         "class": "Full-size general purpose",
-        "source": "https://www.figure.ai/",
-        "date": "2026-10-25"
+        "source": "https://the-gadgeteer.com/2026/11/03/figure-03-humanoids-walk-out-of-botq/",
+        "date": "2026-11-03"
       }
     ],
     "tasks": {

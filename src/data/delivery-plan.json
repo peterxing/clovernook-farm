@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-04",
-  "note": "No material changes today: Clean Energy Regulator accreditation, Vast.ai's data-centre rules, transformer and battery lead times and Gatewell's server board prices (reposted 3 November) are unchanged. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-05",
+  "note": "Re-verified the approval steps (survey, concept, specialist studies, DA lodgement, construction certificates, PIC, beekeeper registration and egg licence) and updated the robot step's Agility Digit 5 fee to about US$8,500 a month from its SEC merger filing. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -77,7 +77,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "concept",
@@ -96,7 +96,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "pre-da",
@@ -140,7 +140,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "da-lodge",
@@ -173,7 +173,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "da-determined",
@@ -723,7 +723,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "pic",
@@ -746,7 +746,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "bees",
@@ -769,7 +769,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "egg-licence",
@@ -792,7 +792,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "site-works",
@@ -1317,7 +1317,7 @@
       "id": "robot-lease",
       "stream": "procurement",
       "title": "Humanoid robot {robotMode} ({robots} from {robotYear})",
-      "detail": "Robot-as-a-service fees run from US$499 a month for a teleoperated home robot (1X NEO) to about US$95k a year for an industrial Agility Digit; the plan assumes US${leaseUsd} a month. Start with cabin turnover and greenhouse work, the tasks expected to mature first, so the robot arrives as the cabins open.",
+      "detail": "Robot-as-a-service fees run from US$499 a month for a teleoperated home robot (1X NEO) to about US$8,500 a month for an industrial Agility Digit 5; the plan assumes US${leaseUsd} a month. Start with cabin turnover and greenhouse work, the tasks expected to mature first, so the robot arrives as the cabins open.",
       "who": "Humanoid makers and robot-as-a-service providers",
       "weeks": 8,
       "after": [
@@ -1341,12 +1341,12 @@
           "date": "Oct 2026"
         },
         {
-          "title": "Humanoids Daily: Agility's investor day (Digit earns about US$500k over five years under RaaS)",
-          "url": "https://www.humanoidsdaily.com/news/agility-investor-day-digit-5-launch-costs-and-a-300m-order-that-unlocks-skill-by-skill",
-          "date": "6 Oct 2026"
+          "title": "Churchill Capital Corp XI (Agility Robotics merger), SEC Form 425: Digit 5 orders modelled at about US$8,500 per robot a month under robots-as-a-service",
+          "url": "https://www.stocktitan.net/sec-filings/CCXI/425-churchill-capital-corp-xi-business-combination-communication-ff3aa5437ed0.html",
+          "date": "16 Sep 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-05"
     },
     {
       "id": "operating",
