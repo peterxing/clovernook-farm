@@ -327,5 +327,35 @@
     "recIrr": 0.0934,
     "recCapex": 24042061,
     "recRobots": 1
+  },
+  {
+    "date": "2026-11-06",
+    "usdAud": 1.4257,
+    "gpuAsk": {
+      "B300": 8.501,
+      "B200": 8.751,
+      "H200": 3.869,
+      "RTXPRO6000": 1.374,
+      "L40S": 0.534
+    },
+    "gpuPrice": {
+      "B300": 6.5,
+      "B200": 5,
+      "H200": 3.94,
+      "RTXPRO6000": 1.96,
+      "L40S": 0.81
+    },
+    "nem30": 127.7,
+    "lgc": 7.55,
+    "moduleUsdPerW": 0.114,
+    "eyci": 939,
+    "ntli": 1150,
+    "fpi": 136,
+    "robotUsd": 42000,
+    "unitreeH2": 29900,
+    "recNpv": 2257755,
+    "recIrr": 0.0931,
+    "recCapex": 23959501,
+    "recRobots": 1
   }
 ]
