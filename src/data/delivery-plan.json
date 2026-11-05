@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-05",
-  "note": "Re-verified the approval steps (survey, concept, specialist studies, DA lodgement, construction certificates, PIC, beekeeper registration and egg licence) and updated the robot step's Agility Digit 5 fee to about US$8,500 a month from its SEC merger filing. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-06",
+  "note": "Re-verified 13 procurement, commitment and build steps. The finance step now cites GPU-backed lending sources (its old American Compute page now offers insurance, not loans) and notes that a customer without an investment-grade rating adds about 2-3 points to the interest rate. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
   "startDate": null,
   "steps": [
     {
@@ -401,7 +401,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "finance",
@@ -420,18 +420,23 @@
             "compute"
           ],
           "who": "Banks, private credit and GPU financiers",
-          "detail": "Lenders want contracted income: the GPU offtake first, then the homestead lease and an energy offtake. Specialist lenders finance GPU servers against signed offtake; the land and farm assets secure the rest."
+          "detail": "Lenders want contracted income: the GPU offtake first, then the homestead lease and an energy offtake. Specialist lenders finance GPU servers against the GPUs and the signed offtake, and a customer without an investment-grade rating adds about 2-3 percentage points to the interest rate; the land and farm assets secure the rest."
         }
       ],
       "status": "todo",
       "sources": [
         {
-          "title": "American Compute: GPU financing and residual values",
-          "url": "https://www.amcompute.com/",
-          "date": "Oct 2026"
+          "title": "Quartz: GPU-collateralised debt explained (loans secured by the GPUs and the customer contracts)",
+          "url": "https://qz.com/gpu-collateralized-debt-ai-neocloud-coreweave-financing-risks-050526",
+          "date": "8 May 2026"
+        },
+        {
+          "title": "Axis Intelligence: Neocloud statistics 2026 (non-investment-grade customers add 2.25-3 points to GPU loan rates)",
+          "url": "https://axis-intelligence.com/neocloud-statistics/",
+          "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "epc-tender",
@@ -456,7 +461,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "fid",
@@ -505,7 +510,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "connection-accept",
@@ -554,7 +559,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "long-lead",
@@ -644,7 +649,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "servers-order",
@@ -694,7 +699,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=risk"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "cc",
@@ -811,7 +816,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "pv-install",
@@ -831,7 +836,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "bess-install",
@@ -851,7 +856,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=energy"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "install-electrical",
@@ -1016,7 +1021,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "servers-install",
@@ -1040,7 +1045,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "gpus-live",
@@ -1064,7 +1069,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-06"
     },
     {
       "id": "gpu-marketplace",
