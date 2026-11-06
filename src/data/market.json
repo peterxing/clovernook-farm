@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-05T21:48:05.242Z",
+  "updated": "2026-11-06T21:21:13.557Z",
   "fx": {
     "ok": true,
-    "usdAud": 1.4257,
-    "audUsd": 0.7014,
-    "date": "2026-11-05",
+    "usdAud": 1.4493,
+    "audUsd": 0.69,
+    "date": "2026-11-06",
     "source": "RBA F11.1 (A$1 = US$)",
     "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates"
   },
@@ -14,7 +14,7 @@
       "B300": {
         "p25": 8.501,
         "median": 9.94,
-        "n": 0,
+        "n": 1,
         "hist": [
           {
             "date": "2026-10-27",
@@ -28,7 +28,7 @@
       "B200": {
         "p25": 8.751,
         "median": 10.001,
-        "n": 14,
+        "n": 15,
         "hist": [
           {
             "date": "2026-10-26",
@@ -69,6 +69,10 @@
           {
             "date": "2026-11-06",
             "p25": 8.751
+          },
+          {
+            "date": "2026-11-07",
+            "p25": 8.751
           }
         ],
         "p25s": 8.751,
@@ -76,9 +80,9 @@
         "anchorKey": "5|8.75"
       },
       "H200": {
-        "p25": 3.472,
-        "median": 4.136,
-        "n": 46,
+        "p25": 3.601,
+        "median": 4.002,
+        "n": 45,
         "hist": [
           {
             "date": "2026-10-26",
@@ -127,16 +131,20 @@
           {
             "date": "2026-11-06",
             "p25": 3.472
+          },
+          {
+            "date": "2026-11-07",
+            "p25": 3.601
           }
         ],
-        "p25s": 3.869,
-        "ratio": 1.0356,
+        "p25s": 3.606,
+        "ratio": 0.9838,
         "anchorKey": "3.8|3.736"
       },
       "RTXPRO6000": {
-        "p25": 1.468,
-        "median": 1.607,
-        "n": 112,
+        "p25": 1.402,
+        "median": 1.542,
+        "n": 107,
         "hist": [
           {
             "date": "2026-10-26",
@@ -185,6 +193,10 @@
           {
             "date": "2026-11-06",
             "p25": 1.468
+          },
+          {
+            "date": "2026-11-07",
+            "p25": 1.402
           }
         ],
         "p25s": 1.374,
@@ -194,7 +206,7 @@
       "L40S": {
         "p25": 0.534,
         "median": 0.735,
-        "n": 26,
+        "n": 24,
         "hist": [
           {
             "date": "2026-10-26",
@@ -243,21 +255,25 @@
           {
             "date": "2026-11-06",
             "p25": 0.534
+          },
+          {
+            "date": "2026-11-07",
+            "p25": 0.534
           }
         ],
         "p25s": 0.534,
-        "ratio": 0.8574,
+        "ratio": 0.8344,
         "anchorKey": "0.95|0.64"
       }
     },
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
     "ok": true,
     "usdPerW": 0.114,
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "source": "InfoLink spot price, TOPCon module (USD/W, average)",
     "url": "https://www.infolink-group.com/spot-price/en/"
   },
@@ -299,10 +315,10 @@
   },
   "fpi": {
     "ok": true,
-    "value": 136,
-    "meat": 127.9,
-    "month": "2026-09",
-    "date": "2026-09",
+    "value": 133.9,
+    "meat": 125.5,
+    "month": "2026-10",
+    "date": "2026-10",
     "source": "FAO Food Price Index (2014-2016 = 100)",
     "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/"
   },
@@ -334,7 +350,7 @@
       "priceUsd": 20000,
       "monthlyUsd": 499
     },
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "source": "Unitree store and 1X order page (list prices, US$)",
     "url": "https://shop.unitree.com/collections/humanoid-robot"
   },
@@ -350,11 +366,11 @@
   },
   "nem": {
     "ok": true,
-    "mean30": 127.7,
-    "mean365": 79.14,
-    "negShare365": 0.0717,
-    "through": "2026-11-05",
-    "date": "2026-11-05",
+    "mean30": 127.12,
+    "mean365": 79.12,
+    "negShare365": 0.0707,
+    "through": "2026-11-06",
+    "date": "2026-11-06",
     "source": "AEMO NSW1 5-minute prices",
     "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
   }
