@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-06",
-  "note": "Re-verified 13 procurement, commitment and build steps. The finance step now cites GPU-backed lending sources (its old American Compute page now offers insurance, not loans) and notes that a customer without an investment-grade rating adds about 2-3 points to the interest rate. At today's lead times the investment decision falls in June 2028 and the site is energised in August 2029.",
+  "updated": "2026-11-07",
+  "note": "Re-verified 24 steps, including all nine grid connection steps against Essential Energy's HV connection page and the site option, pre-lodgement and DA steps against OnTheHouse, MidCoast Council and NSW Planning (MidCoast has no local planning panel, so the regional panel still decides); no durations or statuses changed. At today's lead times the investment decision falls on 10 June 2028 and energisation on 25 August 2029, with everything operating by 29 September 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "dev-budget",
@@ -52,7 +52,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "survey",
@@ -116,7 +116,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "studies",
@@ -198,7 +198,7 @@
           "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "ee-register",
@@ -216,7 +216,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "ee-prelim",
@@ -244,7 +244,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "ee-investigation",
@@ -264,7 +264,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "ee-studies",
@@ -294,7 +294,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "connection-offer",
@@ -323,7 +323,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "gpu-loi",
@@ -533,7 +533,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "epc-contract",
@@ -877,7 +877,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "connection-works",
@@ -906,7 +906,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "energise",
@@ -938,7 +938,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-02"
+      "checked": "2026-11-07"
     },
     {
       "id": "lgc-accreditation",
@@ -998,7 +998,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "dc-build",
@@ -1115,7 +1115,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "cabins-build",
@@ -1149,7 +1149,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "cabin-bookings",
@@ -1175,7 +1175,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "cabins-open",
@@ -1199,7 +1199,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "greenhouse-build",
@@ -1233,7 +1233,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "produce-buyers",
@@ -1266,7 +1266,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "restock",
@@ -1293,7 +1293,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "egg-buyers",
@@ -1316,7 +1316,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     },
     {
       "id": "robot-lease",
@@ -1351,7 +1351,7 @@
           "date": "16 Sep 2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-07"
     },
     {
       "id": "operating",
@@ -1383,7 +1383,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
         }
       ],
-      "checked": "2026-11-01"
+      "checked": "2026-11-07"
     }
   ],
   "signups": [

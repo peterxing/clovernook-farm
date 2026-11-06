@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-06",
-  "note": "Added Agility Digit 5 to the robot list after Agility listed on Nasdaq on 5 Nov; GPU trackers, Gatewell's server prices (reposted 3 Nov) and robot list prices are otherwise unchanged. ABARES timed out for a ninth day and the LGC feed still fails on Ecovantage's wording, so the model keeps A$7.55 while the fallback holds the A$7.45 close for 26-30 Oct.",
+  "updated": "2026-11-07",
+  "note": "Added Agility's S-4 cost model to the Digit 5 entry (about US$200,000 to buy plus about US$36,000 a year, or about US$8,500 a month as a service); GPU rents, module prices and robot list prices are otherwise in line with the current anchors. ABARES timed out for a tenth day and the LGC feed still fails, so the model keeps A$7.55 while the fallback holds Ecovantage's A$7.45 close for 26-30 Oct.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -196,11 +196,11 @@
       {
         "name": "Agility Digit 5",
         "maker": "Agility Robotics",
-        "priceUsd": null,
-        "availability": "Robots-as-a-service to industrial customers (GXO, Schaeffler, Toyota); Agility listed on Nasdaq on 5 Nov 2026",
+        "priceUsd": 200000,
+        "availability": "Sold to industrial customers: about US$200,000 to buy plus about US$36,000 a year for software and maintenance, or about US$8,500 a month as a service (Agility S-4 cost model)",
         "class": "Full-size logistics humanoid (totes and bins)",
-        "source": "https://arstechnica.com/ai/2026/11/agility-robotics-nasdaq-debut-invites-scrutiny-of-humanoid-robot-market/",
-        "date": "2026-11-05"
+        "source": "https://robomorrow.com/en/agility-robotics-digit-economics-s4-revenue-loss-2026/",
+        "date": "2026-09-11"
       }
     ],
     "tasks": {
