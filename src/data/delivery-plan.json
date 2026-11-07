@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-07",
-  "note": "Re-verified 24 steps, including all nine grid connection steps against Essential Energy's HV connection page and the site option, pre-lodgement and DA steps against OnTheHouse, MidCoast Council and NSW Planning (MidCoast has no local planning panel, so the regional panel still decides); no durations or statuses changed. At today's lead times the investment decision falls on 10 June 2028 and energisation on 25 August 2029, with everything operating by 29 September 2029.",
+  "updated": "2026-11-08",
+  "note": "Re-verified 8 procurement and customer steps: the GPU marketplace step now notes that Vast.ai's certified hosts must be a verified, registered business that signs its hosting agreement, and the LGC accreditation step adds the Clean Energy Regulator's 6-week registered-person check before drafting 10-12 weeks ahead of first generation. No durations or statuses changed: at today's lead times the investment decision falls on 11 June 2028 and energisation on 26 August 2029, with everything operating by 30 September 2029.",
   "startDate": null,
   "steps": [
     {
@@ -343,14 +343,14 @@
         {
           "title": "Bargo: B200 on-demand, reserved and spot rents",
           "url": "https://www.bargo.ai/gpu/b200",
-          "date": "2 Nov 2026"
+          "date": "7 Nov 2026"
         },
         {
           "title": "Clovernook Farm: GPU rents used by the model (Markets tab)",
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-11-03"
+      "checked": "2026-11-08"
     },
     {
       "id": "servers-quote",
@@ -370,7 +370,7 @@
         {
           "title": "Gatewell: HGX B300, B200 and H200 board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "3 Nov 2026"
+          "date": "5 Nov 2026"
         },
         {
           "title": "Mercatus: 8-GPU server prices and allocation",
@@ -378,7 +378,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-04"
+      "checked": "2026-11-08"
     },
     {
       "id": "gpu-contract",
@@ -575,12 +575,12 @@
       "commitAt": "start",
       "sources": [
         {
-          "title": "Nexus Power: transformer lead times in 2026 (distribution class up to 5 MVA: 8-14 months)",
-          "url": "https://www.nexuspower.io/insights/transformer-lead-times-2026",
-          "date": "2026"
+          "title": "Nexus Compute: transformer lead times in 2026 (distribution class up to 5 MVA: 8-14 months)",
+          "url": "https://www.nexuscompute.ai/insights/transformer-lead-times-2026",
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-04"
+      "checked": "2026-11-08"
     },
     {
       "id": "battery-order",
@@ -601,7 +601,7 @@
           "date": "Sep 2026"
         }
       ],
-      "checked": "2026-11-04"
+      "checked": "2026-11-08"
     },
     {
       "id": "pv-order",
@@ -619,10 +619,10 @@
         {
           "title": "InfoLink: TOPCon module spot prices",
           "url": "https://www.infolink-group.com/spot-price/en/",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-03"
+      "checked": "2026-11-08"
     },
     {
       "id": "dc-order",
@@ -677,10 +677,10 @@
         {
           "title": "Gatewell: HGX board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "3 Nov 2026"
+          "date": "5 Nov 2026"
         }
       ],
-      "checked": "2026-11-04"
+      "checked": "2026-11-08"
     },
     {
       "id": "detail-design",
@@ -944,7 +944,7 @@
       "id": "lgc-accreditation",
       "stream": "approvals",
       "title": "Power station accreditation for LGCs",
-      "detail": "Prepare the application in the REC Registry ahead of first generation: LGCs can only be created from the accreditation date. The {kwdc} array is above the 1 MW limit that moved smaller new solar to small-scale certificates on 1 October 2026.",
+      "detail": "Become a registered person first (the Clean Energy Regulator takes up to 6 weeks to assess it), then draft the application in the REC Registry 10-12 weeks before first generation: LGCs can only be created from the accreditation date. The {kwdc} array is above the 1 MW limit that moved smaller new solar to small-scale certificates on 1 October 2026.",
       "who": "Clean Energy Regulator",
       "weeks": 12,
       "after": [
@@ -967,10 +967,10 @@
         {
           "title": "Clean Energy Regulator: apply for power station accreditation",
           "url": "https://cer.gov.au/schemes/renewable-energy-target/renewable-energy-target-participants-and-industry/power-stations/apply-accreditation",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-04"
+      "checked": "2026-11-08"
     },
     {
       "id": "energy-offtake",
@@ -1075,7 +1075,7 @@
       "id": "gpu-marketplace",
       "stream": "customers",
       "title": "List spare GPUs on marketplaces",
-      "detail": "Vast.ai's certified data centre tier needs 5 or more servers in a professionally managed facility with reliable power, cooling and network; ISO 27001 or SOC 2 helps but isn't required, and applications are reviewed within 2 business days. Otherwise list as a standard host.",
+      "detail": "Vast.ai's certified data centre tier needs at least 5 servers with flagship GPUs (it is aimed at hosts with 40 or more data-centre GPUs) in a professionally managed facility with reliable power, cooling and network, owned by a registered business that completes identity verification and signs Vast's hosting agreement; ISO 27001 or SOC 2 helps but isn't required, and applications are reviewed within 2 business days. Otherwise list as a standard host.",
       "who": "Vast.ai and other GPU marketplaces",
       "weeks": 2,
       "after": [
@@ -1089,10 +1089,10 @@
         {
           "title": "Vast.ai: certified data center application",
           "url": "https://vast.ai/data-center-application",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-04"
+      "checked": "2026-11-08"
     },
     {
       "id": "homestead-lease",

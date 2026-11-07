@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-07",
-  "note": "Added Agility's S-4 cost model to the Digit 5 entry (about US$200,000 to buy plus about US$36,000 a year, or about US$8,500 a month as a service); GPU rents, module prices and robot list prices are otherwise in line with the current anchors. ABARES timed out for a tenth day and the LGC feed still fails, so the model keeps A$7.55 while the fallback holds Ecovantage's A$7.45 close for 26-30 Oct.",
+  "updated": "2026-11-08",
+  "note": "Re-anchored the L40S rent from US$0.95 to US$0.75 an hour because Vast.ai asks have fallen about 27% since late October and neocloud on-demand prices now start at US$0.85 (MatMul, 7 Nov); the live index restarts from today's level. Other GPU rents, server prices and robot list prices are unchanged, and the fallback keeps Ecovantage's last verified LGC close of A$7.45 (26-30 Oct) while the ABARES and LGC feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -47,15 +47,15 @@
       "vastAnchorP25": 1.334
     },
     "L40S": {
-      "anchorUsdPerHr": 0.95,
+      "anchorUsdPerHr": 0.75,
       "serverUsd": 110000,
-      "reference": "Older Ada-generation card; prices drifting down",
+      "reference": "On demand from US$0.85 (Seeweb) to US$1.94, median US$1.09 across 5 neoclouds; Vast.ai asks fell from about US$0.64 to US$0.47 (25th percentile) since late October",
       "source": {
-        "title": "Vast.ai marketplace",
-        "url": "https://vast.ai/pricing",
-        "date": "Oct 2026"
+        "title": "MatMul: L40S price per hour (live)",
+        "url": "https://matmul.cloud/gpus/l40s",
+        "date": "7 Nov 2026"
       },
-      "vastAnchorP25": 0.64
+      "vastAnchorP25": 0.467
     }
   },
   "solar": {
