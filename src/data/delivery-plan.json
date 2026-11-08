@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08",
-  "note": "Re-verified 8 procurement and customer steps: the GPU marketplace step now notes that Vast.ai's certified hosts must be a verified, registered business that signs its hosting agreement, and the LGC accreditation step adds the Clean Energy Regulator's 6-week registered-person check before drafting 10-12 weeks ahead of first generation. No durations or statuses changed: at today's lead times the investment decision falls on 11 June 2028 and energisation on 26 August 2029, with everything operating by 30 September 2029.",
+  "updated": "2026-11-09",
+  "note": "Re-verified 8 approval and licensing steps; the beekeeper step now gives the A$100 fee for a two-year business registration (2026-27 fees), and the bush fire rules are unchanged (the draft PBP 2026 is still not in force). No durations or statuses changed: at today's lead times the investment decision falls on 12 June 2028 and energisation on 27 August 2029, with everything operating by 1 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -77,7 +77,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "concept",
@@ -96,7 +96,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "pre-da",
@@ -140,7 +140,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "da-lodge",
@@ -173,7 +173,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "da-determined",
@@ -728,7 +728,7 @@
           "date": "Oct 2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "pic",
@@ -751,13 +751,13 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "bees",
       "stream": "approvals",
       "title": "Register as a beekeeper ({hives} hives)",
-      "detail": "Every beekeeper must register from the first hive; registration lasts two years.",
+      "detail": "Every beekeeper must register from the first hive; a business registration costs A$100 and lasts two years.",
       "who": "NSW DPIRD, through Service NSW",
       "weeks": 2,
       "after": [
@@ -771,10 +771,15 @@
         {
           "title": "Service NSW: apply for a beekeeper registration",
           "url": "https://www.service.nsw.gov.au/transaction/apply-for-a-beekeeper-registration",
-          "date": "2026"
+          "date": "3 Sep 2026"
+        },
+        {
+          "title": "Australian Business Licence and Information Service: NSW beekeeper registration (A$100 for a business, valid two years, 2026-27 fees)",
+          "url": "https://ablis.business.gov.au/service/new-south-wales/beekeeping-registration/39874",
+          "date": "2026-27"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "egg-licence",
@@ -797,7 +802,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-05"
+      "checked": "2026-11-09"
     },
     {
       "id": "site-works",

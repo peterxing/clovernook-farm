@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08",
-  "note": "Re-anchored the L40S rent from US$0.95 to US$0.75 an hour because Vast.ai asks have fallen about 27% since late October and neocloud on-demand prices now start at US$0.85 (MatMul, 7 Nov); the live index restarts from today's level. Other GPU rents, server prices and robot list prices are unchanged, and the fallback keeps Ecovantage's last verified LGC close of A$7.45 (26-30 Oct) while the ABARES and LGC feeds keep failing.",
+  "updated": "2026-11-09",
+  "note": "No material changes today: GPU rents (Bargo, 8 Nov: B200 US$4.26 spot to US$6.02 reserved; H200 US$3.35-3.40), server prices and robot list prices match the current inputs. The fallback keeps Ecovantage's last verified LGC close of A$7.45 (26-30 Oct; no newer weekly update yet) while the ABARES and LGC feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
