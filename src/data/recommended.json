@@ -1,8 +1,8 @@
 {
   "date": "2026-11-10",
-  "generatedAt": "2026-11-09T22:02:00.845Z",
+  "generatedAt": "2026-11-09T22:03:20.049Z",
   "evaluations": 845,
-  "ms": 1891,
+  "ms": 1923,
   "options": {
     "objective": "npv",
     "capexBudget": 25000000,

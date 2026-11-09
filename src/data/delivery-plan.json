@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-09",
-  "note": "Re-verified 8 approval and licensing steps; the beekeeper step now gives the A$100 fee for a two-year business registration (2026-27 fees), and the bush fire rules are unchanged (the draft PBP 2026 is still not in force). No durations or statuses changed: at today's lead times the investment decision falls on 12 June 2028 and energisation on 27 August 2029, with everything operating by 1 October 2029.",
+  "updated": "2026-11-10",
+  "note": "Re-verified 14 steps: the 13 contract, finance and build steps (GPU lenders still add 2.25-3 points for customers without an investment-grade rating; small solar farms cost A$1.3-2M+ per MW and batteries about A$480/kWh) and the energy offtake step's certificate source. No durations or statuses changed: at today's lead times the investment decision falls on 13 June 2028 and energisation on 28 August 2029, with everything operating by 2 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -401,7 +401,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "finance",
@@ -436,7 +436,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "epc-tender",
@@ -461,7 +461,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "fid",
@@ -510,7 +510,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "connection-accept",
@@ -559,7 +559,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "long-lead",
@@ -649,7 +649,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "servers-order",
@@ -699,7 +699,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=risk"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "cc",
@@ -821,7 +821,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "pv-install",
@@ -841,7 +841,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "bess-install",
@@ -861,7 +861,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=energy"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "install-electrical",
@@ -1000,10 +1000,10 @@
         {
           "title": "Ecovantage: weekly certificate market update",
           "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-          "date": "Oct 2026"
+          "date": "2-6 Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-10"
     },
     {
       "id": "dc-build",
@@ -1026,7 +1026,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "servers-install",
@@ -1050,7 +1050,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "gpus-live",
@@ -1074,7 +1074,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-06"
+      "checked": "2026-11-10"
     },
     {
       "id": "gpu-marketplace",
