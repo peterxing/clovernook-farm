@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-10",
-  "note": "Re-verified 14 steps: the 13 contract, finance and build steps (GPU lenders still add 2.25-3 points for customers without an investment-grade rating; small solar farms cost A$1.3-2M+ per MW and batteries about A$480/kWh) and the energy offtake step's certificate source. No durations or statuses changed: at today's lead times the investment decision falls on 13 June 2028 and energisation on 28 August 2029, with everything operating by 2 October 2029.",
+  "updated": "2026-11-11",
+  "note": "Re-verified 14 steps: the nine grid connection steps against Essential Energy's HV connection page (stage times unchanged), the site, budget, pre-lodgement and DA steps, and the LGC step, whose mid-scale variant now says systems of 100 kW to 1 MW can claim small-scale certificates for a fixed five years or create REGO certificates instead (Clean Energy Regulator). No durations or statuses changed: at today's lead times the investment decision falls on 14 June 2028 and energisation on 29 August 2029, with everything operating by 3 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "dev-budget",
@@ -49,10 +49,10 @@
         {
           "title": "Essential Energy: connection application costs in CEOP8079 Annexure A",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "survey",
@@ -113,10 +113,10 @@
         {
           "title": "MidCoast Council: pre-lodgement meetings",
           "url": "https://www.midcoast.nsw.gov.au/Development/Industry/Pre-lodgement-meetings",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "studies",
@@ -190,7 +190,7 @@
         {
           "title": "NSW Planning Portal: regionally significant development and planning panels",
           "url": "https://www.planningportal.nsw.gov.au/development-and-assessment/planning-approval-pathways/regionally-significant-development",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         },
         {
           "title": "MidCoast Council: summary of the 28 October 2026 meeting (average DA determination time 56 days, NSW average 76)",
@@ -198,7 +198,7 @@
           "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "ee-register",
@@ -213,10 +213,10 @@
         {
           "title": "Essential Energy: HV connections and large embedded generators",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "ee-prelim",
@@ -241,10 +241,10 @@
         {
           "title": "Essential Energy: HV connection types and timeline (Chapter 5A under 5 MW, Chapter 5 above)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "ee-investigation",
@@ -261,10 +261,10 @@
         {
           "title": "Essential Energy: HV connections timeline (stage 2, 2 months)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "ee-studies",
@@ -291,10 +291,10 @@
         {
           "title": "Essential Energy: HV connections timeline (stage 3, 6-9 months for Chapter 5A)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "connection-offer",
@@ -320,10 +320,10 @@
         {
           "title": "Essential Energy: HV connections timeline (stage 4, contract development)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "gpu-loi",
@@ -530,10 +530,10 @@
         {
           "title": "Essential Energy: HV connections and large embedded generators",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "epc-contract",
@@ -879,10 +879,10 @@
         {
           "title": "Essential Energy: HV connections and large embedded generators",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "connection-works",
@@ -908,10 +908,10 @@
         {
           "title": "Essential Energy: HV connections timeline (stage 5, 9-12 months)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "energise",
@@ -940,10 +940,10 @@
         {
           "title": "Essential Energy: HV connections timeline (stage 6, 2-3 months)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-11"
     },
     {
       "id": "lgc-accreditation",
@@ -964,7 +964,7 @@
             "midScale"
           ],
           "title": "Claim small-scale certificates (mid-scale solar)",
-          "detail": "Since 1 October 2026 new solar systems of 100 kW to 1 MW earn small-scale technology certificates instead of LGCs, and the {kwdc} array falls in that band."
+          "detail": "Since 1 October 2026 new solar systems of 100 kW to 1 MW, like the {kwdc} array, can claim small-scale technology certificates up front for a fixed five years of deemed output, or create Guarantee of Origin (REGO) certificates instead, but not both during those five years. Panels, inverters and batteries must be on the Clean Energy Council lists and installed to Solar Accreditation Australia guidelines."
         }
       ],
       "status": "todo",
@@ -973,9 +973,14 @@
           "title": "Clean Energy Regulator: apply for power station accreditation",
           "url": "https://cer.gov.au/schemes/renewable-energy-target/renewable-energy-target-participants-and-industry/power-stations/apply-accreditation",
           "date": "Nov 2026"
+        },
+        {
+          "title": "Clean Energy Regulator: mid-scale solar (100 kW to 1 MW: small-scale certificates for a fixed five-year deeming period, or REGO certificates)",
+          "url": "https://cer.gov.au/schemes/renewable-energy-target/small-scale-renewable-energy-scheme/small-scale-renewable-energy-systems/mid-scale-solar",
+          "date": "7 Oct 2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-11"
     },
     {
       "id": "energy-offtake",

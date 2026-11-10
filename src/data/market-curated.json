@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-10",
-  "note": "Updated the LGC fallback to Ecovantage's latest verified spot close of A$7.50 on 5 Nov (2-6 Nov update, up from A$7.45; CAL28s A$7.20); GPU rents (Bargo, 9 Nov: B200 US$4.78 spot to US$6.02 reserved, H200 about US$3.40-3.61), server prices and robot list prices are otherwise unchanged. The live LGC feed still fails on Ecovantage's wording, so the model keeps A$7.55 until it is fixed.",
+  "updated": "2026-11-11",
+  "note": "No material changes today: GPU rents (Bargo, 10 Nov: B200 US$4.25 spot to US$6.02 reserved; H200 about US$3.40-3.59), 8-GPU board prices (Gatewell, 5 Nov) and robot list prices match the current inputs. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov while the ABARES and LGC feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
