@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11",
-  "note": "No material changes today: GPU rents (Bargo, 10 Nov: B200 US$4.25 spot to US$6.02 reserved; H200 about US$3.40-3.59), 8-GPU board prices (Gatewell, 5 Nov) and robot list prices match the current inputs. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov while the ABARES and LGC feeds keep failing.",
+  "updated": "2026-11-12",
+  "note": "No material changes today: GPU rents (Bargo, 11 Nov: B200 US$4.78 spot to US$6.65 reserved; H200 about US$3.40-3.42), 8-GPU board prices and robot list prices (1X NEO still US$20,000 or US$499 a month) match the current inputs. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov while the ABARES and LGC feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11",
-  "note": "Re-verified 14 steps: the nine grid connection steps against Essential Energy's HV connection page (stage times unchanged), the site, budget, pre-lodgement and DA steps, and the LGC step, whose mid-scale variant now says systems of 100 kW to 1 MW can claim small-scale certificates for a fixed five years or create REGO certificates instead (Clean Energy Regulator). No durations or statuses changed: at today's lead times the investment decision falls on 14 June 2028 and energisation on 29 August 2029, with everything operating by 3 October 2029.",
+  "updated": "2026-11-12",
+  "note": "Re-verified the 10 homes, farm, robot and operating steps: Taree's rental vacancy is 1.81% with rents up 4.9% a year (HtAG), the egg licence threshold is still 20 dozen a week, and the robot step adds RoboMorrow's summary of Agility's US$8,500-a-month service fee because the SEC filing page now blocks automated checks. No durations or statuses changed: at today's lead times the investment decision falls on 15 June 2028 and energisation on 30 August 2029, with everything operating by 4 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -1120,12 +1120,12 @@
       "status": "todo",
       "sources": [
         {
-          "title": "HtAG Analytics: Taree 2430 rents and vacancy",
+          "title": "HtAG Analytics: Taree 2430 rents and vacancy (vacancy 1.81%, rents up 4.9% a year)",
           "url": "https://www.htag.com.au/nsw/nsw328-mid-coast-council/taree-nsw-2430/",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "cabins-build",
@@ -1159,7 +1159,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "cabin-bookings",
@@ -1185,7 +1185,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "cabins-open",
@@ -1209,7 +1209,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "greenhouse-build",
@@ -1243,7 +1243,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "produce-buyers",
@@ -1276,7 +1276,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "restock",
@@ -1303,7 +1303,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "egg-buyers",
@@ -1323,10 +1323,10 @@
         {
           "title": "NSW Food Authority: egg producers",
           "url": "https://www.foodauthority.nsw.gov.au/industry/eggs/egg-producers",
-          "date": "2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "robot-lease",
@@ -1353,15 +1353,20 @@
         {
           "title": "1X: NEO order page (US$20,000 or US$499 a month)",
           "url": "https://www.1x.tech/order",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         },
         {
           "title": "Churchill Capital Corp XI (Agility Robotics merger), SEC Form 425: Digit 5 orders modelled at about US$8,500 per robot a month under robots-as-a-service",
           "url": "https://www.stocktitan.net/sec-filings/CCXI/425-churchill-capital-corp-xi-business-combination-communication-ff3aa5437ed0.html",
           "date": "16 Sep 2026"
+        },
+        {
+          "title": "RoboMorrow: Agility's S-4 cost model for Digit 5 (about US$8,500 a month plus a US$25,000 deployment fee as a service)",
+          "url": "https://robomorrow.com/en/agility-robotics-digit-economics-s4-revenue-loss-2026/",
+          "date": "11 Sep 2026"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     },
     {
       "id": "operating",
@@ -1393,7 +1398,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
         }
       ],
-      "checked": "2026-11-07"
+      "checked": "2026-11-12"
     }
   ],
   "signups": [
