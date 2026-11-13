@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-12",
-  "note": "Re-verified the 10 homes, farm, robot and operating steps: Taree's rental vacancy is 1.81% with rents up 4.9% a year (HtAG), the egg licence threshold is still 20 dozen a week, and the robot step adds RoboMorrow's summary of Agility's US$8,500-a-month service fee because the SEC filing page now blocks automated checks. No durations or statuses changed: at today's lead times the investment decision falls on 15 June 2028 and energisation on 30 August 2029, with everything operating by 4 October 2029.",
+  "updated": "2026-11-14",
+  "note": "Re-verified 15 steps: the procurement and customer steps (distribution transformers 8-14 months, battery containers 5-8 months from order to pad, Vast.ai's certified-host rules unchanged) and the survey, study, DA, certifier and licensing steps (the draft PBP 2026 is still not in force). No durations or statuses changed: at today's lead times the investment decision falls on 17 June 2028 and energisation on 1 September 2029, with everything operating by 6 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -77,7 +77,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "concept",
@@ -96,7 +96,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "pre-da",
@@ -140,7 +140,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "da-lodge",
@@ -165,7 +165,7 @@
         {
           "title": "NSW Planning Portal: regionally significant development (private infrastructure over A$5M)",
           "url": "https://www.planningportal.nsw.gov.au/development-and-assessment/planning-approval-pathways/regionally-significant-development",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         },
         {
           "title": "NSW RFS: issuing a bush fire safety authority for integrated development from 1 July 2026",
@@ -173,7 +173,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "da-determined",
@@ -343,14 +343,14 @@
         {
           "title": "Bargo: B200 on-demand, reserved and spot rents",
           "url": "https://www.bargo.ai/gpu/b200",
-          "date": "7 Nov 2026"
+          "date": "13 Nov 2026"
         },
         {
           "title": "Clovernook Farm: GPU rents used by the model (Markets tab)",
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "servers-quote",
@@ -378,7 +378,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "gpu-contract",
@@ -580,7 +580,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "battery-order",
@@ -601,7 +601,7 @@
           "date": "Sep 2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "pv-order",
@@ -622,7 +622,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "dc-order",
@@ -680,7 +680,7 @@
           "date": "5 Nov 2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "detail-design",
@@ -725,10 +725,10 @@
         {
           "title": "NSW Planning Portal",
           "url": "https://www.planningportal.nsw.gov.au/",
-          "date": "Oct 2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "pic",
@@ -748,10 +748,10 @@
         {
           "title": "NSW DPIRD: property identification codes",
           "url": "https://www.dpird.nsw.gov.au/dpi/biosecurity/your-role-in-biosecurity/primary-producers/nlis/property-identification-codes",
-          "date": "2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "bees",
@@ -779,7 +779,7 @@
           "date": "2026-27"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "egg-licence",
@@ -799,10 +799,10 @@
         {
           "title": "NSW Food Authority: egg producers (licence above 20 dozen eggs a week)",
           "url": "https://www.foodauthority.nsw.gov.au/industry/eggs/egg-producers",
-          "date": "2026"
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-09"
+      "checked": "2026-11-14"
     },
     {
       "id": "site-works",
@@ -1102,7 +1102,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-08"
+      "checked": "2026-11-14"
     },
     {
       "id": "homestead-lease",
