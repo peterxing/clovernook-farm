@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-14",
-  "note": "Added Apptronik's Apollo to the robot list after GXO signed a letter of intent on 12 Nov to roll out up to 1,000 as a service from late 2027 if agreed performance and safety targets are met; no price is published. GPU rents (Bargo, 13 Nov: B200 US$4.79 spot to US$5.56 reserved; H200 about US$3.39 spot), board prices and robot list prices are otherwise unchanged, and the LGC fallback stays at Ecovantage's A$7.50 (5 Nov).",
+  "updated": "2026-11-15",
+  "note": "No material changes today: GPU rents (Bargo, 14 Nov: B200 US$4.71 spot to US$5.10 reserved; H200 about US$3.37 spot), board prices and robot list prices match the current inputs, and Tesla's Optimus news repeats the Fremont production start already recorded. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov (no newer weekly update yet) while the ABARES and LGC feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
