@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-15",
-  "note": "Re-verified the 14 contract, finance, build and offtake steps (GPU lenders still add 2.25-3 points for customers without an investment-grade rating; small solar farms still cost A$1.3-2M+ per MW); no durations or statuses changed. At today's lead times the investment decision falls on 18 June 2028 and energisation on 2 September 2029, with everything operating by 7 October 2029.",
+  "updated": "2026-11-16",
+  "note": "Re-verified the 14 site, approval, grid connection and LGC accreditation steps: Essential Energy's HV connection stages, MidCoast's A$625 pre-lodgement meeting, the regional panel pathway and the Clean Energy Regulator's 6-week assessment times are unchanged, and the property is still off the market. No durations or statuses changed: at today's lead times the investment decision falls on 19 June 2028 and energisation on 3 September 2029, with everything operating by 8 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "dev-budget",
@@ -52,7 +52,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "survey",
@@ -116,7 +116,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "studies",
@@ -198,7 +198,7 @@
           "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "ee-register",
@@ -216,7 +216,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "ee-prelim",
@@ -244,7 +244,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "ee-investigation",
@@ -264,7 +264,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "ee-studies",
@@ -294,7 +294,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "connection-offer",
@@ -323,7 +323,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "gpu-loi",
@@ -533,7 +533,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "epc-contract",
@@ -882,7 +882,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "connection-works",
@@ -911,7 +911,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "energise",
@@ -943,7 +943,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "lgc-accreditation",
@@ -972,7 +972,7 @@
         {
           "title": "Clean Energy Regulator: apply for power station accreditation",
           "url": "https://cer.gov.au/schemes/renewable-energy-target/renewable-energy-target-participants-and-industry/power-stations/apply-accreditation",
-          "date": "Nov 2026"
+          "date": "5 Nov 2026"
         },
         {
           "title": "Clean Energy Regulator: mid-scale solar (100 kW to 1 MW: small-scale certificates for a fixed five-year deeming period, or REGO certificates)",
@@ -980,7 +980,7 @@
           "date": "7 Oct 2026"
         }
       ],
-      "checked": "2026-11-11"
+      "checked": "2026-11-16"
     },
     {
       "id": "energy-offtake",

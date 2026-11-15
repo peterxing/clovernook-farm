@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-15",
-  "note": "No material changes today: GPU rents (Bargo, 14 Nov: B200 US$4.71 spot to US$5.10 reserved; H200 about US$3.37 spot), board prices and robot list prices match the current inputs, and Tesla's Optimus news repeats the Fremont production start already recorded. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov (no newer weekly update yet) while the ABARES and LGC feeds keep failing.",
+  "updated": "2026-11-16",
+  "note": "No material changes today: GPU rents (Bargo, 15 Nov: B200 US$4.65 spot to US$6.02 reserved; H200 about US$3.36 spot), 8-GPU board prices (Gatewell, reposted 13 Nov) and robot list prices match the current inputs. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov (no newer weekly update yet) while the ABARES and LGC feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
