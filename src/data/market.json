@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T20:28:46.105Z",
+  "updated": "2026-11-15T20:51:54.249Z",
   "fx": {
     "ok": true,
     "usdAud": 1.4697,
@@ -14,7 +14,7 @@
       "B300": {
         "p25": 8.501,
         "median": 9.94,
-        "n": 6,
+        "n": 5,
         "hist": [
           {
             "date": "2026-10-27",
@@ -27,13 +27,9 @@
       },
       "B200": {
         "p25": 8.751,
-        "median": 10.001,
+        "median": 10.626,
         "n": 18,
         "hist": [
-          {
-            "date": "2026-10-31",
-            "p25": 8.751
-          },
           {
             "date": "2026-11-01",
             "p25": 6.864
@@ -85,21 +81,21 @@
           {
             "date": "2026-11-15",
             "p25": 8.751
+          },
+          {
+            "date": "2026-11-16",
+            "p25": 8.751
           }
         ],
         "p25s": 8.751,
-        "ratio": 0.9477,
+        "ratio": 0.9951,
         "anchorKey": "5|8.75"
       },
       "H200": {
-        "p25": 3.989,
-        "median": 4.343,
-        "n": 52,
+        "p25": 4.136,
+        "median": 4.31,
+        "n": 56,
         "hist": [
-          {
-            "date": "2026-11-02",
-            "p25": 3.601
-          },
           {
             "date": "2026-11-03",
             "p25": 3.882
@@ -151,21 +147,21 @@
           {
             "date": "2026-11-15",
             "p25": 3.989
+          },
+          {
+            "date": "2026-11-16",
+            "p25": 4.136
           }
         ],
-        "p25s": 3.878,
-        "ratio": 1.0171,
+        "p25s": 3.989,
+        "ratio": 1.0677,
         "anchorKey": "3.8|3.736"
       },
       "RTXPRO6000": {
-        "p25": 1.416,
-        "median": 1.601,
-        "n": 118,
+        "p25": 1.47,
+        "median": 1.651,
+        "n": 113,
         "hist": [
-          {
-            "date": "2026-11-02",
-            "p25": 1.374
-          },
           {
             "date": "2026-11-03",
             "p25": 1.374
@@ -217,21 +213,21 @@
           {
             "date": "2026-11-15",
             "p25": 1.416
+          },
+          {
+            "date": "2026-11-16",
+            "p25": 1.47
           }
         ],
-        "p25s": 1.339,
-        "ratio": 1.0037,
+        "p25s": 1.36,
+        "ratio": 1.0195,
         "anchorKey": "1.9|1.334"
       },
       "L40S": {
         "p25": 0.534,
-        "median": 0.8,
-        "n": 39,
+        "median": 0.774,
+        "n": 30,
         "hist": [
-          {
-            "date": "2026-11-02",
-            "p25": 0.467
-          },
           {
             "date": "2026-11-03",
             "p25": 0.467
@@ -283,21 +279,25 @@
           {
             "date": "2026-11-15",
             "p25": 0.534
+          },
+          {
+            "date": "2026-11-16",
+            "p25": 0.534
           }
         ],
         "p25s": 0.534,
-        "ratio": 1.1044,
+        "ratio": 1.1435,
         "anchorKey": "0.75|0.467"
       }
     },
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
     "ok": true,
     "usdPerW": 0.114,
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "source": "InfoLink spot price, TOPCon module (USD/W, average)",
     "url": "https://www.infolink-group.com/spot-price/en/"
   },
@@ -374,7 +374,7 @@
       "priceUsd": 20000,
       "monthlyUsd": 499
     },
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "source": "Unitree store and 1X order page (list prices, US$)",
     "url": "https://shop.unitree.com/collections/humanoid-robot"
   },
@@ -390,11 +390,11 @@
   },
   "nem": {
     "ok": true,
-    "mean30": 95.52,
-    "mean365": 79.98,
-    "negShare365": 0.0656,
-    "through": "2026-11-14",
-    "date": "2026-11-14",
+    "mean30": 97.46,
+    "mean365": 80.21,
+    "negShare365": 0.065,
+    "through": "2026-11-15",
+    "date": "2026-11-15",
     "source": "AEMO NSW1 5-minute prices",
     "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
   }
