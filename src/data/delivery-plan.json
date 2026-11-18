@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-16",
-  "note": "Re-verified the 14 site, approval, grid connection and LGC accreditation steps: Essential Energy's HV connection stages, MidCoast's A$625 pre-lodgement meeting, the regional panel pathway and the Clean Energy Regulator's 6-week assessment times are unchanged, and the property is still off the market. No durations or statuses changed: at today's lead times the investment decision falls on 19 June 2028 and energisation on 3 September 2029, with everything operating by 8 October 2029.",
+  "updated": "2026-11-19",
+  "note": "Re-verified 12 steps: the 10 homes, farm, robot and operating steps, the energy offtake step's LGC price, and the LGC accreditation step, whose mid-scale variant now notes that the Clean Energy Regulator opened small-scale certificate applications for 100 kW to 1 MW systems on 17 November 2026. No durations or statuses changed: at today's lead times the investment decision falls on 22 June 2028 and energisation on 6 September 2029, with everything operating by 11 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -964,7 +964,7 @@
             "midScale"
           ],
           "title": "Claim small-scale certificates (mid-scale solar)",
-          "detail": "Since 1 October 2026 new solar systems of 100 kW to 1 MW, like the {kwdc} array, can claim small-scale technology certificates up front for a fixed five years of deemed output, or create Guarantee of Origin (REGO) certificates instead, but not both during those five years. Panels, inverters and batteries must be on the Clean Energy Council lists and installed to Solar Accreditation Australia guidelines."
+          "detail": "Since 1 October 2026 new solar systems of 100 kW to 1 MW, like the {kwdc} array, can claim small-scale technology certificates up front for a fixed five years of deemed output, or create Guarantee of Origin (REGO) certificates instead, but not both during those five years. Applications for these certificates opened in the REC Registry on 17 November 2026. Panels, inverters and batteries must be on the Clean Energy Council lists and installed to Solar Accreditation Australia guidelines."
         }
       ],
       "status": "todo",
@@ -978,9 +978,14 @@
           "title": "Clean Energy Regulator: mid-scale solar (100 kW to 1 MW: small-scale certificates for a fixed five-year deeming period, or REGO certificates)",
           "url": "https://cer.gov.au/schemes/renewable-energy-target/small-scale-renewable-energy-scheme/small-scale-renewable-energy-systems/mid-scale-solar",
           "date": "7 Oct 2026"
+        },
+        {
+          "title": "Clean Energy Regulator: mid-scale applications are open in the REC Registry",
+          "url": "https://cer.gov.au/news-and-media/news/2026/november/mid-scale-applications-are-open-rec-registry",
+          "date": "17 Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-19"
     },
     {
       "id": "energy-offtake",
@@ -1005,10 +1010,10 @@
         {
           "title": "Ecovantage: weekly certificate market update",
           "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-          "date": "2-6 Nov 2026"
+          "date": "9-13 Nov 2026"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-19"
     },
     {
       "id": "dc-build",
@@ -1125,7 +1130,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "cabins-build",
@@ -1159,7 +1164,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "cabin-bookings",
@@ -1185,7 +1190,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "cabins-open",
@@ -1209,7 +1214,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "greenhouse-build",
@@ -1243,7 +1248,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "produce-buyers",
@@ -1276,7 +1281,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "restock",
@@ -1303,7 +1308,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "egg-buyers",
@@ -1326,7 +1331,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "robot-lease",
@@ -1366,7 +1371,7 @@
           "date": "11 Sep 2026"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     },
     {
       "id": "operating",
@@ -1398,7 +1403,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
         }
       ],
-      "checked": "2026-11-12"
+      "checked": "2026-11-19"
     }
   ],
   "signups": [

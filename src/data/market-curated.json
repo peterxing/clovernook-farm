@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-16",
-  "note": "No material changes today: GPU rents (Bargo, 15 Nov: B200 US$4.65 spot to US$6.02 reserved; H200 about US$3.36 spot), 8-GPU board prices (Gatewell, reposted 13 Nov) and robot list prices match the current inputs. The fallback keeps Ecovantage's A$7.50 LGC close for 5 Nov (no newer weekly update yet) while the ABARES and LGC feeds keep failing.",
+  "updated": "2026-11-19",
+  "note": "Updated the LGC fallback to Ecovantage's latest verified spot close of A$7.60 on 11 Nov (9-13 Nov update; Cal 27 A$7.90, Cal 28 A$7.40). GPU rents (Bargo, 15 Nov: B200 US$4.80 spot to US$6.02 reserved; H200 about US$3.36 spot), 8-GPU board prices (Gatewell, 13 Nov) and robot list prices are otherwise unchanged; the live LGC feed still fails on Ecovantage's wording, so the model keeps A$7.55 until it is fixed.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -81,12 +81,12 @@
     }
   },
   "lgc": {
-    "price": 7.5,
-    "date": "2026-11-05",
+    "price": 7.6,
+    "date": "2026-11-11",
     "source": {
       "title": "Ecovantage weekly market update",
       "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-      "date": "2-6 Nov 2026"
+      "date": "9-13 Nov 2026"
     }
   },
   "livestock": {
