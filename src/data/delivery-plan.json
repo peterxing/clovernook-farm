@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19",
-  "note": "Re-verified 12 steps: the 10 homes, farm, robot and operating steps, the energy offtake step's LGC price, and the LGC accreditation step, whose mid-scale variant now notes that the Clean Energy Regulator opened small-scale certificate applications for 100 kW to 1 MW systems on 17 November 2026. No durations or statuses changed: at today's lead times the investment decision falls on 22 June 2028 and energisation on 6 September 2029, with everything operating by 11 October 2029.",
+  "updated": "2026-11-20",
+  "note": "Re-verified 16 steps, from the survey and specialist studies through equipment orders, the PIC, beekeeper and egg registrations and the GPU marketplace listing to the DA decision; refreshed the Gatewell and Bargo source dates and added the NSW list of local planning panels, which confirms MidCoast has none, so the Hunter and Central Coast Regional Planning Panel still decides the DA. No durations or statuses changed: at today's lead times the investment decision falls on 23 June 2028 and energisation on 7 September 2029, with everything operating by 12 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -77,7 +77,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "concept",
@@ -96,7 +96,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "pre-da",
@@ -140,7 +140,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "da-lodge",
@@ -171,9 +171,14 @@
           "title": "NSW RFS: issuing a bush fire safety authority for integrated development from 1 July 2026",
           "url": "https://www.rfs.nsw.gov.au/resources/publications/building-in-a-bush-fire-area/general/guidance-document-issuing-a-bush-fire-safety-authority-for-integrated-development-from-1-july-2026/Guidance-Document-Issuing-a-Bush-Fire-Safety-Authority-for-Integrated-Development.pdf",
           "date": "2026"
+        },
+        {
+          "title": "NSW Planning: local planning panels as at 1 March 2026 (MidCoast has none, so regionally significant DAs there still go to the regional panel)",
+          "url": "https://www.planning.nsw.gov.au/sites/default/files/2026-03/list-of-local-planning-panels.pdf",
+          "date": "1 Mar 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "da-determined",
@@ -198,7 +203,7 @@
           "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-20"
     },
     {
       "id": "ee-register",
@@ -343,14 +348,14 @@
         {
           "title": "Bargo: B200 on-demand, reserved and spot rents",
           "url": "https://www.bargo.ai/gpu/b200",
-          "date": "13 Nov 2026"
+          "date": "15 Nov 2026"
         },
         {
           "title": "Clovernook Farm: GPU rents used by the model (Markets tab)",
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "servers-quote",
@@ -370,7 +375,7 @@
         {
           "title": "Gatewell: HGX B300, B200 and H200 board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "5 Nov 2026"
+          "date": "19 Nov 2026"
         },
         {
           "title": "Mercatus: 8-GPU server prices and allocation",
@@ -378,7 +383,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "gpu-contract",
@@ -580,7 +585,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "battery-order",
@@ -601,7 +606,7 @@
           "date": "Sep 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "pv-order",
@@ -622,7 +627,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "dc-order",
@@ -677,10 +682,10 @@
         {
           "title": "Gatewell: HGX board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "5 Nov 2026"
+          "date": "19 Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "detail-design",
@@ -728,7 +733,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "pic",
@@ -751,7 +756,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "bees",
@@ -779,7 +784,7 @@
           "date": "2026-27"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "egg-licence",
@@ -802,7 +807,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "site-works",
@@ -1107,7 +1112,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-14"
+      "checked": "2026-11-20"
     },
     {
       "id": "homestead-lease",

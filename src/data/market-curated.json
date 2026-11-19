@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19",
-  "note": "Updated the LGC fallback to Ecovantage's latest verified spot close of A$7.60 on 11 Nov (9-13 Nov update; Cal 27 A$7.90, Cal 28 A$7.40). GPU rents (Bargo, 15 Nov: B200 US$4.80 spot to US$6.02 reserved; H200 about US$3.36 spot), 8-GPU board prices (Gatewell, 13 Nov) and robot list prices are otherwise unchanged; the live LGC feed still fails on Ecovantage's wording, so the model keeps A$7.55 until it is fixed.",
+  "updated": "2026-11-20",
+  "note": "Added Boston Dynamics' Atlas to the robot list: it isn't for sale, and on 17 Nov GlobalFoundries became the first company outside car making to join its early adopter program, with testing in chip fabs from early 2027. Other inputs are unchanged: Vast.ai B300 asks rose to about US$10/hr, but spot from about US$6 and 12-month reserved rates of US$6.49-7.94 still support the US$6.50 anchor, Gatewell re-posted the same 8-GPU board prices on 19 Nov, and the LGC fallback stays at A$7.60 (Ecovantage, 9-13 Nov) while the live LGC and ABARES feeds keep failing.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -210,6 +210,15 @@
         "class": "Full-size general purpose (warehouse picking and totes)",
         "source": "https://gxo.com/news_article/gxo-apptronik-expand-humanoid-robotics-partnership/",
         "date": "2026-11-12"
+      },
+      {
+        "name": "Boston Dynamics Atlas",
+        "maker": "Boston Dynamics",
+        "priceUsd": null,
+        "availability": "Not for sale; in early production and tested through an early adopter program (car plants so far); on 17 Nov 2026 GlobalFoundries joined, with testing in its chip fabs from early 2027",
+        "class": "Full-size electric industrial humanoid",
+        "source": "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration/",
+        "date": "2026-11-17"
       }
     ],
     "tasks": {
