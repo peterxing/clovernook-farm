@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-18T22:52:11.573Z",
+  "updated": "2026-11-19T22:55:54.313Z",
   "fx": {
     "ok": true,
-    "usdAud": 1.4881,
-    "audUsd": 0.672,
-    "date": "2026-11-18",
+    "usdAud": 1.4977,
+    "audUsd": 0.6677,
+    "date": "2026-11-19",
     "source": "RBA F11.1 (A$1 = US$)",
     "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates"
   },
@@ -12,28 +12,28 @@
     "ok": true,
     "models": {
       "B300": {
-        "p25": 8.501,
-        "median": 9.94,
-        "n": 5,
+        "p25": 10.001,
+        "median": 11.876,
+        "n": 12,
         "hist": [
           {
             "date": "2026-10-27",
             "p25": 8.501
+          },
+          {
+            "date": "2026-11-20",
+            "p25": 10.001
           }
         ],
-        "p25s": 8.501,
+        "p25s": 10.001,
         "ratio": 1,
         "anchorKey": "6.5|"
       },
       "B200": {
-        "p25": 8.277,
-        "median": 8.751,
-        "n": 11,
+        "p25": 7.502,
+        "median": 8.74,
+        "n": 19,
         "hist": [
-          {
-            "date": "2026-11-06",
-            "p25": 8.751
-          },
           {
             "date": "2026-11-07",
             "p25": 8.751
@@ -85,6 +85,10 @@
           {
             "date": "2026-11-19",
             "p25": 8.277
+          },
+          {
+            "date": "2026-11-20",
+            "p25": 7.502
           }
         ],
         "p25s": 8.751,
@@ -94,12 +98,8 @@
       "H200": {
         "p25": 4.001,
         "median": 4.267,
-        "n": 47,
+        "n": 60,
         "hist": [
-          {
-            "date": "2026-11-06",
-            "p25": 3.472
-          },
           {
             "date": "2026-11-07",
             "p25": 3.601
@@ -151,21 +151,21 @@
           {
             "date": "2026-11-19",
             "p25": 4.001
+          },
+          {
+            "date": "2026-11-20",
+            "p25": 4.001
           }
         ],
-        "p25s": 3.989,
-        "ratio": 1.0677,
+        "p25s": 4.001,
+        "ratio": 1.0709,
         "anchorKey": "3.8|3.736"
       },
       "RTXPRO6000": {
-        "p25": 1.468,
-        "median": 1.601,
-        "n": 126,
+        "p25": 1.47,
+        "median": 1.604,
+        "n": 117,
         "hist": [
-          {
-            "date": "2026-11-06",
-            "p25": 1.468
-          },
           {
             "date": "2026-11-07",
             "p25": 1.402
@@ -217,21 +217,21 @@
           {
             "date": "2026-11-19",
             "p25": 1.468
+          },
+          {
+            "date": "2026-11-20",
+            "p25": 1.47
           }
         ],
-        "p25s": 1.468,
-        "ratio": 1.1004,
+        "p25s": 1.47,
+        "ratio": 1.1019,
         "anchorKey": "1.9|1.334"
       },
       "L40S": {
-        "p25": 0.467,
-        "median": 0.695,
-        "n": 35,
+        "p25": 0.469,
+        "median": 0.734,
+        "n": 30,
         "hist": [
-          {
-            "date": "2026-11-06",
-            "p25": 0.534
-          },
           {
             "date": "2026-11-07",
             "p25": 0.534
@@ -283,6 +283,10 @@
           {
             "date": "2026-11-19",
             "p25": 0.467
+          },
+          {
+            "date": "2026-11-20",
+            "p25": 0.469
           }
         ],
         "p25s": 0.534,
@@ -290,14 +294,14 @@
         "anchorKey": "0.75|0.467"
       }
     },
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
     "ok": true,
     "usdPerW": 0.114,
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "source": "InfoLink spot price, TOPCon module (USD/W, average)",
     "url": "https://www.infolink-group.com/spot-price/en/"
   },
@@ -374,7 +378,7 @@
       "priceUsd": 20000,
       "monthlyUsd": 499
     },
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "source": "Unitree store and 1X order page (list prices, US$)",
     "url": "https://shop.unitree.com/collections/humanoid-robot"
   },
@@ -390,11 +394,11 @@
   },
   "nem": {
     "ok": true,
-    "mean30": 100.1,
-    "mean365": 80.7,
-    "negShare365": 0.0622,
-    "through": "2026-11-18",
-    "date": "2026-11-18",
+    "mean30": 100.92,
+    "mean365": 80.86,
+    "negShare365": 0.0613,
+    "through": "2026-11-19",
+    "date": "2026-11-19",
     "source": "AEMO NSW1 5-minute prices",
     "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
   }
