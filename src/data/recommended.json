@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-20",
-  "generatedAt": "2026-11-19T23:46:06.701Z",
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-20T22:02:51.815Z",
   "evaluations": 686,
-  "ms": 3257,
+  "ms": 1237,
   "options": {
     "objective": "npv",
     "capexBudget": 25000000,
@@ -55,10 +55,10 @@
     "robots.acquisition": "lease"
   },
   "metrics": {
-    "npv": 2771688,
+    "npv": 2762830,
     "irr": 0.0957,
-    "capex": 24650701,
-    "ebitda1": 6976594,
+    "capex": 24674701,
+    "ebitda1": 6986102,
     "kwdc": 1538,
     "bessKwh": 2000,
     "gpus": 128,
