@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-20",
-  "note": "Re-verified 16 steps, from the survey and specialist studies through equipment orders, the PIC, beekeeper and egg registrations and the GPU marketplace listing to the DA decision; refreshed the Gatewell and Bargo source dates and added the NSW list of local planning panels, which confirms MidCoast has none, so the Hunter and Central Coast Regional Planning Panel still decides the DA. No durations or statuses changed: at today's lead times the investment decision falls on 23 June 2028 and energisation on 7 September 2029, with everything operating by 12 October 2029.",
+  "updated": "2026-11-21",
+  "note": "Re-verified 25 steps, including every grid step against Essential Energy's HV connection timeline (unchanged), the A$625 pre-lodgement meeting, the site option and the finance, tender, investment-decision and build steps; the connection application and HV kiosk steps now note that connection agreements signed from 1 January 2027 need an Essential Energy-owned SCADA terminal for the emergency backstop. No durations or statuses changed: at today's lead times the investment decision falls on 24 June 2028 and energisation on 8 September 2029, with everything operating by 13 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "dev-budget",
@@ -52,7 +52,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "survey",
@@ -116,7 +116,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "studies",
@@ -221,7 +221,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "ee-prelim",
@@ -249,7 +249,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "ee-investigation",
@@ -269,13 +269,13 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "ee-studies",
       "stream": "grid",
       "title": "Connection application and network studies",
-      "detail": "Apply with the inverter, battery and protection details, including the emergency backstop and SCADA requirements for HV embedded generation. Studies take 6-9 months under Chapter 5A.",
+      "detail": "Apply with the inverter, battery and protection details. Connection agreements signed from 1 January 2027 need an Essential Energy-owned SCADA remote terminal unit on site for the emergency backstop (standard CEOS7903), so design the plant controller to take its limits. Studies take 6-9 months under Chapter 5A.",
       "who": "Essential Energy and the owner's power systems consultant",
       "weeks": 33,
       "after": [
@@ -288,7 +288,7 @@
             "gridLarge"
           ],
           "weeks": 54,
-          "detail": "Apply with the inverter, battery and protection details, including the emergency backstop and SCADA requirements. Studies take 10-15 months under Chapter 5."
+          "detail": "Apply with the inverter, battery and protection details. Connection agreements signed from 1 January 2027 need an Essential Energy-owned SCADA remote terminal unit on site for the emergency backstop (standard CEOS7903), so design the plant controller to take its limits. Studies take 10-15 months under Chapter 5."
         }
       ],
       "status": "todo",
@@ -297,9 +297,14 @@
           "title": "Essential Energy: HV connections timeline (stage 3, 6-9 months for Chapter 5A)",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
           "date": "Nov 2026"
+        },
+        {
+          "title": "Essential Energy: emergency backstop and SCADA requirements (an Essential Energy-owned RTU for HV generators with a connection agreement signed from 1 January 2027)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/Emergency-backstop-and-SCADA-requirements",
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "connection-offer",
@@ -328,7 +333,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "gpu-loi",
@@ -406,7 +411,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "finance",
@@ -441,7 +446,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "epc-tender",
@@ -466,7 +471,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "fid",
@@ -515,7 +520,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "connection-accept",
@@ -538,7 +543,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "epc-contract",
@@ -564,7 +569,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "long-lead",
@@ -654,7 +659,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "servers-order",
@@ -704,7 +709,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=risk"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "cc",
@@ -826,7 +831,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "pv-install",
@@ -846,7 +851,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "bess-install",
@@ -866,13 +871,13 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=energy"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "install-electrical",
       "stream": "build",
       "title": "Install the HV kiosk and protection",
-      "detail": "HV switchgear, transformer, protection and metering on the platform, ready for Essential Energy's witness tests.",
+      "detail": "HV switchgear, transformer, protection and metering on the platform, with the plant controller linked to Essential Energy's SCADA remote terminal unit for the emergency backstop, ready for Essential Energy's witness tests.",
       "who": "Electrical contractor (Accredited Service Provider)",
       "weeks": 6,
       "after": [
@@ -885,9 +890,14 @@
           "title": "Essential Energy: HV connections and large embedded generators",
           "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/hv-connections-and-large-embedded-generators",
           "date": "Nov 2026"
+        },
+        {
+          "title": "Essential Energy: emergency backstop and SCADA requirements (an Essential Energy-owned RTU for HV generators with a connection agreement signed from 1 January 2027)",
+          "url": "https://www.essentialenergy.com.au/our-network/connecting-to-the-network/Emergency-backstop-and-SCADA-requirements",
+          "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "connection-works",
@@ -916,7 +926,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "energise",
@@ -948,7 +958,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-16"
+      "checked": "2026-11-21"
     },
     {
       "id": "lgc-accreditation",
@@ -1041,7 +1051,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "servers-install",
@@ -1065,7 +1075,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "gpus-live",
@@ -1089,7 +1099,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-15"
+      "checked": "2026-11-21"
     },
     {
       "id": "gpu-marketplace",

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-20",
-  "note": "Added Boston Dynamics' Atlas to the robot list: it isn't for sale, and on 17 Nov GlobalFoundries became the first company outside car making to join its early adopter program, with testing in chip fabs from early 2027. Other inputs are unchanged: Vast.ai B300 asks rose to about US$10/hr, but spot from about US$6 and 12-month reserved rates of US$6.49-7.94 still support the US$6.50 anchor, Gatewell re-posted the same 8-GPU board prices on 19 Nov, and the LGC fallback stays at A$7.60 (Ecovantage, 9-13 Nov) while the live LGC and ABARES feeds keep failing.",
+  "updated": "2026-11-21",
+  "note": "1X NEO's entry now reflects its CEO's statement that the first units ship to developers and some consumers in December 2026 (Humanoids Daily, 20 Nov). Nothing else changed: GPU rents (Bargo, 15 Nov) and 8-GPU board prices (Gatewell, 20 Nov) haven't moved enough to shift an anchor, Ecovantage hasn't yet published the 16-20 Nov week so the LGC fallback stays at A$7.60, and the live ABARES feed is still stuck at an EYCI of 939c while ABARES shows 1,046c (18 Nov).",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -143,10 +143,10 @@
         "name": "1X NEO",
         "maker": "1X",
         "priceUsd": 20000,
-        "availability": "US deliveries from 2026; US$499/month subscription",
+        "availability": "US$20,000 or US$499/month; 1X says it will start shipping to developers and some consumers in December 2026",
         "class": "Home robot, teleoperation-assisted",
-        "source": "https://www.1x.tech/order",
-        "date": "2026-10-25"
+        "source": "https://www.humanoidsdaily.com/news/1x-neo-developers-december-runtime-2026-bornich",
+        "date": "2026-11-20"
       },
       {
         "name": "Unitree H2",
