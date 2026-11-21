@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-21",
-  "note": "Re-verified 25 steps, including every grid step against Essential Energy's HV connection timeline (unchanged), the A$625 pre-lodgement meeting, the site option and the finance, tender, investment-decision and build steps; the connection application and HV kiosk steps now note that connection agreements signed from 1 January 2027 need an Essential Energy-owned SCADA terminal for the emergency backstop. No durations or statuses changed: at today's lead times the investment decision falls on 24 June 2028 and energisation on 8 September 2029, with everything operating by 13 October 2029.",
+  "updated": "2026-11-22",
+  "note": "No material changes today: re-verified the 12 homes, farm, robot, offtake, certificate and operating steps against the Clean Energy Regulator's accreditation and mid-scale solar pages, Taree rents, the 1X and Agility robot fees and the egg licence threshold. At today's lead times the investment decision falls on 25 June 2028 and energisation on 9 September 2029, with everything operating by 14 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -1000,7 +1000,7 @@
           "date": "17 Nov 2026"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "energy-offtake",
@@ -1028,7 +1028,7 @@
           "date": "9-13 Nov 2026"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "dc-build",
@@ -1145,7 +1145,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "cabins-build",
@@ -1179,7 +1179,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "cabin-bookings",
@@ -1205,7 +1205,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "cabins-open",
@@ -1229,7 +1229,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "greenhouse-build",
@@ -1263,7 +1263,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "produce-buyers",
@@ -1296,7 +1296,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "restock",
@@ -1323,7 +1323,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "egg-buyers",
@@ -1346,7 +1346,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "robot-lease",
@@ -1386,7 +1386,7 @@
           "date": "11 Sep 2026"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     },
     {
       "id": "operating",
@@ -1418,7 +1418,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
         }
       ],
-      "checked": "2026-11-19"
+      "checked": "2026-11-22"
     }
   ],
   "signups": [

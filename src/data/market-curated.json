@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-21",
-  "note": "1X NEO's entry now reflects its CEO's statement that the first units ship to developers and some consumers in December 2026 (Humanoids Daily, 20 Nov). Nothing else changed: GPU rents (Bargo, 15 Nov) and 8-GPU board prices (Gatewell, 20 Nov) haven't moved enough to shift an anchor, Ecovantage hasn't yet published the 16-20 Nov week so the LGC fallback stays at A$7.60, and the live ABARES feed is still stuck at an EYCI of 939c while ABARES shows 1,046c (18 Nov).",
+  "updated": "2026-11-22",
+  "note": "No material changes today. Ecovantage hasn't published the 16-20 Nov week, Bargo's rents are still those of 15 Nov and Gatewell's 8-GPU board prices are unchanged (20 Nov), so the GPU anchors and the A$7.60 LGC fallback stay; the live ABARES feed is still stuck at an EYCI of 939c while ABARES shows 1,046c (18 Nov).",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
