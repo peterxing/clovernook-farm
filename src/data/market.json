@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T21:28:56.001Z",
+  "updated": "2026-11-22T21:35:57.033Z",
   "fx": {
     "ok": true,
     "usdAud": 1.5002,
@@ -12,9 +12,9 @@
     "ok": true,
     "models": {
       "B300": {
-        "p25": 10,
-        "median": 10.625,
-        "n": 12,
+        "p25": 10.626,
+        "median": 11.202,
+        "n": 13,
         "hist": [
           {
             "date": "2026-10-27",
@@ -31,6 +31,10 @@
           {
             "date": "2026-11-22",
             "p25": 10
+          },
+          {
+            "date": "2026-11-23",
+            "p25": 10.626
           }
         ],
         "p25s": 10,
@@ -38,14 +42,10 @@
         "anchorKey": "6.5|9.939"
       },
       "B200": {
-        "p25": 6.878,
+        "p25": 7.501,
         "median": 8.186,
-        "n": 19,
+        "n": 17,
         "hist": [
-          {
-            "date": "2026-11-09",
-            "p25": 8.751
-          },
           {
             "date": "2026-11-10",
             "p25": 6.776
@@ -97,21 +97,21 @@
           {
             "date": "2026-11-22",
             "p25": 6.878
+          },
+          {
+            "date": "2026-11-23",
+            "p25": 7.501
           }
         ],
-        "p25s": 8.277,
-        "ratio": 0.9488,
+        "p25s": 7.502,
+        "ratio": 0.9014,
         "anchorKey": "5|8.75"
       },
       "H200": {
-        "p25": 3.602,
-        "median": 4.003,
-        "n": 59,
+        "p25": 4.001,
+        "median": 4.054,
+        "n": 45,
         "hist": [
-          {
-            "date": "2026-11-09",
-            "p25": 3.605
-          },
           {
             "date": "2026-11-10",
             "p25": 3.878
@@ -163,6 +163,10 @@
           {
             "date": "2026-11-22",
             "p25": 3.602
+          },
+          {
+            "date": "2026-11-23",
+            "p25": 4.001
           }
         ],
         "p25s": 3.882,
@@ -170,14 +174,10 @@
         "anchorKey": "3.8|3.736"
       },
       "RTXPRO6000": {
-        "p25": 1.468,
-        "median": 1.602,
-        "n": 109,
+        "p25": 1.467,
+        "median": 1.601,
+        "n": 114,
         "hist": [
-          {
-            "date": "2026-11-09",
-            "p25": 1.336
-          },
           {
             "date": "2026-11-10",
             "p25": 1.36
@@ -229,21 +229,21 @@
           {
             "date": "2026-11-22",
             "p25": 1.468
+          },
+          {
+            "date": "2026-11-23",
+            "p25": 1.467
           }
         ],
-        "p25s": 1.47,
-        "ratio": 1.1019,
+        "p25s": 1.468,
+        "ratio": 1.1004,
         "anchorKey": "1.9|1.334"
       },
       "L40S": {
-        "p25": 0.534,
+        "p25": 0.467,
         "median": 0.8,
-        "n": 36,
+        "n": 30,
         "hist": [
-          {
-            "date": "2026-11-09",
-            "p25": 0.467
-          },
           {
             "date": "2026-11-10",
             "p25": 0.469
@@ -295,6 +295,10 @@
           {
             "date": "2026-11-22",
             "p25": 0.534
+          },
+          {
+            "date": "2026-11-23",
+            "p25": 0.467
           }
         ],
         "p25s": 0.534,
@@ -302,14 +306,14 @@
         "anchorKey": "0.75|0.467"
       }
     },
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "source": "Vast.ai marketplace, rentable on-demand offers (US$/GPU-hr; 7-day median of the lower quartile, ≥8 offers)",
     "url": "https://vast.ai/pricing"
   },
   "solarModule": {
     "ok": true,
     "usdPerW": 0.114,
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "source": "InfoLink spot price, TOPCon module (USD/W, average)",
     "url": "https://www.infolink-group.com/spot-price/en/"
   },
@@ -386,7 +390,7 @@
       "priceUsd": 20000,
       "monthlyUsd": 499
     },
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "source": "Unitree store and 1X order page (list prices, US$)",
     "url": "https://shop.unitree.com/collections/humanoid-robot"
   },
@@ -402,11 +406,11 @@
   },
   "nem": {
     "ok": true,
-    "mean30": 100.86,
-    "mean365": 80.99,
+    "mean30": 99.66,
+    "mean365": 81.01,
     "negShare365": 0.0601,
-    "through": "2026-11-21",
-    "date": "2026-11-21",
+    "through": "2026-11-22",
+    "date": "2026-11-22",
     "source": "AEMO NSW1 5-minute prices",
     "url": "https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data"
   }
