@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-22",
-  "note": "No material changes today: re-verified the 12 homes, farm, robot, offtake, certificate and operating steps against the Clean Energy Regulator's accreditation and mid-scale solar pages, Taree rents, the 1X and Agility robot fees and the egg licence threshold. At today's lead times the investment decision falls on 25 June 2028 and energisation on 9 September 2029, with everything operating by 14 October 2029.",
+  "updated": "2026-11-23",
+  "note": "No material changes today: re-verified the specialist studies (PBP 2019 still applies while the draft PBP 2026 is finalised), the transformer lead time (8-14 months up to 5 MVA) and the GPU letter-of-intent, server quote and server order steps (Gatewell's board prices unchanged on 20 Nov, shipping in 3-8 weeks). At today's lead times the investment decision falls on 26 June 2028 and energisation on 10 September 2029, with everything operating by 15 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -140,7 +140,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-23"
     },
     {
       "id": "da-lodge",
@@ -360,7 +360,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-23"
     },
     {
       "id": "servers-quote",
@@ -380,7 +380,7 @@
         {
           "title": "Gatewell: HGX B300, B200 and H200 board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "19 Nov 2026"
+          "date": "20 Nov 2026"
         },
         {
           "title": "Mercatus: 8-GPU server prices and allocation",
@@ -388,7 +388,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-23"
     },
     {
       "id": "gpu-contract",
@@ -590,7 +590,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-23"
     },
     {
       "id": "battery-order",
@@ -687,10 +687,10 @@
         {
           "title": "Gatewell: HGX board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "19 Nov 2026"
+          "date": "20 Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-23"
     },
     {
       "id": "detail-design",

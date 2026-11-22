@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-22",
-  "note": "No material changes today. Ecovantage hasn't published the 16-20 Nov week, Bargo's rents are still those of 15 Nov and Gatewell's 8-GPU board prices are unchanged (20 Nov), so the GPU anchors and the A$7.60 LGC fallback stay; the live ABARES feed is still stuck at an EYCI of 939c while ABARES shows 1,046c (18 Nov).",
+  "updated": "2026-11-23",
+  "note": "No material changes today. GPU rents (Bargo still at 15 Nov; Ornn's 21 Nov settlements moved under 10% in a week) and Gatewell's 8-GPU board prices (20 Nov) don't justify an anchor change, Ecovantage hasn't published the 16-20 Nov week so the LGC fallback stays at A$7.60, and a robot dog now patrolling a Chinese cattle barn (DEEP Robotics, 21 Nov) isn't a humanoid milestone, so the readiness curves stay put.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
