@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-23",
-  "note": "No material changes today: re-verified the specialist studies (PBP 2019 still applies while the draft PBP 2026 is finalised), the transformer lead time (8-14 months up to 5 MVA) and the GPU letter-of-intent, server quote and server order steps (Gatewell's board prices unchanged on 20 Nov, shipping in 3-8 weeks). At today's lead times the investment decision falls on 26 June 2028 and energisation on 10 September 2029, with everything operating by 15 October 2029.",
+  "updated": "2026-11-25",
+  "note": "Re-verified 12 steps: the survey, concept, DA lodgement and decision (MidCoast still has no local planning panel and PBP 2019 still applies), construction certificates, battery and module orders, the PIC, beekeeper and egg registrations, the Vast.ai listing and the energy offtake, whose LGC source now points to Ecovantage's 16-20 Nov update. No durations or statuses changed: at today's lead times the investment decision falls on 28 June 2028 and energisation on 12 September 2029, with everything operating by 17 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -77,7 +77,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "concept",
@@ -96,7 +96,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "pre-da",
@@ -178,7 +178,7 @@
           "date": "1 Mar 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "da-determined",
@@ -203,7 +203,7 @@
           "date": "28 Oct 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "ee-register",
@@ -611,7 +611,7 @@
           "date": "Sep 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "pv-order",
@@ -632,7 +632,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "dc-order",
@@ -738,7 +738,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "pic",
@@ -761,7 +761,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "bees",
@@ -789,7 +789,7 @@
           "date": "2026-27"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "egg-licence",
@@ -812,7 +812,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "site-works",
@@ -1025,10 +1025,10 @@
         {
           "title": "Ecovantage: weekly certificate market update",
           "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-          "date": "9-13 Nov 2026"
+          "date": "16-20 Nov 2026"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-25"
     },
     {
       "id": "dc-build",
@@ -1122,7 +1122,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-20"
+      "checked": "2026-11-25"
     },
     {
       "id": "homestead-lease",

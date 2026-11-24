@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-23",
-  "note": "No material changes today. GPU rents (Bargo still at 15 Nov; Ornn's 21 Nov settlements moved under 10% in a week) and Gatewell's 8-GPU board prices (20 Nov) don't justify an anchor change, Ecovantage hasn't published the 16-20 Nov week so the LGC fallback stays at A$7.60, and a robot dog now patrolling a Chinese cattle barn (DEEP Robotics, 21 Nov) isn't a humanoid milestone, so the readiness curves stay put.",
+  "updated": "2026-11-25",
+  "note": "Updated the LGC fallback to Ecovantage's 16-20 Nov close of A$7.25 (down from A$7.60; Cal 27 A$7.25-7.50, Cal 28 A$7.00), and added AGIBOT's full-size A3 (from US$72,999) and wheeled G2 (from US$159,999), now on sale in the US through RoboStore. GPU anchors are unchanged: Ornn's 23 Nov settlements moved less than 10% in a week and Gatewell re-posted the same 8-GPU board prices on 23 Nov.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -81,12 +81,12 @@
     }
   },
   "lgc": {
-    "price": 7.6,
-    "date": "2026-11-11",
+    "price": 7.25,
+    "date": "2026-11-20",
     "source": {
       "title": "Ecovantage weekly market update",
       "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-      "date": "9-13 Nov 2026"
+      "date": "16-20 Nov 2026"
     }
   },
   "livestock": {
@@ -219,6 +219,24 @@
         "class": "Full-size electric industrial humanoid",
         "source": "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration/",
         "date": "2026-11-17"
+      },
+      {
+        "name": "AGIBOT A3",
+        "maker": "AGIBOT",
+        "priceUsd": 72999,
+        "availability": "On sale in the US through RoboStore from 20 Nov 2026 (A3 Ultra with NVIDIA Thor from US$109,999); lead times vary",
+        "class": "Full-size humanoid (39 DoF, 10-hour battery)",
+        "source": "https://robostore.com/collections/agibot-a3-humanoids",
+        "date": "2026-11-20"
+      },
+      {
+        "name": "AGIBOT G2",
+        "maker": "AGIBOT",
+        "priceUsd": 159999,
+        "availability": "On sale in the US through RoboStore from 20 Nov 2026; trialled in a 24-hour convenience store shift in China",
+        "class": "Wheeled dual-arm industrial humanoid",
+        "source": "https://robostore.com/collections/agibot-g2-humanoids",
+        "date": "2026-11-20"
       }
     ],
     "tasks": {
