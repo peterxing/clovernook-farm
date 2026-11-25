@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T22:54:13.731Z",
+  "updated": "2026-11-25T00:25:40.519Z",
   "fx": {
     "ok": true,
     "usdAud": 1.509,
@@ -13,8 +13,8 @@
     "models": {
       "B300": {
         "p25": 7.501,
-        "median": 9.94,
-        "n": 19,
+        "median": 10,
+        "n": 17,
         "hist": [
           {
             "date": "2026-10-27",
@@ -52,7 +52,7 @@
       "B200": {
         "p25": 7.502,
         "median": 8.728,
-        "n": 9,
+        "n": 11,
         "hist": [
           {
             "date": "2026-11-12",
@@ -116,9 +116,9 @@
         "anchorKey": "5|8.75"
       },
       "H200": {
-        "p25": 3.757,
+        "p25": 4.006,
         "median": 4.654,
-        "n": 34,
+        "n": 37,
         "hist": [
           {
             "date": "2026-11-12",
@@ -174,7 +174,7 @@
           },
           {
             "date": "2026-11-25",
-            "p25": 3.757
+            "p25": 4.006
           }
         ],
         "p25s": 4.001,
@@ -248,9 +248,9 @@
         "anchorKey": "1.9|1.334"
       },
       "L40S": {
-        "p25": 0.667,
-        "median": 0.774,
-        "n": 28,
+        "p25": 0.535,
+        "median": 0.762,
+        "n": 29,
         "hist": [
           {
             "date": "2026-11-12",
@@ -306,7 +306,7 @@
           },
           {
             "date": "2026-11-25",
-            "p25": 0.667
+            "p25": 0.535
           }
         ],
         "p25s": 0.534,
@@ -406,11 +406,9 @@
     "ok": true,
     "price": 7.25,
     "week": "16 - 20 November 2026",
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "source": "Ecovantage weekly certificate market update (LGC spot)",
-    "url": "https://www.ecovantage.com.au/energy-certificate-market-update/",
-    "stale": true,
-    "error": "fetch failed"
+    "url": "https://www.ecovantage.com.au/energy-certificate-market-update/"
   },
   "nem": {
     "ok": true,
