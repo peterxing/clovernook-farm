@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-25",
-  "note": "Re-verified 12 steps: the survey, concept, DA lodgement and decision (MidCoast still has no local planning panel and PBP 2019 still applies), construction certificates, battery and module orders, the PIC, beekeeper and egg registrations, the Vast.ai listing and the energy offtake, whose LGC source now points to Ecovantage's 16-20 Nov update. No durations or statuses changed: at today's lead times the investment decision falls on 28 June 2028 and energisation on 12 September 2029, with everything operating by 17 October 2029.",
+  "updated": "2026-11-27",
+  "note": "Re-verified 25 steps: every grid step against Essential Energy's unchanged HV connection timeline and emergency backstop rules, the A$625 pre-lodgement meeting, the site option (the lot sold in April 2026 and isn't listed), the finance and tender sources and the build steps. No durations or statuses changed: at today's lead times the investment decision falls on 30 June 2028 and energisation on 14 September 2029, with everything operating by 19 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -27,7 +27,7 @@
           "date": "2025"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "dev-budget",
@@ -52,7 +52,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "survey",
@@ -116,7 +116,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "studies",
@@ -221,7 +221,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "ee-prelim",
@@ -249,7 +249,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "ee-investigation",
@@ -269,7 +269,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "ee-studies",
@@ -304,7 +304,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "connection-offer",
@@ -333,7 +333,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "gpu-loi",
@@ -411,7 +411,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "finance",
@@ -446,7 +446,7 @@
           "date": "19 Oct 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "epc-tender",
@@ -471,7 +471,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "fid",
@@ -520,7 +520,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "connection-accept",
@@ -543,7 +543,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "epc-contract",
@@ -569,7 +569,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=finance"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "long-lead",
@@ -659,7 +659,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "servers-order",
@@ -709,7 +709,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=risk"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "cc",
@@ -831,7 +831,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=approvals"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "pv-install",
@@ -851,7 +851,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=site"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "bess-install",
@@ -871,7 +871,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=energy"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "install-electrical",
@@ -897,7 +897,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "connection-works",
@@ -926,7 +926,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "energise",
@@ -958,7 +958,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "lgc-accreditation",
@@ -1051,7 +1051,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "servers-install",
@@ -1075,7 +1075,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "gpus-live",
@@ -1099,7 +1099,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=compute"
         }
       ],
-      "checked": "2026-11-21"
+      "checked": "2026-11-27"
     },
     {
       "id": "gpu-marketplace",

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-25",
-  "note": "Updated the LGC fallback to Ecovantage's 16-20 Nov close of A$7.25 (down from A$7.60; Cal 27 A$7.25-7.50, Cal 28 A$7.00), and added AGIBOT's full-size A3 (from US$72,999) and wheeled G2 (from US$159,999), now on sale in the US through RoboStore. GPU anchors are unchanged: Ornn's 23 Nov settlements moved less than 10% in a week and Gatewell re-posted the same 8-GPU board prices on 23 Nov.",
+  "updated": "2026-11-27",
+  "note": "Added XPENG's IRON to the robot list: it starts mass production in January 2027 and enterprise deliveries for retail, hospitality and reception from Q2 2027, with no price yet (AI Day, 25 Nov). Nothing else changed: the live LGC feed is working again at A$7.25 (Ecovantage, 16-20 Nov), Ornn's 25 Nov GPU settlements and Gatewell's 23 Nov board prices don't justify an anchor change, and Volvo's AEON factory training isn't a farm-task milestone, so the readiness curves stay.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
@@ -237,6 +237,15 @@
         "class": "Wheeled dual-arm industrial humanoid",
         "source": "https://robostore.com/collections/agibot-g2-humanoids",
         "date": "2026-11-20"
+      },
+      {
+        "name": "XPENG IRON",
+        "maker": "XPENG",
+        "priceUsd": null,
+        "availability": "Not yet for sale: mass production starts January 2027 and enterprise deliveries for retail, hospitality and reception from Q2 2027; price not announced",
+        "class": "Full-size service humanoid (76 DoF, 21-DoF tactile hands)",
+        "source": "https://www.humanoidsdaily.com/news/xpeng-details-mass-production-iron-humanoid-at-ai-day-2026-confirms-unisex-form-factor-and-vla-3-0",
+        "date": "2026-11-25"
       }
     ],
     "tasks": {
