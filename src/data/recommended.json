@@ -1,8 +1,8 @@
 {
   "date": "2026-11-28",
-  "generatedAt": "2026-11-27T22:04:02.560Z",
-  "evaluations": 636,
-  "ms": 1084,
+  "generatedAt": "2026-11-27T23:57:41.993Z",
+  "evaluations": 610,
+  "ms": 1235,
   "options": {
     "objective": "npv",
     "capexBudget": 25000000,
@@ -41,8 +41,8 @@
     "grid.exportLimitKw": 2000,
     "bess.powerKw": 1000,
     "bess.hours": 2,
-    "compute.model": "H200",
-    "compute.servers": 24,
+    "compute.model": "B300",
+    "compute.servers": 16,
     "compute.padRaiseM": 3.2,
     "homes.cabins": 6,
     "homes.grannyFlat": false,
@@ -55,14 +55,14 @@
     "robots.acquisition": "lease"
   },
   "metrics": {
-    "npv": 2538233,
-    "irr": 0.0949,
-    "capex": 23636005,
-    "ebitda1": 6560178,
+    "npv": 2566338,
+    "irr": 0.0946,
+    "capex": 24685261,
+    "ebitda1": 6974546,
     "kwdc": 1538,
     "bessKwh": 2000,
-    "gpus": 192,
-    "gpuModel": "H200",
+    "gpus": 128,
+    "gpuModel": "B300",
     "robots": 1,
     "robotYear": 2028
   }
