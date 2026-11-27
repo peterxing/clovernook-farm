@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-27",
-  "note": "Re-verified 25 steps: every grid step against Essential Energy's unchanged HV connection timeline and emergency backstop rules, the A$625 pre-lodgement meeting, the site option (the lot sold in April 2026 and isn't listed), the finance and tender sources and the build steps. No durations or statuses changed: at today's lead times the investment decision falls on 30 June 2028 and energisation on 14 September 2029, with everything operating by 19 October 2029.",
+  "updated": "2026-11-28",
+  "note": "Re-verified 16 steps: the homes, farm, robot, certificate and operating steps, the specialist studies, the transformer lead time and the GPU letter-of-intent, server quote and server order steps; the letter-of-intent step now also cites Bargo's H200 rents because today's plan switched to H200 servers. No durations or statuses changed: at today's lead times the investment decision falls on 1 July 2028 and energisation on 15 September 2029, with everything operating by 20 October 2029.",
   "startDate": null,
   "steps": [
     {
@@ -140,7 +140,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-23"
+      "checked": "2026-11-28"
     },
     {
       "id": "da-lodge",
@@ -356,11 +356,16 @@
           "date": "15 Nov 2026"
         },
         {
+          "title": "Bargo: H200 on-demand, reserved and spot rents",
+          "url": "https://www.bargo.ai/gpu/h200",
+          "date": "15 Nov 2026"
+        },
+        {
           "title": "Clovernook Farm: GPU rents used by the model (Markets tab)",
           "url": "https://peterxing.github.io/clovernook-farm/#tab=markets"
         }
       ],
-      "checked": "2026-11-23"
+      "checked": "2026-11-28"
     },
     {
       "id": "servers-quote",
@@ -380,7 +385,7 @@
         {
           "title": "Gatewell: HGX B300, B200 and H200 board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "20 Nov 2026"
+          "date": "27 Nov 2026"
         },
         {
           "title": "Mercatus: 8-GPU server prices and allocation",
@@ -388,7 +393,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-23"
+      "checked": "2026-11-28"
     },
     {
       "id": "gpu-contract",
@@ -590,7 +595,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-23"
+      "checked": "2026-11-28"
     },
     {
       "id": "battery-order",
@@ -687,10 +692,10 @@
         {
           "title": "Gatewell: HGX board prices and shipping times",
           "url": "https://gatewellusa.com/ai-compute/datacenter-gpu-prices",
-          "date": "20 Nov 2026"
+          "date": "27 Nov 2026"
         }
       ],
-      "checked": "2026-11-23"
+      "checked": "2026-11-28"
     },
     {
       "id": "detail-design",
@@ -1000,7 +1005,7 @@
           "date": "17 Nov 2026"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "energy-offtake",
@@ -1145,7 +1150,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "cabins-build",
@@ -1179,7 +1184,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "cabin-bookings",
@@ -1205,7 +1210,7 @@
           "date": "2026"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "cabins-open",
@@ -1229,7 +1234,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=homes"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "greenhouse-build",
@@ -1263,7 +1268,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "produce-buyers",
@@ -1296,7 +1301,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "restock",
@@ -1323,7 +1328,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=farm"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "egg-buyers",
@@ -1346,7 +1351,7 @@
           "date": "Nov 2026"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "robot-lease",
@@ -1386,7 +1391,7 @@
           "date": "11 Sep 2026"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     },
     {
       "id": "operating",
@@ -1418,7 +1423,7 @@
           "url": "https://peterxing.github.io/clovernook-farm/#tab=overview"
         }
       ],
-      "checked": "2026-11-22"
+      "checked": "2026-11-28"
     }
   ],
   "signups": [

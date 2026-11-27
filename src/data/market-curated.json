@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-27",
-  "note": "Added XPENG's IRON to the robot list: it starts mass production in January 2027 and enterprise deliveries for retail, hospitality and reception from Q2 2027, with no price yet (AI Day, 25 Nov). Nothing else changed: the live LGC feed is working again at A$7.25 (Ecovantage, 16-20 Nov), Ornn's 25 Nov GPU settlements and Gatewell's 23 Nov board prices don't justify an anchor change, and Volvo's AEON factory training isn't a farm-task milestone, so the readiness curves stay.",
+  "updated": "2026-11-28",
+  "note": "No material changes today. GPU anchors stay: B300 12-month reserved rates are still US$6.49-7.94 with spot from about US$5.84, Ornn's 26 Nov settlements and Gatewell's 27 Nov board prices barely moved, and an 8-GPU H200 server is still about US$370,000 (Mercatus); the LGC fallback stays at A$7.25 because Ecovantage hasn't published the 23-27 Nov week, and robot list prices are unchanged.",
   "gpu": {
     "B300": {
       "anchorUsdPerHr": 6.5,
